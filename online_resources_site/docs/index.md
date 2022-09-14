@@ -1,3 +1,8 @@
+---
+hide:
+  - footer
+---
+
 # Python Crash Course, Third Edition
 
 This is a collection of resources for [Python Crash Course (3rd Ed.)](https://nostarch.com/python-crash-course-3rd-edition), an introductory programming book from [No Starch Press](https://nostarch.com) by Eric Matthes.

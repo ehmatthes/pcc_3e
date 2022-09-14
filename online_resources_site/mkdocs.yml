@@ -2,6 +2,8 @@ site_name: Python Crash Course, Third Edition
 
 theme:
   name: material
+  features:
+    # - navigation.tabs
 
 markdown_extensions:
   - attr_list
