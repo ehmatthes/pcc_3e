@@ -1,0 +1,7 @@
+asgiref==3.5.2
+beautifulsoup4==4.11.1
+Django==4.1b1
+django-bootstrap5==21.3
+platformshconfig==2.4.0
+soupsieve==2.3.2.post1
+sqlparse==0.4.2
