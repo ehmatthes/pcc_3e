@@ -11,6 +11,7 @@ theme:
 
   palette: 
 
+
     # Palette toggle for light mode
     - scheme: default
       toggle:
