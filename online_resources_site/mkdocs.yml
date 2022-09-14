@@ -4,6 +4,7 @@ theme:
   name: material
   features:
     # - navigation.tabs
+    navigation.instant
 
 markdown_extensions:
   - attr_list
