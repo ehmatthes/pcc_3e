@@ -2,6 +2,8 @@ site_name: Python Crash Course, Third Edition
 
 theme:
   name: material
+  logo: images/pcc_snake_logo.png
+  favicon: images/pcc_snake_favicon-48px.png
   features:
     # - navigation.tabs
     navigation.instant
