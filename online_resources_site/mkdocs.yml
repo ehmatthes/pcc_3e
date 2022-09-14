@@ -2,3 +2,6 @@ site_name: Python Crash Course, Third Edition
 
 theme:
   name: material
+
+markdown_extensions:
+  - attr_list
