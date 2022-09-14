@@ -16,7 +16,7 @@ Twitter: [@ehmatthes](https://twitter.com/ehmatthes)
 
 ---
 
-[![Python Crash Course, 3rd Edition cover](../images/pcc_3e_cover-170px.png)](https://nostarch.com/python-crash-course-3rd-edition)
+[![Python Crash Course, 3rd Edition cover](images/pcc_3e_cover-170px.png)](https://nostarch.com/python-crash-course-3rd-edition)
 
 
 Available from [No Starch Press](https://nostarch.com/python-crash-course-3rd-edition), [Amazon](https://www.amazon.com/Python-Crash-Course-Eric-Matthes-dp-1718502702/dp/1718502702/), and [Barnes & Noble](https://www.barnesandnoble.com/w/python-crash-course-3rd-edition-eric-matthes/1141287011). You can also find *Python Crash Course* in person at Barnes & Noble bookstores, and other fine booksellers worldwide.
