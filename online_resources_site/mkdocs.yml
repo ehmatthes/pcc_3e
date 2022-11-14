@@ -1,13 +1,22 @@
 site_name: Python Crash Course, Third Edition
 
+markdown_extensions:
+  - attr_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
 
 theme:
   name: material
   logo: images/pcc_snake_logo.png
   favicon: images/pcc_snake_favicon-48px.png
   features:
-    # - navigation.tabs
-    navigation.instant
+    - navigation.indexes
+    - navigation.instant
 
   palette: 
     # Palette toggle for light mode
@@ -22,16 +31,13 @@ theme:
         icon: material/toggle-switch-off-outline
         name: Switch to light mode
 
-
-markdown_extensions:
-  - attr_list
-
-
 extra_css:
   - stylesheets/extra.css
 
-
 nav:
-  - 'Home': 'index.md'
-  - "What's new?": 'new_in_3e.md'
-  - 'Contact': 'contact.md'
+  - "Home": "index.md"
+  - "What's new?": "new_in_3e.md"
+  - "Solutions":
+    - "solutions/index.md"
+    - "Chapter 2": "solutions/chapter_2.md"
+  - "Contact": "contact.md"
