@@ -11,4 +11,6 @@ Email: [ehmatthes@gmail.com](mailto:ehmatthes@gmail.com)
 
 Twitter: [@ehmatthes](https://twitter.com/ehmatthes)
 
+Mastodon: [@ehmatthes@fosstodon.org](https://fosstodon.org/@ehmatthes)
+
 ---
