@@ -10,8 +10,6 @@ theme:
     navigation.instant
 
   palette: 
-
-
     # Palette toggle for light mode
     - scheme: default
       toggle:
@@ -31,3 +29,9 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
+
+
+nav:
+  - 'Home': 'index.md'
+  - "What's new?": 'new_in_3e.md'
+  - 'Contact': 'contact.md'
