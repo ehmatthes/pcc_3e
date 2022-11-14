@@ -24,6 +24,8 @@ Email: [ehmatthes@gmail.com](mailto:ehmatthes@gmail.com)
 
 Twitter: [@ehmatthes](https://twitter.com/ehmatthes)
 
+Mastodon: [@ehmatthes@fosstodon.org](https://fosstodon.org/@ehmatthes)
+
 ---
 
 [![Python Crash Course, 3rd Edition cover](images/pcc_3e_cover-170px.png)](https://nostarch.com/python-crash-course-3rd-edition)
