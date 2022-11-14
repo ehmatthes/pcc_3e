@@ -1,0 +1,655 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../images/pcc_snake_favicon-48px.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.0">
+    
+    
+      
+        <title>What's new? - Python Crash Course, Third Edition</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2e8b5541.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#whats-new-in-the-third-edition" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Python Crash Course, Third Edition" class="md-header__button md-logo" aria-label="Python Crash Course, Third Edition" data-md-component="logo">
+      
+  <img src="../images/pcc_snake_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Crash Course, Third Edition
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              What's new?
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Python Crash Course, Third Edition" class="md-nav__button md-logo" aria-label="Python Crash Course, Third Edition" data-md-component="logo">
+      
+  <img src="../images/pcc_snake_logo.png" alt="logo">
+
+    </a>
+    Python Crash Course, Third Edition
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          What's new?
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        What's new?
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overall-changes" class="md-nav__link">
+    Overall changes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specific-changes" class="md-nav__link">
+    Specific changes
+  </a>
+  
+    <nav class="md-nav" aria-label="Specific changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chapter-1" class="md-nav__link">
+    Chapter 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chapter-2" class="md-nav__link">
+    Chapter 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chapters-3-9" class="md-nav__link">
+    Chapters 3-9
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chapter-10" class="md-nav__link">
+    Chapter 10
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chapter-11" class="md-nav__link">
+    Chapter 11
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alien-invasion-chapters-12-14" class="md-nav__link">
+    Alien Invasion (Chapters 12-14)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-visualization-chapters-15-17" class="md-nav__link">
+    Data Visualization (Chapters 15-17)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-applications-chapters-18-20" class="md-nav__link">
+    Web Applications (Chapters 18-20)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appendices" class="md-nav__link">
+    Appendices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    Index
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overall-changes" class="md-nav__link">
+    Overall changes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specific-changes" class="md-nav__link">
+    Specific changes
+  </a>
+  
+    <nav class="md-nav" aria-label="Specific changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chapter-1" class="md-nav__link">
+    Chapter 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chapter-2" class="md-nav__link">
+    Chapter 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chapters-3-9" class="md-nav__link">
+    Chapters 3-9
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chapter-10" class="md-nav__link">
+    Chapter 10
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chapter-11" class="md-nav__link">
+    Chapter 11
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alien-invasion-chapters-12-14" class="md-nav__link">
+    Alien Invasion (Chapters 12-14)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-visualization-chapters-15-17" class="md-nav__link">
+    Data Visualization (Chapters 15-17)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-applications-chapters-18-20" class="md-nav__link">
+    Web Applications (Chapters 18-20)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appendices" class="md-nav__link">
+    Appendices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    Index
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="whats-new-in-the-third-edition">What's new in the third edition?</h1>
+<p>Python is a mature language, but like every programming language it continues to evolve. The third edition incorporates the most important new features in Python, without becoming bloated by trying to include every new feature that's been introduced in recent years. The new edition uses the latest versions of all third-party libraries in the projects section.</p>
+<h2 id="overall-changes">Overall changes</h2>
+<p>Here's a summary of the changes that have been made to the book overall:</p>
+<ul>
+<li>The third edition uses Python 3.11. (The second edition was written using Python 3.7.)</li>
+<li>The new edition uses VS Code instead of Sublime Text. VS Code is fully open, and has seen widespread adoption in the Python world over the last several years.</li>
+<li>Code listings are less cluttered and easier to follow throughout the book.</li>
+<li>The new edition uses updated libraries throughout, and updated workflows for each library.</li>
+</ul>
+<h2 id="specific-changes">Specific changes</h2>
+<h3 id="chapter-1">Chapter 1</h3>
+<ul>
+<li>In the setup section, VS Code is recommended as a text editor for readers who don't already have a preference. (You can use any editor that's properly configured to run Python code.)</li>
+</ul>
+<h3 id="chapter-2">Chapter 2</h3>
+<ul>
+<li>This chapter introduces <code>removeprefix()</code> and <code>removesuffix()</code>, two new methods that are helpful when working with files and URLs.</li>
+<li>Chapter 2 also includes Python's newly-improved error messages, which provide much more specific information to help you troubleshoot your code when something goes wrong.</li>
+</ul>
+<h3 id="chapters-3-9">Chapters 3-9</h3>
+<ul>
+<li>Many explanations have been clarified, and code listings have been simplified. (There were some annotations in shorter listings that weren't really necessary.)</li>
+</ul>
+<h3 id="chapter-10">Chapter 10</h3>
+<ul>
+<li>Chapter 10 uses the <code>pathlib</code> module for working with files. This is a much simpler approach to reading from and writing to files. It's also in keeping with how most major libraries are working with files now.</li>
+</ul>
+<h3 id="chapter-11">Chapter 11</h3>
+<ul>
+<li><code>pytest</code> is now the main testing library in the Python world. It's accessible to beginners, but powerful enough to serve professional testing needs as well. Chapter 11 now uses <code>pytest</code> instead of the standard library's <code>unittest</code>.</li>
+<li>This chapter shows how to install third-party libraries, instead of introducing the topic in several different projects in the second half of the book.</li>
+</ul>
+<h3 id="alien-invasion-chapters-12-14">Alien Invasion (Chapters 12-14)</h3>
+<ul>
+<li>The game uses an FPS (frames per second) setting, to make it run more consistently across all systems.</li>
+<li>The approach to building the alien fleet is simpler and easier to understand.</li>
+<li>The code listings throughout the project are presented in an order that's easier to follow.</li>
+</ul>
+<h3 id="data-visualization-chapters-15-17">Data Visualization (Chapters 15-17)</h3>
+<ul>
+<li>Matplotlib has changed some of its default style settings; all figures in the new edition match the current default styles.</li>
+<li>Plotly has introduced Plotly Express, a module that focuses on building an initial plot quickly, and then making styling choices. The third edition uses this new approach.</li>
+<li>The random walk project has a small improvement that increases the accuracy of the plots; you'll see a wider variety of patterns emerge each time you generate a new walk.</li>
+<li>The weather and earthquake projects use updated data sets.</li>
+<li>The GitHub data used in Chapter 17 is fully updated.</li>
+</ul>
+<h3 id="web-applications-chapters-18-20">Web Applications (Chapters 18-20)</h3>
+<ul>
+<li>The Learning Log project is built using Django 4.1, and the project is styled using Bootstrap 5.</li>
+<li>Some parts of the project have been renamed to make it easier to understand the overall layout of a Django project.</li>
+<li>The deployment section has been updated. The project is now deployed to Platform.sh, a modern hosting service for Django projects. The deployment process is controlled by YAML configuration files, which give you a great deal of control over how your project is deployed. This approach is consistent with how professional programmers deploy modern Django projects.</li>
+</ul>
+<h3 id="appendices">Appendices</h3>
+<ul>
+<li>Appendix A includes updated supplementary installation and setup instructions, for readers who run into any issues installing Python.</li>
+<li>Appendix B discusses customizations you can make to VS Code to make it more useful for writing and maintaining Python code. It also includes a number of shortcuts you can use to work more efficiently in VS Code.</li>
+<li>Appendix C includes an updated set of resources for getting help online.</li>
+<li>Appendix D uses the new <code>git restore</code> command for rolling back changes in a project, and the <code>git switch</code> command for getting back to the main branch in a project.</li>
+<li>Appendix E, which is entirely new, expands on the deployment process for web applications. Deployment is a complex process when it doesn't go perfectly. This appendix provides some guidance on how to troubleshoot deployments when they don't work the first time you try them.</li>
+</ul>
+<h3 id="index">Index</h3>
+<ul>
+<li>The new edition has been entirely re-indexed, to help you find what you need quickly after you've worked through the book.</li>
+</ul>
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" hidden>
+      
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Home
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../contact/" class="md-footer__link md-footer__link--next" aria-label="Next: Contact" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Contact
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": "navigation.instant", "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.48f2be22.min.js"></script>
+      
+    
+  </body>
+</html>
