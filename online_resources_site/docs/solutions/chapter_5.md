@@ -177,12 +177,12 @@ You really like peaches!
 
 ## 5-8: Hello Admin
 
-Make a list of five or more usernnames, including the name `'admin'`. Imagine you are writing code that will print a greeting to each user after they log in to a website. Loop through the list, and print a greeting to each user:
+Make a list of five or more usernames, including the name `'admin'`. Imagine you are writing code that will print a greeting to each user after they log in to a website. Loop through the list, and print a greeting to each user.
 
 - If the username is `'admin'`, print a special greeting, such as *Hello admin, would you like to see a status report?*
-- Otherwise, print a generic greeting, such as *Hello Eric, thank you for loggin in again.*
+- Otherwise, print a generic greeting, such as *Hello Jaden, thank you for loggin in again.*
 
-```python
+```python title="hello_admin.py"
 usernames = ['eric', 'willie', 'admin', 'erin', 'ever']
 
 for username in usernames:
@@ -202,8 +202,6 @@ Hello erin, thank you for logging in again!
 Hello ever, thank you for logging in again!
 ```
 
-[top](#top)
-
 ## 5-9: No Users
 
 Add an `if` test to *hello_admin.py* to make sure the list of users is not empty.
@@ -211,7 +209,7 @@ Add an `if` test to *hello_admin.py* to make sure the list of users is not empty
 - If the list is emtpy, print the message *We need to find some users!*
 - Remove all of the usernames from your list, and make sure the correct message is printed.
 
-```python
+```python title="no_users.py"
 usernames = []
 
 if usernames:
@@ -230,8 +228,6 @@ Output:
 We need to find some users!
 ```
 
-[top](#top)
-
 ## 5-10: Checking Usernames
 
 Do the following to create a program that simulates how websites ensure that everyone has a unique username.
@@ -239,9 +235,9 @@ Do the following to create a program that simulates how websites ensure that eve
 - Make a list of five or more usernames called `current_users`.
 Make another list of five usernames called `new_users`. Make sure one or two of the new usernames are also in the `current_users` list.
 - Loop through the `new_users` list to see if each new username has already been used. If it has, print a message that the person will need to enter a new username. If a username has not been used, print a message saying that the username is available.
-- Make sure your comparison is case insensitive. If `'John'` has been used, `'JOHN'` should not be accepted.
+- Make sure your comparison is case insensitive. If `'John'` has been used, `'JOHN'` should not be accepted. (To do this, you’ll need to make a copy of `current_users` containing the lowercase versions of all existing users.)
 
-```python
+```python title="checking_usernames.py"
 current_users = ['eric', 'willie', 'admin', 'erin', 'Ever']
 new_users = ['sarah', 'Willie', 'PHIL', 'ever', 'Iona']
 
@@ -264,15 +260,14 @@ Sorry ever, that name is taken.
 Great, Iona is still available.
 ```
 
-Note: If you're not comfortable with list comprehensions yet, the list `current_users_lower` can be generated using a loop:
+??? note
+    If you're not comfortable with list comprehensions yet, the list `current_users_lower` can be generated using a loop:
 
-```python
-current_users_lower = []
-for user in current_users:
-    current_users_lower.append(user.lower())
-```
-
-[top](#top)
+    ```python
+    current_users_lower = []
+    for user in current_users:
+        current_users_lower.append(user.lower())
+    ```
 
 ## 5-11: Ordinal Numbers
 
@@ -282,7 +277,7 @@ Ordinal numbers indicate their position in a list, such as *1st* or *2nd*. Most 
 - Loop through the list.
 - Use an `if-elif-else` chain inside the loop to print the proper ordinal ending for each number. Your output should read `"1st 2nd 3rd 4th 5th 6th 7th 8th 9th"`, and each result should be on a separate line.
 
-```python
+```python title="ordinal_numbers.py"
 numbers = list(range(1,10))
 
 for number in numbers:
@@ -309,5 +304,3 @@ Output:
 8th
 9th
 ```
-
-[top](#top)
