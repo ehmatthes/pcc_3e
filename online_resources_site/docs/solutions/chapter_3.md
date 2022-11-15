@@ -1,7 +1,7 @@
 ---
 hide:
   - footer
-title: Chapter 3
+title: "Solutions: Chapter 3"
 ---
 
 # Solutions - Chapter 3

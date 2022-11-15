@@ -14,6 +14,7 @@ I haven't included solutions for Chapters 18-20, because the exercises for those
 - [Chapter 3](chapter_3.md)
 - [Chapter 4](chapter_4.md)
 - [Chapter 5](chapter_5.md)
+- [Chapter 6](chapter_6.md)
 
 Questions and Feedback
 ---
