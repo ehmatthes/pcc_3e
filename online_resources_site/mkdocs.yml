@@ -40,4 +40,5 @@ nav:
   - "Solutions":
     - "solutions/index.md"
     - "Chapter 2": "solutions/chapter_2.md"
+    - "Chapter 3": "solutions/chapter_3.md"
   - "Contact": "contact.md"

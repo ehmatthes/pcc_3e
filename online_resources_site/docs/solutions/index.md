@@ -11,6 +11,7 @@ Solutions for selected exercises from each chapter can be found below. Be carefu
 I haven't included solutions for Chapters 18-20, because the exercises for those chapters are really projects in themselves. If you're having trouble with an exercise from one of those chapters consider posting on [Stack Overflow](https://stackoverflow.com/), [r/learnpython](https://www.reddit.com/r/learnpython/), or get in touch.
 
 - [Chapter 2](chapter_2.md)
+- [Chapter 3](chapter_3.md)
 
 Questions and Feedback
 ---
