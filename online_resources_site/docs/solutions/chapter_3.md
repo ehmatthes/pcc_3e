@@ -1,4 +1,6 @@
 ---
+hide:
+  - footer
 title: Chapter 3
 ---
 
