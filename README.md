@@ -1,3 +1,5 @@
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KAUST-Academy/python-crash-course/main)
+
 Python Crash Course - Third Edition
 ===
 
