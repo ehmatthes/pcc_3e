@@ -1,0 +1,11 @@
+name: python-crash-course
+
+channels:
+  - conda-forge
+  - defaults
+  
+ dependencies:
+   - pip
+   - pip:
+     - -r requirements.txt
+   - python>=3.9
