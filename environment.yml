@@ -8,4 +8,5 @@ dependencies:
   - pip
   - pip:
     - -r requirements.txt
+  - pytest
   - python>=3.9
