@@ -13,3 +13,11 @@ If you have any questions about Python Crash Course, feel free to get in touch:
 Email: ehmatthes@gmail.com
 
 Twitter: [@ehmatthes](http://twitter.com/ehmatthes/)
+
+# Additional Resources
+
+I will keep a list of additional resources based on the interests of class participants.
+
+## Data Analysis
+
+* [Python for Data Analysis, 3rd edition](https://wesmckinney.com/book/), [GitHub](https://github.com/wesm/pydata-book)
