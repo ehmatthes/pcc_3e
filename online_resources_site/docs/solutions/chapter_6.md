@@ -221,7 +221,7 @@ The following countries are included in this data set:
 - China
 ```
 
-\*Sometimes we like to think of Alaska as our own separate country.
+\* Sometimes we like to think of Alaska as our own separate country.
 
 ## 6-6: Polling
 
