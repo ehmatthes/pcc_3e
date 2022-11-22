@@ -38,6 +38,9 @@ extra_css:
 nav:
   - "Home": "index.md"
   - "What's new?": "new_in_3e.md"
+  - "Setup Instructions":
+    - "setup_instructions/index.md"
+    - "Configuring VS Code": "setup_instructions/configuring_vs_code.md"
   - "Solutions":
     - "solutions/index.md"
     - "Chapter 2": "solutions/chapter_2.md"
