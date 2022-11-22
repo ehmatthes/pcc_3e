@@ -10,7 +10,7 @@ Back to [solutions](index.md).
 
 ---
 
-***Note:** VS Code isn't always set up to run programs that prompt the user for input. If you're having trouble with user input and you're using VS Code, see [here]() for some troubleshooting help.*
+***Note:** VS Code isn't always set up to run programs that prompt the user for input. If you're having trouble entering user input with VS Code, see [Running programs that use `input()`](../setup_instructions/configuring_vs_code.md/#running-programs-that-use-input) for help.*
 
 ## 7-1: Rental Car
 

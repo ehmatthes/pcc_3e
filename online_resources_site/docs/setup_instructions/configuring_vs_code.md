@@ -26,11 +26,11 @@ To see just the output, do the following:
 
 ![Run/Debug icon](../images/vs_code_screenshots/run_debug_icon.png)
 
-- Click **Create a *launch.json* File**, and select the Python option:
+- Click **Create a *launch.json* File**, and select the **Python File** option:
 
 ![Python option after selecting Create a launch.json file](../images/vs_code_screenshots/python_option.png)
 
-In the `"configurations"` section, change the `console` setting from `integratedTerminal` to `internalConsole`:
+In the `configurations` section, change the `console` setting from `integratedTerminal` to `internalConsole`:
 
 ```json title="launch.json" hl_lines="9"
 {
@@ -74,6 +74,6 @@ To do this, open the *launch.json* file that you created earlier, and change `in
 
 ## Switching between the editor and the terminal
 
-When you're running programs that use `input()`, you'll need to switch between the editor pane where you're typing code, and the terminal where you'll enter input for the program you're running. You can use a mouse or trackpad, but there's a keyboard shortcut that's really helpful.
+When you're running programs that use `input()`, you'll need to switch between the editor pane where you're typing code, and the terminal where you'll enter input. You can use a mouse or a trackpad, but there's a keyboard shortcut that's really helpful.
 
-When you're finished writing the code you're working on, press `Ctrl-F5` to run your program. You'll see a prompt in the terminal pane where you can enter the input for the program. Press `` Ctrl-` `` to switch from the editor pane to the terminal pane. When you're finished entering input and you want to go back to the editor pane, pressing `` Ctrl-` `` again will move the cursor back to the editor window.
+When you're finished entering code in the editor pane, press `Ctrl-F5` to run your program. You'll see a prompt in the terminal pane where you can enter the input for the program. Press `` Ctrl-` `` (Control-backtick) to switch from the editor pane to the terminal pane. When you're finished entering input, press `` Ctrl-` `` again to move the cursor back to the editor window.
