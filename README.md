@@ -1,6 +1,6 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KAUST-Academy/python-crash-course/the-kaust-school-2022)
 
-# Python Crash Course: A Hands-On, Project-Based Introduction to Programming
+# Python Crash Course
 
 The objective of this course is to provide students with an experimental approach, through practical experience, with the Python programming language. The course directly supports the ‘modelling and simulation’ requirements of the International Baccalaureate Computer Science.
 
