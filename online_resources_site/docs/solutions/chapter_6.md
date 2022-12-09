@@ -28,9 +28,7 @@ print(person['age'])
 print(person['city'])
 ```
 
-Output:
-
-```
+``` title="Output:"
 eric
 matthes
 43
@@ -66,9 +64,7 @@ num = favorite_numbers['maggie']
 print(f"Maggie's favorite number is {num}.")
 ```
 
-Output:
-
-```
+``` title="Output:"
 Mandy's favorite number is 42.
 Micah's favorite number is 23.
 Gus's favorite number is 7.
@@ -108,9 +104,7 @@ word = 'dictionary'
 print(f"\n{word.title()}: {glossary[word]}")
 ```
 
-Output:
-
-```
+``` title="Output:"
 String: A series of characters.
 
 Comment: A note in a program that the Python interpreter ignores.
@@ -144,9 +138,7 @@ for word, definition in glossary.items():
     print(f"\n{word.title()}: {definition}")
 ```
 
-Output:
-
-```
+``` title="Output:"
 String: A series of characters.
 
 Comment: A note in a program that the Python interpreter ignores.
@@ -251,9 +243,7 @@ for coder in coders:
         print(f"{coder.title()}, what's your favorite programming language?")
 ```
 
-Output:
-
-```
+``` title="Output:"
 Jen's favorite language is Python.
 Sarah's favorite language is C.
 Edward's favorite language is Ruby.
@@ -310,9 +300,7 @@ for person in people:
     print(f"{name}, of {city}, is {age} years old.")
 ```
 
-Output:
-
-```
+``` title="Output:"
 Eric Matthes, of Sitka, is 46 years old.
 Lemmy Matthes, of Sitka, is 2 years old.
 Willie Matthes, of Sitka, is 11 years old.
@@ -361,9 +349,7 @@ for pet in pets:
         print(f"\t{key}: {value}")
 ```
 
-Output:
-
-```
+``` title="Output:"
 Here's what I know about John:
     animal type: python
     name: john
@@ -403,9 +389,7 @@ for name, places in favorite_places.items():
         print(f"- {place.title()}")
 ```
 
-Output:
-
-```
+``` title="Output:"
 Eric likes the following places:
 - Bear Mountain
 - Death Valley
@@ -438,9 +422,7 @@ for name, numbers in favorite_numbers.items():
         print(f"  {number}")
 ```
 
-Output:
-
-```
+``` title="Output:"
 Mandy likes the following numbers:
   42
   17
@@ -488,9 +470,7 @@ for city, city_info in cities.items():
     print(f"  The {mountains} mounats are nearby.")
 ```
 
-Output:
-
-```
+``` title="Output:"
 Santiago is in Chile.
   It has a population of about 6310000.
   The Andes mounats are nearby.

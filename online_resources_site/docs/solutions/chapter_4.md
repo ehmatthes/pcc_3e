@@ -33,9 +33,7 @@ for pizza in favorite_pizzas:
 print("\nI really love pizza!")
 ```
 
-Output:
-
-```
+``` title="Output:"
 pepperoni
 hawaiian
 veggie
@@ -69,9 +67,7 @@ for animal in animals:
 print("\nAll of these animals have long tails.")
 ```
 
-Output:
-
-```
+``` title="Output:"
 spider monkey
 lemur
 giraffe
@@ -94,9 +90,7 @@ for number in numbers:
     print(number)
 ```
 
-Output:
-
-```
+``` title="Output:"
 1
 2
 3
@@ -118,9 +112,7 @@ print(max(numbers))
 print(sum(numbers))
 ```
 
-Output:
-
-```
+``` title="Output:"
 1
 1000000
 500000500000
@@ -137,9 +129,7 @@ for number in odd_numbers:
     print(number)
 ```
 
-Output:
-
-```
+``` title="Output:"
 1
 3
 5
@@ -160,9 +150,7 @@ for number in threes:
     print(number)
 ```
 
-Output:
-
-```
+``` title="Output:"
 3
 6
 9
@@ -186,9 +174,7 @@ for cube in cubes:
     print(cube)
 ```
 
-Output:
-
-```
+``` title="Output:"
 1
 8
 27
@@ -209,9 +195,7 @@ for cube in cubes:
     print(cube)
 ```
 
-Output:
-
-```
+``` title="Output:"
 1
 8
 27
@@ -245,9 +229,7 @@ for pizza in friend_pizzas:
     print(f"- {pizza}")
 ```
 
-Output:
-
-```
+``` title="Output:"
 My favorite pizzas are:
 - pepperoni
 - hawaiian
@@ -281,9 +263,7 @@ for food in friend_foods:
     print(f"- {food}")
 ```
 
-Output:
-
-```
+``` title="Output:"
 My favorite foods are:
 - pizza
 - falafel
@@ -326,9 +306,7 @@ for item in menu_items:
     print(f"- {item}")
 ```
 
-Output:
-
-```
+``` title="Output:"
 You can choose from the following menu items:
 - rockfish sandwich
 - halibut nuggets

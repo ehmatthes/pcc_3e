@@ -19,9 +19,7 @@ msg = "I love learning to use Python."
 print(msg)
 ```
 
-Output:
-
-```
+``` title="Output:"
 I love learning to use Python.
 ```
 
@@ -37,9 +35,7 @@ msg = "It's really satisfying!"
 print(msg)
 ```
 
-Output:
-
-```
+``` title="Output:"
 I love learning to use Python.
 It's really satisfying!
 ```
@@ -55,9 +51,7 @@ msg = f"Hello {name.title()}, would you like to learn some Python today?"
 print(msg)
 ```
 
-Output:
-
-```
+``` title="Output:"
 Hello Eric, would you like to learn some Python today?
 ```
 
@@ -73,9 +67,7 @@ print(name.upper())
 print(name.title())
 ```
 
-Output:
-
-```
+``` title="Output:"
 eric
 ERIC
 Eric
@@ -92,9 +84,7 @@ print('Albert Einstein once said, "A person who never made a mistake')
 print('never tried anything new."')
 ```
 
-Output:
-
-```
+``` title="Output:"
 Albert Einstein once said, "A person who never made a mistake
 never tried anything new."
 ```
@@ -111,9 +101,7 @@ message = f'{famous_person} once said, "A person who never made a mistake never 
 print(message)
 ```
 
-Output:
-
-```
+``` title="Output:"
 Albert Einstein once said, "A person who never made a mistake never tried anything new."
 ```
 
@@ -152,9 +140,7 @@ print("\nUsing strip():")
 print(name.strip())
 ```
 
-Output:
-
-```
+``` title="Output:"
 Unmodified:
     Eric Matthes
 
@@ -181,9 +167,7 @@ simple_filename = filename.removesuffix('.txt')
 print(simple_filename)
 ```
 
-Output:
-
-```
+``` title="Output:"
 python_notes
 ```
 
@@ -198,8 +182,6 @@ msg = f"My favorite number is {fav_num}."
 print(msg)
 ```
 
-Output:
-
-```
+``` title="Output:"
 My favorite number is 42.
 ```

@@ -23,9 +23,7 @@ def display_message():
 display_message()
 ```
 
-Output:
-
-```
+``` title="Output:"
 I'm learning to store code in functions.
 ```
 
@@ -41,9 +39,7 @@ def favorite_book(title):
 favorite_book('The Abstract Wild')
 ```
 
-Output:
-
-```
+``` title="Output:"
 The Abstract Wild is one of my favorite books.
 ```
 
@@ -63,9 +59,7 @@ make_shirt('large', 'I love Python!')
 make_shirt(message="Readability counts.", size='medium')
 ```
 
-Output:
-
-```
+``` title="Output:"
 I'm going to make a large t-shirt.
 It will say, "I love Python!"
 
@@ -88,9 +82,7 @@ make_shirt(size='medium')
 make_shirt('small', 'Programmers are loopy.')
 ```
 
-Output:
-
-```
+``` title="Output:"
 I'm going to make a large t-shirt.
 It will say, "I love Python!"
 
@@ -116,9 +108,7 @@ describe_city('reykjavik', 'iceland')
 describe_city('punta arenas')
 ```
 
-Output:
-
-```
+``` title="Output:"
 Santiago is in Chile.
 Reykjavik is in Iceland.
 Punta Arenas is in Chile.
@@ -147,9 +137,7 @@ city = city_country('longyearbyen', 'svalbard')
 print(city)
 ```
 
-Output:
-
-```
+``` title="Output:"
 Santiago, Chile
 Ushuaia, Argentina
 Longyearbyen, Svalbard
@@ -182,9 +170,7 @@ album = make_album('willie nelson', 'red-headed stranger')
 print(album)
 ```
 
-Output:
-
-```
+``` title="Output:"
 {'artist': 'Metallica', 'title': 'Ride The Lightning'}
 {'artist': 'Beethoven', 'title': 'Ninth Symphony'}
 {'artist': 'Willie Nelson', 'title': 'Red-Headed Stranger'}
@@ -216,9 +202,7 @@ album = make_album('iron maiden', 'piece of mind', num_songs=8)
 print(album)
 ```
 
-Output:
-
-```
+``` title="Output:"
 {'artist': 'Metallica', 'title': 'Ride The Lightning'}
 {'artist': 'Beethoven', 'title': 'Ninth Symphony'}
 {'artist': 'Willie Nelson', 'title': 'Red-Headed Stranger'}
@@ -262,9 +246,7 @@ while True:
 print("\nThanks for responding!")
 ```
 
-Output:
-
-```
+``` title="Output:"
 Enter 'quit' at any time to stop.
 
 What album are you thinking of? number of the beast
@@ -298,9 +280,7 @@ messages = ["hello there", "how are u?", ":)"]
 show_messages(messages)
 ```
 
-Output:
-
-```
+``` title="Output:"
 hello there
 how are u?
 :)
@@ -336,8 +316,7 @@ print(messages)
 print(sent_messages)
 ```
 
-Output:
-```
+``` title="Output:"
 Showing all messages:
 hello there
 how are u?
@@ -383,8 +362,7 @@ print(messages)
 print(sent_messages)
 ```
 
-Output:
-```
+``` title="Output:"
 Showing all messages:
 hello there
 how are u?
@@ -417,9 +395,7 @@ make_sandwich('turkey', 'apple slices', 'honey mustard')
 make_sandwich('peanut butter', 'strawberry jam')
 ```
 
-Output:
-
-```
+``` title="Output:"
 I'll make you a great sandwich:
   ...adding roast beef to your sandwich.
   ...adding cheddar cheese to your sandwich.
@@ -470,9 +446,7 @@ my_old_accord = make_car('honda', 'accord', year=1991, color='white',
 print(my_old_accord)
 ```
 
-Output:
-
-```
+``` title="Output:"
 {'manufacturer': 'Subaru', 'model': 'Outback', 'color': 'blue', 'tow_package': True}
 {'manufacturer': 'Honda', 'model': 'Accord', 'year': 1991, 'color': 'white', 'headlights': 'popup'}
 ```
@@ -518,9 +492,7 @@ pf.print_models(unprinted_designs, completed_models)
 pf.show_completed_models(completed_models)
 ```
 
-Output:
-
-```
+``` title="Output:"
 Printing model: dodecahedron
 Printing model: robot pendant
 Printing model: iphone case

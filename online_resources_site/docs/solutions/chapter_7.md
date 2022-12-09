@@ -22,9 +22,7 @@ car = input("What kind of car would you like? ")
 print(f"Let me see if I can find you a {car.title()}.")
 ```
 
-Output:
-
-```
+``` title="Output:"
 What kind of car would you like? Toyota Tacoma
 Let me see if I can find you a Toyota Tacoma.
 ```
@@ -43,9 +41,7 @@ else:
     print("Your table is ready.")
 ```
 
-Output:
-
-```
+``` title="Output:"
 How many people are in your dinner party tonight? 12
 I'm sorry, you'll have to wait for a table.
 ```
@@ -71,9 +67,7 @@ else:
     print(f"{number} is not a multiple of 10.")
 ```
 
-Output:
-
-```
+``` title="Output:"
 Give me a number, please: 23
 23 is not a multiple of 10.
 ```
@@ -101,9 +95,7 @@ while True:
         break
 ```
 
-Output:
-
-```
+``` title="Output:"
 What topping would you like on your pizza?
 Enter 'quit' when you are finished: pepperoni
   I'll add pepperoni to your pizza.
@@ -142,9 +134,7 @@ while True:
         print("  Your ticket is $15.")
 ```
 
-Output:
-
-```
+``` title="Output:"
 How old are you?
 Enter 'quit' when you are finished. 2
   You get in free!
@@ -183,9 +173,7 @@ for sandwich in finished_sandwiches:
     print(f"I made a {sandwich} sandwich.")
 ```
 
-Output:
-
-```
+``` title="Output:"
 I'm working on your roast beef sandwich.
 I'm working on your turkey sandwich.
 I'm working on your grilled cheese sandwich.
@@ -222,9 +210,7 @@ for sandwich in finished_sandwiches:
     print(f"I made a {sandwich} sandwich.")
 ```
 
-Output:
-
-```
+``` title="Output:"
 I'm sorry, we're all out of pastrami today.
 
 I'm working on your roast beef sandwich.
@@ -269,9 +255,7 @@ for name, place in responses.items():
     print(f"{name.title()} would like to visit {place.title()}.")
 ```
 
-Output:
-
-```
+``` title="Output:"
 What's your name? eric
 If you could visit one place in the world, where would it be? china
 

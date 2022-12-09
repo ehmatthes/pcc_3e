@@ -22,9 +22,7 @@ print(names[1])
 print(names[2])
 ```
 
-Output:
-
-```
+``` title="Output:"
 ron
 tyler
 dani
@@ -47,9 +45,7 @@ msg = f"Hello, {names[2].title()}!"
 print(msg)
 ```
 
-Output:
-
-```
+``` title="Output:"
 Hello, Ron!
 Hello, Tyler!
 Hello, Dani!
@@ -72,9 +68,7 @@ name = guests[2].title()
 print(f"{name}, please come to dinner.")
 ```
 
-Output:
-
-```
+``` title="Output:"
 Guido Van Rossum, please come to dinner.
 Jack Turner, please come to dinner.
 Lynn Hill, please come to dinner.
@@ -119,9 +113,7 @@ name = guests[2].title()
 print(f"{name}, please come to dinner.")
 ```
 
-Output:
-
-```
+``` title="Output:"
 Guido Van Rossum, please come to dinner.
 Jack Turner, please come to dinner.
 Lynn Hill, please come to dinner.
@@ -198,9 +190,7 @@ name = guests[5].title()
 print(f"{name}, please come to dinner.")
 ```
 
-Output:
-
-```
+``` title="Output:"
 Guido Van Rossum, please come to dinner.
 Jack Turner, please come to dinner.
 Lynn Hill, please come to dinner.
@@ -313,9 +303,7 @@ del(guests[0])
 print(guests)
 ```
 
-Output:
-
-```
+``` title="Output:"
 Guido Van Rossum, please come to dinner.
 Jack Turner, please come to dinner.
 Lynn Hill, please come to dinner.
@@ -394,9 +382,7 @@ locations.sort(reverse=True)
 print(locations)
 ```
 
-Output:
-
-```
+``` title="Output:"
 Original order:
 ['himalaya', 'andes', 'tierra del fuego', 'labrador', 'guam']
 

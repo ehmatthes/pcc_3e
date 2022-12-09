@@ -43,9 +43,7 @@ restaurant.describe_restaurant()
 restaurant.open_restaurant()
 ```
 
-Output:
-
-```
+``` title="Output:"
 The Mean Queen
 pizza
 
@@ -87,9 +85,7 @@ mango_thai = Restaurant('mango thai', 'thai food')
 mango_thai.describe_restaurant()
 ```
 
-Output:
-
-```
+``` title="Output:"
 The Mean Queen serves wonderful pizza.
 
 Ludvig'S Bistro serves wonderful seafood.
@@ -135,9 +131,7 @@ willie.describe_user()
 willie.greet_user()
 ```
 
-Output:
-
-```
+``` title="Output:"
 Eric Matthes
   Username: e_matthes
   Email: e_matthes@example.com
@@ -204,9 +198,7 @@ restaurant.increment_number_served(250)
 print(f"Number served: {restaurant.number_served}")
 ```
 
-Output:
-
-```
+``` title="Output:"
 The Mean Queen serves wonderful pizza.
 
 Number served: 0
@@ -268,9 +260,7 @@ eric.reset_login_attempts()
 print(f"  Login attempts: {eric.login_attempts}")
 ```
 
-Output:
-
-```
+``` title="Output:"
 Eric Matthes
   Username: e_matthes
   Email: e_matthes@example.com
@@ -339,9 +329,7 @@ big_one.describe_restaurant()
 big_one.show_flavors()
 ```
 
-Output:
-
-```
+``` title="Output:"
 The Big One serves wonderful ice cream.
 
 We have the following flavors available:
@@ -414,9 +402,7 @@ eric.privileges = [
 eric.show_privileges()
 ```
 
-Output:
-
-```
+``` title="Output:"
 Eric Matthes
   Username: e_matthes
   Email: e_matthes@example.com
@@ -506,9 +492,7 @@ eric.privileges.privileges = eric_privileges
 eric.privileges.show_privileges()
 ```
 
-Output:
-
-```
+``` title="Output:"
 Eric Matthes
   Username: e_matthes
   Email: e_matthes@example.com
@@ -610,9 +594,7 @@ my_leaf.battery.upgrade_battery()
 my_leaf.battery.get_range()
 ```
 
-Output:
-
-```
+``` title="Output:"
 Make an electric car, and check the range:
 This car can go about 150 miles on a full charge.
 
@@ -664,9 +646,7 @@ channel_club.describe_restaurant()
 channel_club.open_restaurant()
 ```
 
-Output:
-
-```
+``` title="Output:"
 The Channel Club serves wonderful steak and seafood.
 
 The Channel Club is open. Come on in!
@@ -754,9 +734,7 @@ print(f"\nThe admin {eric.username} has these privileges: ")
 eric.privileges.show_privileges()
 ```
 
-Output:
-
-```
+``` title="Output:"
 Eric Matthes
   Username: e_matthes
   Email: e_matthes@example.com
@@ -855,9 +833,7 @@ print(f"\nThe admin {eric.username} has these privileges: ")
 eric.privileges.show_privileges()
 ```
 
-Output:
-
-```
+``` title="Output:"
 Eric Matthes
   Username: e_matthes
   Email: e_matthes@example.com
@@ -920,9 +896,7 @@ print("\n10 rolls of a 20-sided die:")
 print(results)
 ```
 
-Output:
-
-```
+``` title="Output:"
 10 rolls of a 6-sided die:
 [6, 1, 2, 1, 6, 6, 2, 5, 3, 4]
 
@@ -959,8 +933,7 @@ while len(winning_ticket) < 4:
 print(f"\nThe final winning ticket is: {winning_ticket}")
 ```
 
-Output:
-```
+``` title="Output:"
 Let's see what the winning ticket is...
   We pulled a 2!
   We pulled a 3!
@@ -1045,8 +1018,7 @@ else:
     print(f"Winning ticket: {winning_ticket}")
 ```
 
-Output:
-```
+``` title="Output:"
 We have a winning ticket!
 Your ticket: [1, 4, 'a', 9]
 Winning ticket: [1, 9, 'a', 4]

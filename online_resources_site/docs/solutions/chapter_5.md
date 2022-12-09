@@ -27,9 +27,7 @@ if alien_color == 'green':
     print("You just earned 5 points!")
 ```
 
-Output:
-
-```
+``` title="Output:"
 You just earned 5 points!
 ```
 
@@ -63,9 +61,7 @@ else:
     print("You just earned 10 points!")
 ```
 
-Output:
-
-```
+``` title="Output:"
 You just earned 5 points!
 ```
 
@@ -80,9 +76,7 @@ else:
     print("You just earned 10 points!")
 ```
 
-Output:
-
-```
+``` title="Output:"
 You just earned 10 points!
 ```
 
@@ -140,9 +134,7 @@ else:
     print("You're an elder!")
 ```
 
-Output:
-
-```
+``` title="Output:"
 You're a teenager!
 ```
 
@@ -168,9 +160,7 @@ if 'peaches' in favorite_fruits:
     print("You really like peaches!")
 ```
 
-Output:
-
-```
+``` title="Output:"
 You really like blueberries!
 You really like peaches!
 ```
@@ -192,9 +182,7 @@ for username in usernames:
         print(f"Hello {username}, thank you for loggin in again!")
 ```
 
-Output:
-
-```
+``` title="Output:"
 Hello eric, thank you for logging in again!
 Hello willie, thank you for logging in again!
 Hello admin, would you like to see a status report?
@@ -222,9 +210,7 @@ else:
     print("We need to find some users!")
 ```
 
-Output:
-
-```
+``` title="Output:"
 We need to find some users!
 ```
 
@@ -250,9 +236,7 @@ for new_user in new_users:
         print(f"Great, {new_user} is still available.")
 ```
 
-Output:
-
-```
+``` title="Output:"
 Great, sarah is still available.
 Sorry Willie, that name is taken.
 Great, PHIL is still available.
@@ -291,9 +275,7 @@ for number in numbers:
         print(f"{number}th")
 ```
 
-Output:
-
-```
+``` title="Output:"
 1st
 2nd
 3rd
