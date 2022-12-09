@@ -6,8 +6,6 @@ title: "Solutions: Chapter 3"
 
 # Solutions - Chapter 3
 
-Back to [solutions](index.md).
-
 ---
 
 ## 3-1: Names

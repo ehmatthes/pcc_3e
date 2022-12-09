@@ -6,8 +6,6 @@ title: "Solutions: Chapter 9"
 
 # Solutions - Chapter 9
 
-Back to [solutions](index.md).
-
 ---
 
 ## 9-1: Restaurant

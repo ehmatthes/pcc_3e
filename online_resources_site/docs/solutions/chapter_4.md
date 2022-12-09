@@ -6,8 +6,6 @@ title: "Solutions: Chapter 4"
 
 # Solutions - Chapter 4
 
-Back to [solutions](index.md).
-
 ---
 
 ## 4-1: Pizzas

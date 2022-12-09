@@ -6,8 +6,6 @@ title: "Solutions: Chapter 2"
 
 # Solutions - Chapter 2
 
-Back to [solutions](index.md).
-
 ---
 
 ## 2-1: Simple Message

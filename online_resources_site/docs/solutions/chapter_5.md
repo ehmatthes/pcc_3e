@@ -6,8 +6,6 @@ title: "Solutions: Chapter 5"
 
 # Solutions - Chapter 5
 
-Back to [solutions](index.md).
-
 ---
 
 ## 5-3: Alien Colors #1

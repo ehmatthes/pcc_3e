@@ -6,8 +6,6 @@ title: "Solutions: Chapter 6"
 
 # Solutions - Chapter 6
 
-Back to [solutions](index.md).
-
 ---
 
 ## 6-1: Person
