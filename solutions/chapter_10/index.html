@@ -1,0 +1,1378 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../images/pcc_snake_favicon-48px.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.0">
+    
+    
+      
+        <title>Solutions: Chapter 10 - Python Crash Course, Third Edition</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2e8b5541.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#solutions-chapter-10" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Python Crash Course, Third Edition" class="md-header__button md-logo" aria-label="Python Crash Course, Third Edition" data-md-component="logo">
+      
+  <img src="../../images/pcc_snake_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Crash Course, Third Edition
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Solutions: Chapter 10
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Python Crash Course, Third Edition" class="md-nav__button md-logo" aria-label="Python Crash Course, Third Edition" data-md-component="logo">
+      
+  <img src="../../images/pcc_snake_logo.png" alt="logo">
+
+    </a>
+    Python Crash Course, Third Edition
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../new_in_3e/" class="md-nav__link">
+        What's new?
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../setup_instructions/">Setup Instructions</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Setup Instructions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Setup Instructions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup_instructions/configuring_vs_code/" class="md-nav__link">
+        Configuring VS Code
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Solutions</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Solutions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Solutions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_2/" class="md-nav__link">
+        Chapter 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_3/" class="md-nav__link">
+        Chapter 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_4/" class="md-nav__link">
+        Chapter 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_5/" class="md-nav__link">
+        Chapter 5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_6/" class="md-nav__link">
+        Chapter 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_7/" class="md-nav__link">
+        Chapter 7
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_8/" class="md-nav__link">
+        Chapter 8
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_9/" class="md-nav__link">
+        Chapter 9
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Chapter 10
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Chapter 10
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#10-1-learning-python" class="md-nav__link">
+    10-1: Learning Python
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-2-learning-c" class="md-nav__link">
+    10-2: Learning C
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-3-simpler-code" class="md-nav__link">
+    10-3: Simpler Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-4-guest" class="md-nav__link">
+    10-4: Guest
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-5-guest-book" class="md-nav__link">
+    10-5: Guest Book
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-6-addition" class="md-nav__link">
+    10-6: Addition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-7-addition-calculator" class="md-nav__link">
+    10-7: Addition Calculator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-8-cats-and-dogs" class="md-nav__link">
+    10-8: Cats and Dogs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-9-silent-cats-and-dogs" class="md-nav__link">
+    10-9: Silent Cats and Dogs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-10-common-words" class="md-nav__link">
+    10-10: Common Words
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-11-favorite-number" class="md-nav__link">
+    10-11: Favorite Number
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-12-favorite-number-remembered" class="md-nav__link">
+    10-12: Favorite Number Remembered
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-13-user-dictionary" class="md-nav__link">
+    10-13: User Dictionary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-14-verify-user" class="md-nav__link">
+    10-14: Verify User
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#10-1-learning-python" class="md-nav__link">
+    10-1: Learning Python
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-2-learning-c" class="md-nav__link">
+    10-2: Learning C
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-3-simpler-code" class="md-nav__link">
+    10-3: Simpler Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-4-guest" class="md-nav__link">
+    10-4: Guest
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-5-guest-book" class="md-nav__link">
+    10-5: Guest Book
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-6-addition" class="md-nav__link">
+    10-6: Addition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-7-addition-calculator" class="md-nav__link">
+    10-7: Addition Calculator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-8-cats-and-dogs" class="md-nav__link">
+    10-8: Cats and Dogs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-9-silent-cats-and-dogs" class="md-nav__link">
+    10-9: Silent Cats and Dogs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-10-common-words" class="md-nav__link">
+    10-10: Common Words
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-11-favorite-number" class="md-nav__link">
+    10-11: Favorite Number
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-12-favorite-number-remembered" class="md-nav__link">
+    10-12: Favorite Number Remembered
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-13-user-dictionary" class="md-nav__link">
+    10-13: User Dictionary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-14-verify-user" class="md-nav__link">
+    10-14: Verify User
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="solutions-chapter-10">Solutions - Chapter 10</h1>
+<hr />
+<h2 id="10-1-learning-python">10-1: Learning Python</h2>
+<p>Open a blank file in your text editor and write a few lines summarizing what you've learned about Python so far. Start each line with the phrase <em>In Python you can...</em> Save the file as <em>learning_python.txt</em> in the same directory as your exercises from this chapter. Write a program that reads the file and prints what you wrote two times: print the contents once by reading in the entire file, and once by storing the lines in a list and then looping over each line.</p>
+<div class="highlight"><span class="filename">learning_python.txt</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>In Python you can store as much information as you want.
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>In Python you can connect pieces of information.
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>In Python you can model real-world situations.
+</code></pre></div>
+<div class="highlight"><span class="filename">learning_python.py</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- Reading in the entire file:&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;learning_python.txt&#39;</span><span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">contents</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Looping over the lines:&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">lines</span> <span class="o">=</span> <span class="n">contents</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Output:</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>--- Reading in the entire file:
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>In Python you can store as much information as you want.
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>In Python you can connect pieces of information.
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>In Python you can model real-world situations.
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>--- Looping over the lines:
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>In Python you can store as much information as you want.
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>In Python you can connect pieces of information.
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>In Python you can model real-world situations.
+</code></pre></div>
+<h2 id="10-2-learning-c">10-2: Learning C</h2>
+<p>You can use the <code>replace()</code> method to replace any word in a string with a different word. Here's a quick example showing how to replace <code>'dog'</code> with <code>'cat'</code> in a sentence:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I really like dogs.&quot;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">message</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="s1">&#39;I really like cats.&#39;</span>
+</code></pre></div>
+<p>Read in each line from the file you just created, <em>learning_python.txt</em>, and replace the word <em>Python</em> with the name of another language, such as <em>C</em>. Print each modified line to the screen.</p>
+<div class="highlight"><span class="filename">learning_c.py</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;learning_python.txt&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">contents</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">lines</span> <span class="o">=</span> <span class="n">contents</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Output:</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>In C you can store as much information as you want.
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>In C you can connect pieces of information.
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>In C you can model real-world situations.
+</code></pre></div>
+<h2 id="10-3-simpler-code">10-3: Simpler Code</h2>
+<p>The program <em>file_reader.py</em> in this section uses a temporary variable, <code>lines</code>, to show how <code>splitlines()</code> works. You can skip the temporary variable and loop directly over the list that <code>splitlines()</code> returns:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>for line in contents.splitlines():
+</code></pre></div>
+<p>Remove the temporary variable from each of the programs in this section, to make them more concise.</p>
+<div class="highlight"><span class="filename">simpler_code_file_reader.py</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;pi_digits.txt&#39;</span><span class="p">)</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">contents</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">contents</span><span class="o">.</span><span class="n">splitlines</span><span class="p">():</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>  <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Output:</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>3.1415926535
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>  8979323846
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>  2643383279
+</code></pre></div>
+<div class="highlight"><span class="filename">simpler_code_pi_string.py</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;pi_million_digits.txt&#39;</span><span class="p">)</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">contents</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="n">pi_string</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">contents</span><span class="o">.</span><span class="n">splitlines</span><span class="p">():</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    <span class="n">pi_string</span> <span class="o">+=</span> <span class="n">line</span><span class="o">.</span><span class="n">lstrip</span><span class="p">()</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">pi_string</span><span class="p">[:</span><span class="mi">52</span><span class="p">]</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pi_string</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Output:</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>3.14159265358979323846264338327950288419716939937510...
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>1000002
+</code></pre></div>
+<div class="highlight"><span class="filename">simpler_code_pi_birthday.py</span><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;pi_million_digits.txt&#39;</span><span class="p">)</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="n">contents</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="n">pi_string</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">contents</span><span class="o">.</span><span class="n">splitlines</span><span class="p">():</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>    <span class="n">pi_string</span> <span class="o">+=</span> <span class="n">line</span><span class="o">.</span><span class="n">lstrip</span><span class="p">()</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="n">birthday</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your birthday, in the form mmddyy: &quot;</span><span class="p">)</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="k">if</span> <span class="n">birthday</span> <span class="ow">in</span> <span class="n">pi_string</span><span class="p">:</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your birthday appears in the first million digits of pi!&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your birthday does not appear in the first million digits of pi.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Output:</span><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Enter your birthday, in the form mmddyy: 040122
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>Your birthday appears in the first million digits of pi!
+</code></pre></div>
+<h2 id="10-4-guest">10-4: Guest</h2>
+<p>Write a program that prompts the user for their name. When they respond, write their name to a file called <em>guest.txt</em>.</p>
+<div class="highlight"><span class="filename">guest.py</span><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;guest.txt&#39;</span><span class="p">)</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What&#39;s your name? &quot;</span><span class="p">)</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="n">path</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Output:</span><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>What&#39;s your name? eric
+</code></pre></div>
+<div class="highlight"><span class="filename">guest.txt</span><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>eric
+</code></pre></div>
+<h2 id="10-5-guest-book">10-5: Guest Book</h2>
+<p>Write a <code>while</code> loop that prompts users for their name. Collect all the names that are entered, and then write these names to a file called <em>guest_book.txt</em>. Make sure each entry appears on a new line in the file.</p>
+<div class="highlight"><span class="filename">guest_book.py</span><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;guest_book.txt&#39;</span><span class="p">)</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="n">prompt</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hi, what&#39;s your name? &quot;</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="n">prompt</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Enter &#39;quit&#39; if you&#39;re the last guest. &quot;</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="n">guest_names</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>    <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>    <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;quit&#39;</span><span class="p">:</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>        <span class="k">break</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Thanks </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, we&#39;ll add you to the guest book.&quot;</span><span class="p">)</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>    <span class="n">guest_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>
+<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="c1"># Build a string where &quot;\n&quot; is added after each name.</span>
+<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a><span class="n">file_string</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">guest_names</span><span class="p">:</span>
+<a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a>    <span class="n">file_string</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+<a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a>
+<a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a><span class="n">path</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">file_string</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Output:</span><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Hi, what&#39;s your name? 
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>Enter &#39;quit&#39; if you&#39;re the last guest. eric
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>Thanks eric, we&#39;ll add you to the guest book.
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>Hi, what&#39;s your name? 
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>Enter &#39;quit&#39; if you&#39;re the last guest. erin
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>Thanks erin, we&#39;ll add you to the guest book.
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>Hi, what&#39;s your name? 
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>Enter &#39;quit&#39; if you&#39;re the last guest. ever
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>Thanks ever, we&#39;ll add you to the guest book.
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>Hi, what&#39;s your name? 
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>Enter &#39;quit&#39; if you&#39;re the last guest. willie
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>Thanks willie, we&#39;ll add you to the guest book.
+<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>
+<a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>Hi, what&#39;s your name? 
+<a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>Enter &#39;quit&#39; if you&#39;re the last guest. quit
+</code></pre></div>
+<div class="highlight"><span class="filename">guest_book.txt</span><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>eric
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>erin
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>ever
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>willie
+</code></pre></div>
+<h2 id="10-6-addition">10-6: Addition</h2>
+<p>One common problem when prompting for numerical input occurs when people provide text instead of numbers. When you try to convert the input to an <code>int</code>, you'll get a <code>ValueError</code>. Write a program that prompts for two numbers. Add them together and print the result. Catch the <code>ValueError</code> if either input value is not a number, and print a friendly error message. Test your program by entering two numbers and then by entering some text instead of a number.</p>
+<div class="highlight"><span class="filename">addition.py</span><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>    <span class="n">x</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Give me a number: &quot;</span><span class="p">)</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>    <span class="n">y</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Give me another number: &quot;</span><span class="p">)</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>    <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sorry, I really needed a number.&quot;</span><span class="p">)</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>    <span class="nb">sum</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The sum of </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="nb">sum</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Output with two integers:</span><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Give me a number: 23
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>Give me another number: 47
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>The sum of 23 and 47 is 70.
+</code></pre></div>
+<div class="highlight"><span class="filename">Output with non-numerical input:</span><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>Give me a number: 23
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>Give me another number: fred
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>Sorry, I really needed a number.
+</code></pre></div>
+<h2 id="10-7-addition-calculator">10-7: Addition Calculator</h2>
+<p>Wrap your code from Exercise 10-6 in a <code>while</code> loop so the user can continue entering numbers even if they make a mistake and enter text instead of a number.</p>
+<div class="highlight"><span class="filename">addition_calculator.py</span><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enter &#39;q&#39; at any time to quit.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>    <span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>        <span class="n">x</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Give me a number: &quot;</span><span class="p">)</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>        <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="s1">&#39;q&#39;</span><span class="p">:</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>            <span class="k">break</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>        <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>        <span class="n">y</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Give me another number: &quot;</span><span class="p">)</span>
+<a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>        <span class="k">if</span> <span class="n">y</span> <span class="o">==</span> <span class="s1">&#39;q&#39;</span><span class="p">:</span>
+<a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>            <span class="k">break</span>
+<a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a>
+<a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a>        <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a>
+<a id="__codelineno-22-17" name="__codelineno-22-17" href="#__codelineno-22-17"></a>    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+<a id="__codelineno-22-18" name="__codelineno-22-18" href="#__codelineno-22-18"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sorry, I really needed a number.&quot;</span><span class="p">)</span>
+<a id="__codelineno-22-19" name="__codelineno-22-19" href="#__codelineno-22-19"></a>
+<a id="__codelineno-22-20" name="__codelineno-22-20" href="#__codelineno-22-20"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-22-21" name="__codelineno-22-21" href="#__codelineno-22-21"></a>        <span class="nb">sum</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<a id="__codelineno-22-22" name="__codelineno-22-22" href="#__codelineno-22-22"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The sum of </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="nb">sum</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Output:</span><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Enter &#39;q&#39; at any time to quit.
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>Give me a number: 23
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>Give me another number: 47
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>The sum of 23 and 47 is 70.
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>Give me a number: three
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>Sorry, I really needed a number.
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>Give me a number: 3
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a>Give me another number: five
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a>Sorry, I really needed a number.
+<a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a>
+<a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a>Give me a number: -12
+<a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a>Give me another number: 20
+<a id="__codelineno-23-16" name="__codelineno-23-16" href="#__codelineno-23-16"></a>The sum of -12 and 20 is 8.
+<a id="__codelineno-23-17" name="__codelineno-23-17" href="#__codelineno-23-17"></a>
+<a id="__codelineno-23-18" name="__codelineno-23-18" href="#__codelineno-23-18"></a>Give me a number: q
+</code></pre></div>
+<h2 id="10-8-cats-and-dogs">10-8: Cats and Dogs</h2>
+<p>Make two files, <code>cats.txt</code> and <code>dogs.txt</code>. Store at least three names of cats in the first file and three names of dogs in the second file. Write a program that tries to read these files and print the contents of the file to the screen. Wrap your code in a <code>try-except</code> block to catch the <code>FileNotFound</code> error, and print a friendly message if a file is missing. Move one of the files to a different location on your system, and make sure the code in the <code>except</code> block executes properly.</p>
+<div class="highlight"><span class="filename">cats.txt</span><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>henry
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>clarence
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>mildred
+</code></pre></div>
+<div class="highlight"><span class="filename">dogs.txt</span><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>willie
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>annahootz
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>summit
+</code></pre></div>
+<div class="highlight"><span class="filename">cats_and_dogs.py</span><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="n">filenames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cats.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;dogs.txt&#39;</span><span class="p">]</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">:</span>
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Reading file: </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>    <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>    <span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a>        <span class="n">contents</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+<a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a>    <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+<a id="__codelineno-26-12" name="__codelineno-26-12" href="#__codelineno-26-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Sorry, I can&#39;t find that file.&quot;</span><span class="p">)</span>
+<a id="__codelineno-26-13" name="__codelineno-26-13" href="#__codelineno-26-13"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-26-14" name="__codelineno-26-14" href="#__codelineno-26-14"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Output with both files:</span><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>Reading file: cats.txt
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>henry
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>clarence
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>mildred
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>Reading file: dogs.txt
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>willie
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>annahootz
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>summit
+</code></pre></div>
+<div class="highlight"><span class="filename">Output after moving cats.txt:</span><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>Reading file: cats.txt
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>  Sorry, I can&#39;t find that file.
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>Reading file: dogs.txt
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>willie
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>annahootz
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>summit
+</code></pre></div>
+<h2 id="10-9-silent-cats-and-dogs">10-9: Silent Cats and Dogs</h2>
+<p>Modify your <code>except</code> block in Exercise 10-8 to fail silently if either file is missing.</p>
+<div class="highlight"><span class="filename">silent_cats_and_dogs.py</span><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="n">filenames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cats.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;dogs.txt&#39;</span><span class="p">]</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">:</span>
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>    <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>    <span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>        <span class="n">contents</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>    <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+<a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a>        <span class="k">pass</span>
+<a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Reading file: </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-29-13" name="__codelineno-29-13" href="#__codelineno-29-13"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Output when both files exist:</span><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>Reading file: cats.txt
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>henry
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>clarence
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>mildred
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>Reading file: dogs.txt
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>willie
+<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>annahootz
+<a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a>summit
+</code></pre></div>
+<div class="highlight"><span class="filename">Output when cats.txt has been moved:</span><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>Reading file: dogs.txt
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>willie
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>annahootz
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>summit
+</code></pre></div>
+<h2 id="10-10-common-words">10-10: Common Words</h2>
+<p>Visit <a href="https://gutenberg.org/">Project Gutenberg</a> and find a few texts you'd like to analyze. Download the text files for these works, or copy the raw text from your browser into a text file on your computer.</p>
+<p>You can use the <code>count()</code> method to find out how many times a word or phrase appears in a string. For example, the following code counts the number of times <code>'row'</code> appers in a string:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>&gt;&gt;&gt; line = &quot;Row, row, row your boat&quot;
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>&gt;&gt;&gt; line.count(&#39;row&#39;)
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>2
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>&gt;&gt;&gt; line.lower().count(&#39;row&#39;)
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>3 
+</code></pre></div>
+<p>Notice that converting the string to lowercase using <code>lower()</code> catches all appearances of the word you're looking for, regardless of how it's formatted.</p>
+<p>Write a program that reads the files you found at Project Gutenberg and determines how many times the word 'the' appears in each text. This will be an approximation because it will also count words such as 'then' and 'there'. Try counting 'the ', with a space in the string, and see how much lower your count is.</p>
+<div class="highlight"><span class="filename">common_words.py</span><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="k">def</span> <span class="nf">count_common_words</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">word</span><span class="p">):</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>    <span class="sd">&quot;&quot;&quot;Count how many times word appears in the text.&quot;&quot;&quot;</span>
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>    <span class="c1"># Note: This is a really simple approximation, and the number returned</span>
+<a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>    <span class="c1">#   will be higher than the actual count.</span>
+<a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a>    <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>    <span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a>        <span class="n">contents</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+<a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a>    <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+<a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a>        <span class="k">pass</span>
+<a id="__codelineno-33-12" name="__codelineno-33-12" href="#__codelineno-33-12"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-33-13" name="__codelineno-33-13" href="#__codelineno-33-13"></a>        <span class="n">word_count</span> <span class="o">=</span> <span class="n">contents</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+<a id="__codelineno-33-14" name="__codelineno-33-14" href="#__codelineno-33-14"></a>        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="n">word</span><span class="si">}</span><span class="s2">&#39; appears in </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2"> about </span><span class="si">{</span><span class="n">word_count</span><span class="si">}</span><span class="s2"> times.&quot;</span>
+<a id="__codelineno-33-15" name="__codelineno-33-15" href="#__codelineno-33-15"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<a id="__codelineno-33-16" name="__codelineno-33-16" href="#__codelineno-33-16"></a>
+<a id="__codelineno-33-17" name="__codelineno-33-17" href="#__codelineno-33-17"></a><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;alice.txt&#39;</span>
+<a id="__codelineno-33-18" name="__codelineno-33-18" href="#__codelineno-33-18"></a><span class="n">count_common_words</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;the&#39;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Output:</span><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>&#39;the&#39; appears in alice.txt about 2528 times.
+</code></pre></div>
+<p>This solution only examines one text, but the function can be applied to any number of texts.</p>
+<h2 id="10-11-favorite-number">10-11: Favorite Number</h2>
+<p>Write a program that prompts for the user's favorite number. Use <code>json.dumps()</code> to store this number in a file. Write a separate program that reads in this value and prints the message, "I know your favorite number! It's _____."</p>
+<div class="highlight"><span class="filename">favorite_number_writer.py</span><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="kn">import</span> <span class="nn">json</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a><span class="n">number</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What&#39;s your favorite number? &quot;</span><span class="p">)</span>
+<a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>
+<a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a><span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;favorite_number.json&#39;</span><span class="p">)</span>
+<a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a><span class="n">contents</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+<a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a><span class="n">path</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
+<a id="__codelineno-35-9" name="__codelineno-35-9" href="#__codelineno-35-9"></a>
+<a id="__codelineno-35-10" name="__codelineno-35-10" href="#__codelineno-35-10"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Thanks! I&#39;ll remember that number.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Output:</span><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>What&#39;s your favorite number? 42
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>Thanks! I&#39;ll remember that number.
+</code></pre></div>
+<div class="highlight"><span class="filename">favorite_number_reader.py</span><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="kn">import</span> <span class="nn">json</span>
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>
+<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a><span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;favorite_number.json&#39;</span><span class="p">)</span>
+<a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a><span class="n">contents</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+<a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a><span class="n">number</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
+<a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a>
+<a id="__codelineno-37-8" name="__codelineno-37-8" href="#__codelineno-37-8"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;I know your favorite number! It&#39;s </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Output:</span><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>I know your favorite number! It&#39;s 42.
+</code></pre></div>
+<h2 id="10-12-favorite-number-remembered">10-12: Favorite Number Remembered</h2>
+<p>Combine the two programs from Exercise 10-11 into one file. If the number is already stored, report the favorite number to the user. If not, prompt for the user's favorite number and store it in a file. Run the program twice to see that it works.</p>
+<div class="highlight"><span class="filename">favorite_number_remembered.py</span><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="kn">import</span> <span class="nn">json</span>
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a><span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;favorite_number.json&#39;</span><span class="p">)</span>
+<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a><span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a>    <span class="n">contents</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+<a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a><span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+<a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a>    <span class="n">number</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What&#39;s your favorite number? &quot;</span><span class="p">)</span>
+<a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a>    <span class="n">contents</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+<a id="__codelineno-39-10" name="__codelineno-39-10" href="#__codelineno-39-10"></a>    <span class="n">path</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
+<a id="__codelineno-39-11" name="__codelineno-39-11" href="#__codelineno-39-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Thanks, I&#39;ll remember that.&quot;</span><span class="p">)</span>
+<a id="__codelineno-39-12" name="__codelineno-39-12" href="#__codelineno-39-12"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-39-13" name="__codelineno-39-13" href="#__codelineno-39-13"></a>    <span class="n">number</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
+<a id="__codelineno-39-14" name="__codelineno-39-14" href="#__codelineno-39-14"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;I know your favorite number! It&#39;s </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Output, first run:</span><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>What&#39;s your favorite number? 42
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>Thanks, I&#39;ll remember that.
+</code></pre></div>
+<div class="highlight"><span class="filename">Output, second run:</span><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>I know your favorite number! It&#39;s 42.
+</code></pre></div>
+<h2 id="10-13-user-dictionary">10-13: User Dictionary</h2>
+<p>The <em>remember_me.py</em> example only stores one piece of information, the username. Expand this example by asking for two more pieces of information about the user, then store all the information you collect in a dictionary. Write this dictionary to a file using <code>json.dumps()</code>, and read it back in using <code>json.loads()</code>. Print a summary showing exactly what your program remembers about the user.</p>
+<div class="highlight"><span class="filename">user_dictionary.py</span><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="kn">import</span> <span class="nn">json</span>
+<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>
+<a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a><span class="k">def</span> <span class="nf">get_stored_user_info</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+<a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>    <span class="sd">&quot;&quot;&quot;Get stored user info if available.&quot;&quot;&quot;</span>
+<a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>    <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+<a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a>        <span class="n">contents</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+<a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a>        <span class="n">user_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
+<a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a>        <span class="k">return</span> <span class="n">user_dict</span>
+<a id="__codelineno-42-10" name="__codelineno-42-10" href="#__codelineno-42-10"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-42-11" name="__codelineno-42-11" href="#__codelineno-42-11"></a>        <span class="k">return</span> <span class="kc">None</span>
+<a id="__codelineno-42-12" name="__codelineno-42-12" href="#__codelineno-42-12"></a>
+<a id="__codelineno-42-13" name="__codelineno-42-13" href="#__codelineno-42-13"></a><span class="k">def</span> <span class="nf">get_new_user_info</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+<a id="__codelineno-42-14" name="__codelineno-42-14" href="#__codelineno-42-14"></a>    <span class="sd">&quot;&quot;&quot;Get information from a new user.&quot;&quot;&quot;</span>
+<a id="__codelineno-42-15" name="__codelineno-42-15" href="#__codelineno-42-15"></a>    <span class="n">username</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your name? &quot;</span><span class="p">)</span>
+<a id="__codelineno-42-16" name="__codelineno-42-16" href="#__codelineno-42-16"></a>    <span class="n">game</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What&#39;s your favorite game? &quot;</span><span class="p">)</span>
+<a id="__codelineno-42-17" name="__codelineno-42-17" href="#__codelineno-42-17"></a>    <span class="n">animal</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What&#39;s your favorite animal? &quot;</span><span class="p">)</span>
+<a id="__codelineno-42-18" name="__codelineno-42-18" href="#__codelineno-42-18"></a>
+<a id="__codelineno-42-19" name="__codelineno-42-19" href="#__codelineno-42-19"></a>    <span class="n">user_dict</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-42-20" name="__codelineno-42-20" href="#__codelineno-42-20"></a>        <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="n">username</span><span class="p">,</span>
+<a id="__codelineno-42-21" name="__codelineno-42-21" href="#__codelineno-42-21"></a>        <span class="s1">&#39;game&#39;</span><span class="p">:</span> <span class="n">game</span><span class="p">,</span>
+<a id="__codelineno-42-22" name="__codelineno-42-22" href="#__codelineno-42-22"></a>        <span class="s1">&#39;animal&#39;</span><span class="p">:</span> <span class="n">animal</span><span class="p">,</span>
+<a id="__codelineno-42-23" name="__codelineno-42-23" href="#__codelineno-42-23"></a>    <span class="p">}</span>
+<a id="__codelineno-42-24" name="__codelineno-42-24" href="#__codelineno-42-24"></a>
+<a id="__codelineno-42-25" name="__codelineno-42-25" href="#__codelineno-42-25"></a>    <span class="n">contents</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">user_dict</span><span class="p">)</span>
+<a id="__codelineno-42-26" name="__codelineno-42-26" href="#__codelineno-42-26"></a>    <span class="n">path</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
+<a id="__codelineno-42-27" name="__codelineno-42-27" href="#__codelineno-42-27"></a>    <span class="k">return</span> <span class="n">user_dict</span>
+<a id="__codelineno-42-28" name="__codelineno-42-28" href="#__codelineno-42-28"></a>
+<a id="__codelineno-42-29" name="__codelineno-42-29" href="#__codelineno-42-29"></a><span class="k">def</span> <span class="nf">greet_user</span><span class="p">():</span>
+<a id="__codelineno-42-30" name="__codelineno-42-30" href="#__codelineno-42-30"></a>    <span class="sd">&quot;&quot;&quot;Greet the user by name, and state what we know about them.&quot;&quot;&quot;</span>
+<a id="__codelineno-42-31" name="__codelineno-42-31" href="#__codelineno-42-31"></a>    <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;user_info.json&#39;</span><span class="p">)</span>
+<a id="__codelineno-42-32" name="__codelineno-42-32" href="#__codelineno-42-32"></a>    <span class="n">user_dict</span> <span class="o">=</span> <span class="n">get_stored_user_info</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<a id="__codelineno-42-33" name="__codelineno-42-33" href="#__codelineno-42-33"></a>    <span class="k">if</span> <span class="n">user_dict</span><span class="p">:</span>
+<a id="__codelineno-42-34" name="__codelineno-42-34" href="#__codelineno-42-34"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Welcome back, </span><span class="si">{</span><span class="n">user_dict</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+<a id="__codelineno-42-35" name="__codelineno-42-35" href="#__codelineno-42-35"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hope you&#39;ve been playing some </span><span class="si">{</span><span class="n">user_dict</span><span class="p">[</span><span class="s1">&#39;game&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">. &quot;</span><span class="p">)</span>
+<a id="__codelineno-42-36" name="__codelineno-42-36" href="#__codelineno-42-36"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Have you seen a </span><span class="si">{</span><span class="n">user_dict</span><span class="p">[</span><span class="s1">&#39;animal&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> recently?&quot;</span><span class="p">)</span>
+<a id="__codelineno-42-37" name="__codelineno-42-37" href="#__codelineno-42-37"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-42-38" name="__codelineno-42-38" href="#__codelineno-42-38"></a>        <span class="n">user_dict</span> <span class="o">=</span> <span class="n">get_new_user_info</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<a id="__codelineno-42-39" name="__codelineno-42-39" href="#__codelineno-42-39"></a>        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;We&#39;ll remember you when you return, </span><span class="si">{</span><span class="n">user_dict</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">!&quot;</span>
+<a id="__codelineno-42-40" name="__codelineno-42-40" href="#__codelineno-42-40"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<a id="__codelineno-42-41" name="__codelineno-42-41" href="#__codelineno-42-41"></a>
+<a id="__codelineno-42-42" name="__codelineno-42-42" href="#__codelineno-42-42"></a><span class="n">greet_user</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Output, first run:</span><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>What is your name? eric
+<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>What&#39;s your favorite game? chess
+<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>What&#39;s your favorite animal? mountain goat
+<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a>We&#39;ll remember you when you return, eric!
+</code></pre></div>
+<div class="highlight"><span class="filename">Output, second run:</span><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>Welcome back, eric!
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>Hope you&#39;ve been playing some chess. 
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>Have you seen a mountain goat recently?
+</code></pre></div>
+<h2 id="10-14-verify-user">10-14: Verify User</h2>
+<p>The final listing for <em>remember_me.py</em> assumes either that the user has already entered their username or that the program is running for the first time. We should modify it in case the current user is not the person who last used the program.</p>
+<p>Before printing a welcome back message in <code>greet_user()</code>, ask the user if this is the correct username. If it's not, call <code>get_new_username()</code> to get the correct username.</p>
+<div class="highlight"><span class="filename">verify_user.py</span><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="kn">import</span> <span class="nn">json</span>
+<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>
+<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a><span class="k">def</span> <span class="nf">get_stored_username</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+<a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a>    <span class="sd">&quot;&quot;&quot;Get stored username if available.&quot;&quot;&quot;</span>
+<a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a>    <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+<a id="__codelineno-45-7" name="__codelineno-45-7" href="#__codelineno-45-7"></a>        <span class="n">contents</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+<a id="__codelineno-45-8" name="__codelineno-45-8" href="#__codelineno-45-8"></a>        <span class="n">username</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
+<a id="__codelineno-45-9" name="__codelineno-45-9" href="#__codelineno-45-9"></a>        <span class="k">return</span> <span class="n">username</span>
+<a id="__codelineno-45-10" name="__codelineno-45-10" href="#__codelineno-45-10"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-45-11" name="__codelineno-45-11" href="#__codelineno-45-11"></a>        <span class="k">return</span> <span class="kc">None</span>
+<a id="__codelineno-45-12" name="__codelineno-45-12" href="#__codelineno-45-12"></a>
+<a id="__codelineno-45-13" name="__codelineno-45-13" href="#__codelineno-45-13"></a><span class="k">def</span> <span class="nf">get_new_username</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+<a id="__codelineno-45-14" name="__codelineno-45-14" href="#__codelineno-45-14"></a>    <span class="sd">&quot;&quot;&quot;Prompt for a new username.&quot;&quot;&quot;</span>
+<a id="__codelineno-45-15" name="__codelineno-45-15" href="#__codelineno-45-15"></a>    <span class="n">username</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your name? &quot;</span><span class="p">)</span>
+<a id="__codelineno-45-16" name="__codelineno-45-16" href="#__codelineno-45-16"></a>    <span class="n">contents</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">username</span><span class="p">)</span>
+<a id="__codelineno-45-17" name="__codelineno-45-17" href="#__codelineno-45-17"></a>    <span class="n">path</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
+<a id="__codelineno-45-18" name="__codelineno-45-18" href="#__codelineno-45-18"></a>    <span class="k">return</span> <span class="n">username</span>
+<a id="__codelineno-45-19" name="__codelineno-45-19" href="#__codelineno-45-19"></a>
+<a id="__codelineno-45-20" name="__codelineno-45-20" href="#__codelineno-45-20"></a><span class="k">def</span> <span class="nf">greet_user</span><span class="p">():</span>
+<a id="__codelineno-45-21" name="__codelineno-45-21" href="#__codelineno-45-21"></a>    <span class="sd">&quot;&quot;&quot;Greet the user by name.&quot;&quot;&quot;</span>
+<a id="__codelineno-45-22" name="__codelineno-45-22" href="#__codelineno-45-22"></a>    <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;username.json&#39;</span><span class="p">)</span>
+<a id="__codelineno-45-23" name="__codelineno-45-23" href="#__codelineno-45-23"></a>    <span class="n">username</span> <span class="o">=</span> <span class="n">get_stored_username</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<a id="__codelineno-45-24" name="__codelineno-45-24" href="#__codelineno-45-24"></a>    <span class="k">if</span> <span class="n">username</span><span class="p">:</span>
+<a id="__codelineno-45-25" name="__codelineno-45-25" href="#__codelineno-45-25"></a>        <span class="n">correct</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Are you </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2">? (y/n) &quot;</span><span class="p">)</span>
+<a id="__codelineno-45-26" name="__codelineno-45-26" href="#__codelineno-45-26"></a>        <span class="k">if</span> <span class="n">correct</span> <span class="o">==</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span>
+<a id="__codelineno-45-27" name="__codelineno-45-27" href="#__codelineno-45-27"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Welcome back, </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+<a id="__codelineno-45-28" name="__codelineno-45-28" href="#__codelineno-45-28"></a>        <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-45-29" name="__codelineno-45-29" href="#__codelineno-45-29"></a>            <span class="n">username</span> <span class="o">=</span> <span class="n">get_new_username</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<a id="__codelineno-45-30" name="__codelineno-45-30" href="#__codelineno-45-30"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;We&#39;ll remember you when you come back, </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>    
+<a id="__codelineno-45-31" name="__codelineno-45-31" href="#__codelineno-45-31"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-45-32" name="__codelineno-45-32" href="#__codelineno-45-32"></a>        <span class="n">username</span> <span class="o">=</span> <span class="n">get_new_username</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<a id="__codelineno-45-33" name="__codelineno-45-33" href="#__codelineno-45-33"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;We&#39;ll remember you when you come back, </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+<a id="__codelineno-45-34" name="__codelineno-45-34" href="#__codelineno-45-34"></a>
+<a id="__codelineno-45-35" name="__codelineno-45-35" href="#__codelineno-45-35"></a><span class="n">greet_user</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Output:</span><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>&gt; python verify_user.py
+<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>What is your name? eric
+<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>We&#39;ll remember you when you come back, eric!
+<a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a>
+<a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a>&gt; python verify_user.py
+<a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a>Are you eric? (y/n) y
+<a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a>Welcome back, eric!
+<a id="__codelineno-46-8" name="__codelineno-46-8" href="#__codelineno-46-8"></a>
+<a id="__codelineno-46-9" name="__codelineno-46-9" href="#__codelineno-46-9"></a>&gt; python verify_user.py
+<a id="__codelineno-46-10" name="__codelineno-46-10" href="#__codelineno-46-10"></a>Are you eric? (y/n) n
+<a id="__codelineno-46-11" name="__codelineno-46-11" href="#__codelineno-46-11"></a>What is your name? ever
+<a id="__codelineno-46-12" name="__codelineno-46-12" href="#__codelineno-46-12"></a>We&#39;ll remember you when you come back, ever!
+<a id="__codelineno-46-13" name="__codelineno-46-13" href="#__codelineno-46-13"></a>
+<a id="__codelineno-46-14" name="__codelineno-46-14" href="#__codelineno-46-14"></a>&gt; python verify_user.py
+<a id="__codelineno-46-15" name="__codelineno-46-15" href="#__codelineno-46-15"></a>Are you ever? (y/n) y
+<a id="__codelineno-46-16" name="__codelineno-46-16" href="#__codelineno-46-16"></a>Welcome back, ever!
+</code></pre></div>
+<p>You might notice the identical <code>else</code> blocks in this version of <code>greet_user()</code>. One way to clean this function up is to use an empty <code>return</code> statement. An empty <code>return</code> statement tells Python to leave the function without running any more code in the function.</p>
+<p>Here's a cleaner version of <code>greet_user()</code>:</p>
+<div class="highlight"><span class="filename">verify_user_clean.py</span><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="k">def</span> <span class="nf">greet_user</span><span class="p">():</span>
+<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>    <span class="sd">&quot;&quot;&quot;Greet the user by name.&quot;&quot;&quot;</span>
+<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>    <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;username.json&#39;</span><span class="p">)</span>
+<a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a>    <span class="n">username</span> <span class="o">=</span> <span class="n">get_stored_username</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<a id="__codelineno-47-5" name="__codelineno-47-5" href="#__codelineno-47-5"></a>    <span class="k">if</span> <span class="n">username</span><span class="p">:</span>
+<a id="__codelineno-47-6" name="__codelineno-47-6" href="#__codelineno-47-6"></a>        <span class="n">correct</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Are you </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2">? (y/n) &quot;</span><span class="p">)</span>
+<a id="__codelineno-47-7" name="__codelineno-47-7" href="#__codelineno-47-7"></a>        <span class="k">if</span> <span class="n">correct</span> <span class="o">==</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span>
+<a id="__codelineno-47-8" name="__codelineno-47-8" href="#__codelineno-47-8"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Welcome back, </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+<a id="__codelineno-47-9" name="__codelineno-47-9" href="#__codelineno-47-9"></a>            <span class="k">return</span>
+<a id="__codelineno-47-10" name="__codelineno-47-10" href="#__codelineno-47-10"></a>
+<a id="__codelineno-47-11" name="__codelineno-47-11" href="#__codelineno-47-11"></a>    <span class="c1"># We got a username, but it&#39;s not correct.</span>
+<a id="__codelineno-47-12" name="__codelineno-47-12" href="#__codelineno-47-12"></a>    <span class="c1">#   Prompt for a new username.</span>
+<a id="__codelineno-47-13" name="__codelineno-47-13" href="#__codelineno-47-13"></a>    <span class="n">username</span> <span class="o">=</span> <span class="n">get_new_username</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<a id="__codelineno-47-14" name="__codelineno-47-14" href="#__codelineno-47-14"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;We&#39;ll remember you when you come back, </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>The <code>return</code> statement means the code in the function stops running after printing the welcome back message. When the username doesn't exist, or the username is incorrect, the <code>return</code> statement is never reached. The second part of the function will only run when the <code>if</code> statements fail, so we don't need an <code>else</code> block. Now the function prompts for a new username when either <code>if</code> statement fails.</p>
+<p>The only thing left to address is the nested <code>if</code> statements. This can be cleaned up by moving the code that checks whether the username is correct to a separate function. If you're enjoying this exercise, you might try making a new function called <code>check_username()</code> and see if you can remove the nested <code>if</code> statement from <code>greet_user()</code>.</p>
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" hidden>
+      
+        
+        <a href="../chapter_9/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Chapter 9" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Chapter 9
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../contact/" class="md-footer__link md-footer__link--next" aria-label="Next: Contact" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Contact
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.instant"], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.48f2be22.min.js"></script>
+      
+    
+  </body>
+</html>
