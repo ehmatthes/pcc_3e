@@ -1,4 +1,4 @@
-class User():
+class User:
     """Represent a simple user profile."""
 
     def __init__(self, first_name, last_name, username, email, location):
@@ -41,7 +41,7 @@ class Admin(User):
         self.privileges = Privileges()
 
 
-class Privileges():
+class Privileges:
     """A class to store an admin's privileges."""
 
     def __init__(self, privileges=[]):

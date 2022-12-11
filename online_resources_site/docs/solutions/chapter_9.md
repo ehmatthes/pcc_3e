@@ -15,7 +15,7 @@ Make a class called `Restaurant`. The `__init__()` method for `Restaurant` shoul
 Make an instance called `restaurant` from your class. Print the two attributes individually, and then call both methods.
 
 ```python title="restaurant.py"
-class Restaurant():
+class Restaurant:
     """A class representing a restaurant."""
 
     def __init__(self, name, cuisine_type):
@@ -55,7 +55,7 @@ The Mean Queen is open. Come on in!
 Start with your class from Exercise 9-1. Create three different instances from the class, and call `describe_restaurant()` for each instance.
 
 ```python title="three_restaurants.py"
-class Restaurant():
+class Restaurant:
     """A class representing a restaurant."""
 
     def __init__(self, name, cuisine_type):
@@ -98,7 +98,7 @@ Make a class called `User`. Create two attributes called `first_name` and `last_
 Create several instances representing different users, and call both methods for each user.
 
 ```python title="users.py"
-class User():
+class User:
     """Represent a simple user profile."""
 
     def __init__(self, first_name, last_name, username, email, location):
@@ -154,7 +154,7 @@ Add a method called `set_number_served()` that lets you set the number of custom
 Add a method called `increment_number_served()` that lets you increment the number of customers who've been served. Call this method with any number you like that could represent how many customers were served in, say, a day of business.
 
 ```python title="number_served.py"
-class Restaurant():
+class Restaurant:
     """A class representing a restaurant."""
 
     def __init__(self, name, cuisine_type):
@@ -212,7 +212,7 @@ Add an attribute called `login_attempts` to your `User` class from Exercise 9-3 
 Make an instance of the `User` class and call `increment_login_attempts()` several times. Print the value of `login_attempts` to make sure it was incremented properly, and then call `reset_login_attempts()`. Print `login_attempts` again to make sure it was reset to 0.
 
 ```python title="login_attempts.py"
-class User():
+class User:
     """Represent a simple user profile."""
 
     def __init__(self, first_name, last_name, username, email, location):
@@ -277,7 +277,7 @@ Resetting login attempts...
 An ice cream stand is a specific kind of restaurant. Write a class called `IceCreamStand` that inherits from the `Restaurant` class you wrote in Exercise 9-1 (page 162) or Exercise 9-4 (page 166). Either version of the class will work; just pick the one you like better. Add an attribute called `flavors` that stores a list of ice cream flavors. Write a method that displays theese flavors. Create an instance of `IceCreamStand`, and call this method.
 
 ```python title="ice_cream_stand.py"
-class Restaurant():
+class Restaurant:
     """A class representing a restaurant."""
 
     def __init__(self, name, cuisine_type):
@@ -341,7 +341,7 @@ We have the following flavors available:
 An administrator is a special kind of user. Write a class called `Admin` that inherits from the `User` class you wrote in Exercise 9-3 (page 162) or Exercise 9-5 (page 167). Add an attribute, `privileges`, that stores a list of strings like `"can add post"`, `"can delete post"`, `"can ban user"`, and so on. Write a method called `show_privileges()` that lists the administrator's set of privileges. Create an instance of `Admin`, and call your method.
 
 ```python title="admin.py"
-class User():
+class User:
     """Represent a simple user profile."""
 
     def __init__(self, first_name, last_name, username, email, location):
@@ -417,7 +417,7 @@ Privileges:
 Write a separate `Privileges` class. The class should have one attribute, `privileges`, that stores a list of strings as described in Exercise 9-7. Move the `show_privileges()` method to this class. Make a `Privileges` instance as an attribute in the `Admin` class. Create a new instance of `Admin` and use your method to show its privileges.
 
 ```python title="privileges.py"
-class User():
+class User:
     """Represent a simple user profile."""
 
     def __init__(self, first_name, last_name, username, email, location):
@@ -460,7 +460,7 @@ class Admin(User):
         self.privileges = Privileges()
 
 
-class Privileges():
+class Privileges:
     """A class to store an admin's privileges."""
 
     def __init__(self, privileges=[]):
@@ -608,7 +608,7 @@ Using your latest `Restaurant` class, store it in a module. Make a separate file
 ```python title="restaurant.py"
 """A class representing a restaurant."""
 
-class Restaurant():
+class Restaurant:
     """A class representing a restaurant."""
 
     def __init__(self, name, cuisine_type):
@@ -657,7 +657,7 @@ Start with your work from Exercise 9-8 (page 173). Store the classes `User`, `Pr
 ```python title="user.py"
 """A collection of classes for modeling users."""
 
-class User():
+class User:
     """Represent a simple user profile."""
 
     def __init__(self, first_name, last_name, username, email, location):
@@ -700,7 +700,7 @@ class Admin(User):
         self.privileges = Privileges()
 
 
-class Privileges():
+class Privileges:
     """A class to store an admin's privileges."""
 
     def __init__(self, privileges=[]):
@@ -751,7 +751,7 @@ Store the `User` class in one module, and store the `Privileges` and `Admin` cla
 ```python title="user.py"
 """A class for modeling users."""
 
-class User():
+class User:
     """Represent a simple user profile."""
 
     def __init__(self, first_name, last_name, username, email, location):
@@ -799,7 +799,7 @@ class Admin(User):
         self.privileges = Privileges()
 
 
-class Privileges():
+class Privileges:
     """A class to store an admin's privileges."""
 
     def __init__(self, privileges=[]):
@@ -852,7 +852,7 @@ Make a 10-sided die and a 20-sided die. Roll each die 10 times.
 ```python title="dice.py"
 from random import randint
 
-class Die():
+class Die:
     """Represent a die, which can be rolled."""
 
     def __init__(self, sides=6):

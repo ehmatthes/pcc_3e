@@ -1,4 +1,4 @@
-class User():
+class User:
     """Represent a simple user profile."""
 
     def __init__(self, first_name, last_name, username, email, location):

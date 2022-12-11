@@ -1,6 +1,6 @@
 from random import randint
 
-class Die():
+class Die:
     """Represent a die, which can be rolled."""
 
     def __init__(self, sides=6):
