@@ -812,7 +812,7 @@
 <h2 id="9-1-restaurant">9-1: Restaurant</h2>
 <p>Make a class called <code>Restaurant</code>. The <code>__init__()</code> method for <code>Restaurant</code> should store two attributes: a <code>restaurant_name</code> and a <code>cuisine_type</code>. Make a method called <code>describe_restaurant()</code> that prints these two pieces of information, and a method called <code>open_restaurant()</code> that prints a message indicating that the restaurant is open.</p>
 <p>Make an instance called <code>restaurant</code> from your class. Print the two attributes individually, and then call both methods.</p>
-<div class="highlight"><span class="filename">restaurant.py</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">():</span>
+<div class="highlight"><span class="filename">restaurant.py</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">:</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="sd">&quot;&quot;&quot;A class representing a restaurant.&quot;&quot;&quot;</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">cuisine_type</span><span class="p">):</span>
@@ -846,7 +846,7 @@
 </code></pre></div>
 <h2 id="9-2-three-restaurants">9-2: Three Restaurants</h2>
 <p>Start with your class from Exercise 9-1. Create three different instances from the class, and call <code>describe_restaurant()</code> for each instance.</p>
-<div class="highlight"><span class="filename">three_restaurants.py</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">():</span>
+<div class="highlight"><span class="filename">three_restaurants.py</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">:</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="sd">&quot;&quot;&quot;A class representing a restaurant.&quot;&quot;&quot;</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">cuisine_type</span><span class="p">):</span>
@@ -882,7 +882,7 @@
 <h2 id="9-3-users">9-3: Users</h2>
 <p>Make a class called <code>User</code>. Create two attributes called <code>first_name</code> and <code>last_name</code>, and then create several other attributes that are typically stored in a user profile. Make a method called <code>describe_user()</code> that prints a summary of the user's information. Make another method called <code>greet_user()</code> that prints a personalized greeting to the user.</p>
 <p>Create several instances representing different users, and call both methods for each user.</p>
-<div class="highlight"><span class="filename">users.py</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">class</span> <span class="nc">User</span><span class="p">():</span>
+<div class="highlight"><span class="filename">users.py</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="sd">&quot;&quot;&quot;Represent a simple user profile.&quot;&quot;&quot;</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
@@ -930,7 +930,7 @@
 <p>Start with your program from Exercise 9-1 (page 162). Add an attribute called <code>number_served</code> with a default value of 0. Create an instance called <code>restaurant</code> from this class. Print the number of customers the restaurant has served, and then change this value and print it again.</p>
 <p>Add a method called <code>set_number_served()</code> that lets you set the number of customers that have been served. Call this method with a new number and print the value again.</p>
 <p>Add a method called <code>increment_number_served()</code> that lets you increment the number of customers who've been served. Call this method with any number you like that could represent how many customers were served in, say, a day of business.</p>
-<div class="highlight"><span class="filename">number_served.py</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">():</span>
+<div class="highlight"><span class="filename">number_served.py</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">:</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="sd">&quot;&quot;&quot;A class representing a restaurant.&quot;&quot;&quot;</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
 <a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">cuisine_type</span><span class="p">):</span>
@@ -981,7 +981,7 @@
 <h2 id="9-5-login-attempts">9-5: Login Attempts</h2>
 <p>Add an attribute called <code>login_attempts</code> to your <code>User</code> class from Exercise 9-3 (page 162). Write a method called <code>increment_login_attempts()</code> that increments the value of <code>login_attempts</code> by 1. Write another method called <code>reset_login_attempts()</code> that resets the value of <code>login_attempts</code> to 0.</p>
 <p>Make an instance of the <code>User</code> class and call <code>increment_login_attempts()</code> several times. Print the value of <code>login_attempts</code> to make sure it was incremented properly, and then call <code>reset_login_attempts()</code>. Print <code>login_attempts</code> again to make sure it was reset to 0.</p>
-<div class="highlight"><span class="filename">login_attempts.py</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">class</span> <span class="nc">User</span><span class="p">():</span>
+<div class="highlight"><span class="filename">login_attempts.py</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="sd">&quot;&quot;&quot;Represent a simple user profile.&quot;&quot;&quot;</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
@@ -1040,7 +1040,7 @@
 </code></pre></div>
 <h2 id="9-6-ice-cream-stand">9-6: Ice Cream Stand</h2>
 <p>An ice cream stand is a specific kind of restaurant. Write a class called <code>IceCreamStand</code> that inherits from the <code>Restaurant</code> class you wrote in Exercise 9-1 (page 162) or Exercise 9-4 (page 166). Either version of the class will work; just pick the one you like better. Add an attribute called <code>flavors</code> that stores a list of ice cream flavors. Write a method that displays theese flavors. Create an instance of <code>IceCreamStand</code>, and call this method.</p>
-<div class="highlight"><span class="filename">ice_cream_stand.py</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">():</span>
+<div class="highlight"><span class="filename">ice_cream_stand.py</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">:</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="sd">&quot;&quot;&quot;A class representing a restaurant.&quot;&quot;&quot;</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
 <a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">cuisine_type</span><span class="p">):</span>
@@ -1098,7 +1098,7 @@
 </code></pre></div>
 <h2 id="9-7-admin">9-7: Admin</h2>
 <p>An administrator is a special kind of user. Write a class called <code>Admin</code> that inherits from the <code>User</code> class you wrote in Exercise 9-3 (page 162) or Exercise 9-5 (page 167). Add an attribute, <code>privileges</code>, that stores a list of strings like <code>"can add post"</code>, <code>"can delete post"</code>, <code>"can ban user"</code>, and so on. Write a method called <code>show_privileges()</code> that lists the administrator's set of privileges. Create an instance of <code>Admin</code>, and call your method.</p>
-<div class="highlight"><span class="filename">admin.py</span><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">class</span> <span class="nc">User</span><span class="p">():</span>
+<div class="highlight"><span class="filename">admin.py</span><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="sd">&quot;&quot;&quot;Represent a simple user profile.&quot;&quot;&quot;</span>
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
 <a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
@@ -1168,7 +1168,7 @@
 </code></pre></div>
 <h2 id="9-8-privileges">9-8: Privileges</h2>
 <p>Write a separate <code>Privileges</code> class. The class should have one attribute, <code>privileges</code>, that stores a list of strings as described in Exercise 9-7. Move the <code>show_privileges()</code> method to this class. Make a <code>Privileges</code> instance as an attribute in the <code>Admin</code> class. Create a new instance of <code>Admin</code> and use your method to show its privileges.</p>
-<div class="highlight"><span class="filename">privileges.py</span><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">class</span> <span class="nc">User</span><span class="p">():</span>
+<div class="highlight"><span class="filename">privileges.py</span><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    <span class="sd">&quot;&quot;&quot;Represent a simple user profile.&quot;&quot;&quot;</span>
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
 <a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
@@ -1211,7 +1211,7 @@
 <a id="__codelineno-14-41" name="__codelineno-14-41" href="#__codelineno-14-41"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">privileges</span> <span class="o">=</span> <span class="n">Privileges</span><span class="p">()</span>
 <a id="__codelineno-14-42" name="__codelineno-14-42" href="#__codelineno-14-42"></a>
 <a id="__codelineno-14-43" name="__codelineno-14-43" href="#__codelineno-14-43"></a>
-<a id="__codelineno-14-44" name="__codelineno-14-44" href="#__codelineno-14-44"></a><span class="k">class</span> <span class="nc">Privileges</span><span class="p">():</span>
+<a id="__codelineno-14-44" name="__codelineno-14-44" href="#__codelineno-14-44"></a><span class="k">class</span> <span class="nc">Privileges</span><span class="p">:</span>
 <a id="__codelineno-14-45" name="__codelineno-14-45" href="#__codelineno-14-45"></a>    <span class="sd">&quot;&quot;&quot;A class to store an admin&#39;s privileges.&quot;&quot;&quot;</span>
 <a id="__codelineno-14-46" name="__codelineno-14-46" href="#__codelineno-14-46"></a>
 <a id="__codelineno-14-47" name="__codelineno-14-47" href="#__codelineno-14-47"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">privileges</span><span class="o">=</span><span class="p">[]):</span>
@@ -1347,7 +1347,7 @@
 <p>Using your latest <code>Restaurant</code> class, store it in a module. Make a separate file that imports <code>Restaurant</code>. Make a <code>Restaurant</code> instance, and call one of <code>Restaurant</code>'s methods to show that the <code>import</code> statement is working properly.</p>
 <div class="highlight"><span class="filename">restaurant.py</span><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="sd">&quot;&quot;&quot;A class representing a restaurant.&quot;&quot;&quot;</span>
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
-<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">():</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">:</span>
 <a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>    <span class="sd">&quot;&quot;&quot;A class representing a restaurant.&quot;&quot;&quot;</span>
 <a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>
 <a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">cuisine_type</span><span class="p">):</span>
@@ -1388,7 +1388,7 @@
 <p>Start with your work from Exercise 9-8 (page 173). Store the classes <code>User</code>, <code>Privileges</code> and <code>Admin</code> in one module. Create a separate file, make an <code>Admin</code> instance, and call <code>show_priveleges()</code> to show that everything is working correctly.</p>
 <div class="highlight"><span class="filename">user.py</span><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="sd">&quot;&quot;&quot;A collection of classes for modeling users.&quot;&quot;&quot;</span>
 <a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>
-<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="k">class</span> <span class="nc">User</span><span class="p">():</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
 <a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>    <span class="sd">&quot;&quot;&quot;Represent a simple user profile.&quot;&quot;&quot;</span>
 <a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>
 <a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
@@ -1431,7 +1431,7 @@
 <a id="__codelineno-21-43" name="__codelineno-21-43" href="#__codelineno-21-43"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">privileges</span> <span class="o">=</span> <span class="n">Privileges</span><span class="p">()</span>
 <a id="__codelineno-21-44" name="__codelineno-21-44" href="#__codelineno-21-44"></a>
 <a id="__codelineno-21-45" name="__codelineno-21-45" href="#__codelineno-21-45"></a>
-<a id="__codelineno-21-46" name="__codelineno-21-46" href="#__codelineno-21-46"></a><span class="k">class</span> <span class="nc">Privileges</span><span class="p">():</span>
+<a id="__codelineno-21-46" name="__codelineno-21-46" href="#__codelineno-21-46"></a><span class="k">class</span> <span class="nc">Privileges</span><span class="p">:</span>
 <a id="__codelineno-21-47" name="__codelineno-21-47" href="#__codelineno-21-47"></a>    <span class="sd">&quot;&quot;&quot;A class to store an admin&#39;s privileges.&quot;&quot;&quot;</span>
 <a id="__codelineno-21-48" name="__codelineno-21-48" href="#__codelineno-21-48"></a>
 <a id="__codelineno-21-49" name="__codelineno-21-49" href="#__codelineno-21-49"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">privileges</span><span class="o">=</span><span class="p">[]):</span>
@@ -1474,7 +1474,7 @@
 <p>Store the <code>User</code> class in one module, and store the <code>Privileges</code> and <code>Admin</code> classes in a separate module. In a separate file, create an <code>Admin</code> instance and call <code>show_privileges()</code> to show that everything is still working correctly.</p>
 <div class="highlight"><span class="filename">user.py</span><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="sd">&quot;&quot;&quot;A class for modeling users.&quot;&quot;&quot;</span>
 <a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>
-<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="k">class</span> <span class="nc">User</span><span class="p">():</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
 <a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>    <span class="sd">&quot;&quot;&quot;Represent a simple user profile.&quot;&quot;&quot;</span>
 <a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>
 <a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
@@ -1520,7 +1520,7 @@
 <a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">privileges</span> <span class="o">=</span> <span class="n">Privileges</span><span class="p">()</span>
 <a id="__codelineno-25-14" name="__codelineno-25-14" href="#__codelineno-25-14"></a>
 <a id="__codelineno-25-15" name="__codelineno-25-15" href="#__codelineno-25-15"></a>
-<a id="__codelineno-25-16" name="__codelineno-25-16" href="#__codelineno-25-16"></a><span class="k">class</span> <span class="nc">Privileges</span><span class="p">():</span>
+<a id="__codelineno-25-16" name="__codelineno-25-16" href="#__codelineno-25-16"></a><span class="k">class</span> <span class="nc">Privileges</span><span class="p">:</span>
 <a id="__codelineno-25-17" name="__codelineno-25-17" href="#__codelineno-25-17"></a>    <span class="sd">&quot;&quot;&quot;A class to store an admin&#39;s privileges.&quot;&quot;&quot;</span>
 <a id="__codelineno-25-18" name="__codelineno-25-18" href="#__codelineno-25-18"></a>
 <a id="__codelineno-25-19" name="__codelineno-25-19" href="#__codelineno-25-19"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">privileges</span><span class="o">=</span><span class="p">[]):</span>
@@ -1564,7 +1564,7 @@
 <p>Make a 10-sided die and a 20-sided die. Roll each die 10 times.</p>
 <div class="highlight"><span class="filename">dice.py</span><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
 <a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>
-<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="k">class</span> <span class="nc">Die</span><span class="p">():</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="k">class</span> <span class="nc">Die</span><span class="p">:</span>
 <a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>    <span class="sd">&quot;&quot;&quot;Represent a die, which can be rolled.&quot;&quot;&quot;</span>
 <a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>
 <a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sides</span><span class="o">=</span><span class="mi">6</span><span class="p">):</span>
