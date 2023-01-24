@@ -41,6 +41,11 @@ nav:
   - "Setup Instructions":
     - "setup_instructions/index.md"
     - "Configuring VS Code": "setup_instructions/configuring_vs_code.md"
+  - "Updates":
+    - "updates/index.md"
+    - "First printing": "updates/first_printing.md"
+    - "Second printing": "updates/second_printing.md"
+    - "Which printing do I have?": "updates/which_printing.md"
   - "Solutions":
     - "solutions/index.md"
     - "Chapter 2": "solutions/chapter_2.md"
