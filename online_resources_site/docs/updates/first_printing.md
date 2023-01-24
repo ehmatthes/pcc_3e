@@ -14,12 +14,13 @@ If you find an error in the book that's not listed here, or can’t get somethin
 
 - [Updates](#updates)
 - [Errata](#errata)
+    - [Chapter 6](#chapter-6)
     - [Chapter 9](#chapter-9)
     - [Chapter 10](#chapter-10)
+    - [Chapter 15](#chapter-15)
+    - [Chapter 16](#chapter-16)
     - [Chapter 18](#chapter-18)
     - [Chapter 19](#chapter-19)
-
-
 
 
 Updates
@@ -31,6 +32,16 @@ There are no updates to note at this time.
 
 Errata
 ---
+
+### Chapter 6
+
+The output at the bottom of page 95 should say `position`, not `x-position`:
+
+```
+Original position: 0
+New position: 2
+```
+
 
 ### Chapter 9
 
@@ -47,6 +58,22 @@ On page 167, the docstring for the `__init__()` method in *electric_car.py* shou
 On page 200, Exercise 10-7 should read "Wrap your code from Exercise 10-6 in a while loop..."
 
 Also, Exercise 10-9 should refer to Exercise 10-8.
+
+### Chapter 15
+
+Matplotlib has a number of predefined styles that you can choose from. The book uses the `seaborn` style, which was base on a style from the [Seaborn](https://seaborn.pydata.org) plotting library. The default style of the Seaborn library has diverged from Matplotlib's `seaborn` style, so they are changing the name of this style to make that clear. (If you're curious to read more about this, see "seaborn styles renamed" in the Matplotlib documentation page [API Changes for 3.6.0](https://matplotlib.org/stable/api/prev_api_changes/api_changes_3.6.0.html#seaborn-styles-renamed).)
+
+If you use `seaborn` as the book does, you'll see a `MatplotlibDeprecationWarning`. This won't prevent your code from running, and it won't affect the style of your output.
+
+To avoid seeing this warning, use `seaborn-v0_8` wherever you see `seaborn` in the book's code. The code should look like this:
+
+```python
+plt.style.use('seaborn-v0_8')
+```
+
+### Chapter 16,
+
+As noted above for Chapter 15, use `seaborn-v0_8` wherever you see `seaborn`.
 
 ### Chapter 18
 
