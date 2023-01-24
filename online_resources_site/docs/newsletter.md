@@ -10,18 +10,20 @@ I write a weekly newsletter about (almost) all things Python at [Mostly Python](
 
 Most of what I write will be meaningful to anyone who has worked through a significant portion of *Python Crash Course*, and is interested in current takes on a variety of topics centered around Python. My goal is to help people transition out of the beginner mindset, and keep up with things that are happening in the Python world.
 
-If you're curious to read a couple posts, you might want to start with one of these:
+If you're curious to read some posts, you might want to start with one of these:
 
-### [Why I'm still using Python](https://mostlypython.substack.com/p/why-im-still-using-python)
+- [Why I'm still using Python](https://mostlypython.substack.com/p/why-im-still-using-python)
+    
+    This discusses more in depth the reasons I'm still doing most of my programming work in Python, 16 years after I was first introduced to the language.
 
-This discusses more in depth the reasons I'm still doing most of my programming work in Python, 16 years after I was first introduced to the language.
+- [Python Lists: A closer look](https://mostlypython.substack.com/p/python-lists-a-closer-look)
 
-### [Python Lists: A closer look](https://mostlypython.substack.com/p/python-lists-a-closer-look)
+    This is the first post in a series about lists, and how they can help people develop a deeper understanding of Python as a whole.
 
-This is the first post in a series about lists, and how they can help people develop a deeper understanding of Python as a whole.
+- [Improving medical students' lives with code](https://mostlypython.substack.com/p/improving-medical-students-lives)
 
-### [Improving medical students' lives with code](https://mostlypython.substack.com/p/improving-medical-students-lives)
+    I recently spoke with a reader who's working on a project that would make it easier for medical students to conduct research. This post focuses on how to think about a larger project once you've developed some coding skills.
+    
+---
 
-I recently spoke with a reader who's working on a project that would make it easier for medical students to conduct research. This post focuses on how to think about a larger project once you've developed some coding skills.
-
-![Mostly Python logo, two snakes facing each other over a microchip.](images/mp_logo_200px.png)
+[![Mostly Python logo, two snakes facing each other over a microchip.](images/mp_logo_200px.png){ align=right }](https://mostlypython.substack.com)
