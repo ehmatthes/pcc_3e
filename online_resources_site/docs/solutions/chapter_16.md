@@ -180,3 +180,76 @@ Output:
 
 ![Daily high and low temperatures for Sitka, AK and Death Valley shown on the same plot.](../images/solutions_images/sitka_death_valley_comparison.png)
 
+## 16-4: Automatic Indexes
+
+In this section, we hardcoded the indexes corresponding to the `TMIN` and `TMAX` columns. Use the header row to determine the indexes for these values, so your program can work for Sitka or Death Valley. Use the station name to automatically generate an appropriate title for your graph as well.
+
+The `index()` method returns the index of an item in a list. For example:
+
+```
+>>> animals = ['cat', 'dog', 'mouse', 'elephant']
+>>> animals.index('dog')
+1
+```
+
+This can help us pull the indexes of the headers we want from the header row:
+
+```python title="automatic_indexes.py"
+from pathlib import Path
+import csv
+from datetime import datetime
+
+import matplotlib.pyplot as plt
+
+
+path = Path('weather_data/death_valley_2021_simple.csv')
+lines = path.read_text().splitlines()
+
+reader = csv.reader(lines)
+header_row = next(reader)
+
+date_index = header_row.index('DATE')
+high_index = header_row.index('TMAX')
+low_index = header_row.index('TMIN')
+name_index = header_row.index('NAME')
+
+# Extract dates, and high and low temperatures.
+dates, highs, lows = [], [], []
+place_name = ""
+for row in reader:
+    # Grab the station name, if it's not already set.
+    if not place_name:
+        place_name = row[name_index]
+
+    current_date = datetime.strptime(row[date_index], '%Y-%m-%d')
+    try:
+        high = int(row[high_index])
+        low = int(row[low_index])
+    except ValueError:
+        print(f"Missing data for {current_date}")
+    else:
+        dates.append(current_date)
+        highs.append(high)
+        lows.append(low)
+
+# Plot the high and low temperatures.
+plt.style.use('seaborn-v0_8')
+fig, ax = plt.subplots()
+ax.plot(dates, highs, color='red', alpha=0.5)
+ax.plot(dates, lows, color='blue', alpha=0.5)
+ax.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
+
+# Format plot.
+title = f"Daily High and Low Temperatures, 2021\n{place_name}"
+ax.set_title(title, fontsize=20)
+fig.autofmt_xdate()
+ax.set_ylabel("Temperature (F)", fontsize=16)
+ax.tick_params(labelsize=16)
+
+plt.show()
+```
+
+Output:
+
+![Plot of daily high and low temperatures in Death Valley for 2021.](../images/solutions_images/automatic_indexes.png)
+
