@@ -341,8 +341,46 @@ In the resources for this chapter, you’ll find a file called *world_fires_1_da
 
 You can download more recent versions of this data at [https://earthdata.nasa.gov/earth-observation-data/near-real-time/firms/active-fire-data](https://earthdata.nasa.gov/earth-observation-data/near-real-time/firms/active-fire-data). You can find links to the data in CSV format in the SHP, KML, and TXT Files section.
 
-```python title="world_fires.py"
+***Note:** Global fire activity can be highly variable, so the size of this dataset can vary widely depending on when you happen to download it. Using all of the data may slow your system down too much. If that happens, make a copy of the original data file but only keep the first 5,000 rows, or however many rows your system can handle in a reasonable amount of processing time.*
 
+```python title="world_fires.py"
+from pathlib import Path
+import csv
+
+import plotly.express as px
+
+
+path = Path('eq_data/world_fires_1_day.csv')
+lines = path.read_text().splitlines()
+
+reader = csv.reader(lines)
+header_row = next(reader)
+
+# Extract lat, lon, brightness
+lats, lons, brights = [], [], []
+for row in reader:
+    try:
+        lat = float(row[0])
+        lon = float(row[1])
+        bright = float(row[2])
+    except ValueError:
+        # Show raw date information for invalid rows.
+        print(f"Invalid data for {row[5]}")
+    else:
+        lats.append(lat)
+        lons.append(lon)
+        brights.append(bright)
+
+# Plot brightnesses on a world map.
+title = "Global wildfire activity"
+fig = px.scatter_geo(lat=lats, lon=lons, size=brights, title=title,
+        color=brights,
+        color_continuous_scale='Viridis',
+        labels={'color':'Brightness'},
+        projection='natural earth',
+    )
+
+fig.show()
 ```
 
 Output:
