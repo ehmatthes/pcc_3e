@@ -253,3 +253,98 @@ Output:
 
 ![Plot of daily high and low temperatures in Death Valley for 2021.](../images/solutions_images/automatic_indexes.png)
 
+## 16-6: Refactoring
+
+The loop that pulls data from `all_eq_dicts` uses variables for the magnitude, longitude, latitude, and title of each earthquake before appending these values to their appropriate lists. This approach was chosen for clarity in how to pull data from a GeoJSON file, but it’s not necessary in your code. Instead of using these temporary variables, pull each value from `eq_dict` and append it to the appropriate list in one line. Doing so should shorten the body of this loop to just four lines.
+
+```python title="eq_world_map_refactored.py"
+from pathlib import Path
+import json
+
+import plotly.express as px
+
+
+# Read data as a string and convert to a Python object.
+path = Path('eq_data/eq_data_30_day_m1.geojson')
+contents = path.read_text()
+all_eq_data = json.loads(contents)
+
+# Examine all earthquakes in the dataset.
+all_eq_dicts = all_eq_data['features']
+
+mags, lons, lats, eq_titles = [], [], [], []
+for eq_dict in all_eq_dicts:
+    mags.append(eq_dict['properties']['mag'])
+    lons.append(eq_dict['geometry']['coordinates'][0])
+    lats.append(eq_dict['geometry']['coordinates'][1])
+    eq_titles.append(eq_dict['properties']['title'])
+
+title = 'Global Earthquakes'
+fig = px.scatter_geo(lat=lats, lon=lons, size=mags, title=title,
+        color=mags,
+        color_continuous_scale='Viridis',
+        labels={'color':'Magnitude'},
+        projection='natural earth',
+        hover_name=eq_titles,
+    )
+fig.show()
+```
+
+Output:
+
+![Map showing 30 days of worldwide earthquake activity.](../images/solutions_images/eq_world_map_refactored.png)
+
+## 16-6: Automated Title
+
+In this section, we used the generic title *Global Earthquakes*. Instead, you can use the title for the dataset in the `metadata` part of the GeoJSON file. Pull this value and assign it to the variable title.
+
+```python title="eq_world_map_automated_title.py"
+from pathlib import Path
+import json
+
+import plotly.express as px
+
+
+# Read data as a string and convert to a Python object.
+path = Path('eq_data/eq_data_30_day_m1.geojson')
+contents = path.read_text()
+all_eq_data = json.loads(contents)
+
+# Examine all earthquakes in the dataset.
+title = all_eq_data['metadata']['title']
+all_eq_dicts = all_eq_data['features']
+
+mags, lons, lats, eq_titles = [], [], [], []
+for eq_dict in all_eq_dicts:
+    mags.append(eq_dict['properties']['mag'])
+    lons.append(eq_dict['geometry']['coordinates'][0])
+    lats.append(eq_dict['geometry']['coordinates'][1])
+    eq_titles.append(eq_dict['properties']['title'])
+
+fig = px.scatter_geo(lat=lats, lon=lons, size=mags, title=title,
+        color=mags,
+        color_continuous_scale='Viridis',
+        labels={'color':'Magnitude'},
+        projection='natural earth',
+        hover_name=eq_titles,
+    )
+fig.show()
+```
+
+Output:
+
+![Map showing 30 days of worldwide earthquake activity.](../images/solutions_images/eq_world_map_automated_title.png)
+
+## 16-9: World Fires
+
+In the resources for this chapter, you’ll find a file called *world_fires_1_day.csv*. This file contains information about fires burning in different locations around the globe, including the latitude, longitude, and brightness of each fire. Using the data-processing work from the first part of this chapter and the mapping work from this section, make a map that shows which parts of the world are affected by fires.
+
+You can download more recent versions of this data at [https://earthdata.nasa.gov/earth-observation-data/near-real-time/firms/active-fire-data](https://earthdata.nasa.gov/earth-observation-data/near-real-time/firms/active-fire-data). You can find links to the data in CSV format in the SHP, KML, and TXT Files section.
+
+```python title="world_fires.py"
+
+```
+
+Output:
+
+![Map of worldwide fire activity.](../images/solutions_images/world_fires.png)
