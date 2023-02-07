@@ -22,6 +22,7 @@ I haven't included solutions for Chapters 18-20, because the exercises for those
 - [Chapter 11](chapter_11.md)
 - [Chapter 15](chapter_15.md)
 - [Chapter 16](chapter_16.md)
+- [Chapter 17](chapter_17.md)
 
 Questions and Feedback
 ---
