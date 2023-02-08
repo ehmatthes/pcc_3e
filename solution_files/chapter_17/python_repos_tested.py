@@ -1,6 +1,6 @@
 import requests
 
-def get_repo_info():
+def get_repos_info():
     """Get information about Python repositories on GitHub."""
     # Make an API call and check the response.
     url = "https://api.github.com/search/repositories"
@@ -8,16 +8,28 @@ def get_repo_info():
 
     headers = {"Accept": "application/vnd.github.v3+json"}
     r = requests.get(url, headers=headers)
+
     print(f"Status code: {r.status_code}")
 
-    # Convert the response object to a dictionary.
-    response_dict = r.json()
+    return r
 
+def get_response_dict(response):
+    """Convert the response object to a dictionary."""
+    response_dict = response.json()
+    return response_dict
+
+def show_repos_info(response_dict):
+    """Show information about the returned repositories."""
     print(f"Total repositories: {response_dict['total_count']}")
     print(f"Complete results: {not response_dict['incomplete_results']}")
 
-    # Explore information about the repositories.
-    repo_dicts = response_dict['items']
+def get_repo_dicts(response_dict):
+    """Return list of dictionaries, one for each repository."""
+    response_dict = response_dict['items']
+    return repo_dicts
+
+def show_repo_dicts_info(repo_dicts):
+    """Summarize information about repositories."""
     print(f"Repositories returned: {len(repo_dicts)}")
 
     print("\nSelected information about each repository:")
@@ -31,6 +43,8 @@ def get_repo_info():
         print(f"Updated: {repo_dict['updated_at']}")
         print(f"Description: {repo_dict['description']}")
 
-    return repo_dicts
-
-get_repo_info()
+response = get_repos_info()
+response_dict = get_response_dict(response)
+show_repos_info(response_dict)
+repo_dicts = get_repo_dicts(response_dict)
+show_repo_dicts_info(repo_dicts)
