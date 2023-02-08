@@ -25,7 +25,7 @@ def show_repos_info(response_dict):
 
 def get_repo_dicts(response_dict):
     """Return list of dictionaries, one for each repository."""
-    response_dict = response_dict['items']
+    repo_dicts = response_dict['items']
     return repo_dicts
 
 def show_repo_dicts_info(repo_dicts):
