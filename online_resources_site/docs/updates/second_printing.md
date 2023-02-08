@@ -50,6 +50,6 @@ To avoid seeing this warning, use `seaborn-v0_8` wherever you see `seaborn` in t
 plt.style.use('seaborn-v0_8')
 ```
 
-### Chapter 16,
+### Chapter 16
 
 As noted above for Chapter 15, use `seaborn-v0_8` wherever you see `seaborn`.
