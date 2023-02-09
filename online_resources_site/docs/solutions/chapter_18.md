@@ -65,16 +65,16 @@ Register both models with the admin site, and use the site to enter some pizza n
 
 Consider an app that helps people plan their meals throughout the week. Make a new folder called *meal_planner*, and start a new Django project inside this folder. Then make a new app called `meal_plans`. Make a simple home page for this project.
 
-[build solution]
+*The full solution is [here]().*
 
 ## 18-6: Pizzeria Home Page
 
 Add a home page to the `Pizzeria` project you started in Exercise 18-4 (page 388).
 
-The full solution is [here]().
+*The full solution is [here]().*
 
 ## 18-8: Pizzeria Pages
 
 Add a page to the `Pizzeria` project from Exercise 18-6 (page 392) that shows the names of available pizzas. Then link each pizza name to a page displaying the pizza’s toppings. Make sure you use template inheritance to build your pages efficiently.
 
-The full solution is [here]().
+*The full solution is [here]().*
