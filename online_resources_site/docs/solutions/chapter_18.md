@@ -58,3 +58,23 @@ class Entry(models.Model):
 Start a new project called `pizzeria_project` with an app called `pizzas`. Define a model `Pizza` with a field called `name`, which will hold name values, such as `Hawaiian` and `Meat Lovers`. Define a model called `Topping` with fields called `pizza` and `name`. The `pizza` field should be a foreign key to `Pizza`, and `name` should be able to hold values such as `pineapple`, `Canadian bacon`, and `sausage`.
 
 Register both models with the admin site, and use the site to enter some pizza names and toppings. Use the shell to explore the data you entered.
+
+*An entire Django project, even a small one, is too much to list here. You can see the solution to this project [here]().*
+
+## 18-5: Meal Planner
+
+Consider an app that helps people plan their meals throughout the week. Make a new folder called *meal_planner*, and start a new Django project inside this folder. Then make a new app called `meal_plans`. Make a simple home page for this project.
+
+[build solution]
+
+## 18-6: Pizzeria Home Page
+
+Add a home page to the `Pizzeria` project you started in Exercise 18-4 (page 388).
+
+The full solution is [here]().
+
+## 18-8: Pizzeria Pages
+
+Add a page to the `Pizzeria` project from Exercise 18-6 (page 392) that shows the names of available pizzas. Then link each pizza name to a page displaying the pizza’s toppings. Make sure you use template inheritance to build your pages efficiently.
+
+[build solution]
