@@ -1,0 +1,16 @@
+{% extends 'meal_plans/base.html' %}
+
+{% block content %}
+
+  <p>Meal: {{ meal.name }}</p>
+
+  <p>Meal Items:</p>
+  <ul>
+    {% for item in meal_items %}
+      <li>{{ item.name }}</li>
+    {% empty %}
+      <li>No items have been added to this meal yet.</li>
+    {% endfor %}
+  </ul>
+  
+{% endblock content %}

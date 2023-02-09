@@ -59,7 +59,7 @@ Start a new project called `pizzeria_project` with an app called `pizzas`. Defin
 
 Register both models with the admin site, and use the site to enter some pizza names and toppings. Use the shell to explore the data you entered.
 
-*An entire Django project, even a small one, is too much to list here. You can see the solution to this project [here]().*
+*An entire Django project, even a small one, is too much to list here. You can see the full solution to this project [here]().*
 
 ## 18-5: Meal Planner
 
