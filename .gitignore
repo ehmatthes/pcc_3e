@@ -7,3 +7,6 @@ __pycache__/
 .venv/
 
 online_resources_site/site/
+
+*.sqlite3
+
