@@ -21,3 +21,13 @@ Create pages for making a blog, for making new posts, and for editing existing p
 Add a user authentication and registration system to the `Blog` project you started in Exercise 19-1 (page 415). Make sure logged-in users see their username somewhere on the screen and unregistered users see a link to the registration page.
 
 *The full solution is [here](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_19/ex_19_2_blog_accounts).*
+
+## 19-3: Refactoring
+
+There are...
+
+```python title="views.py"
+
+```
+
+*You can also see the full project [here](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_19/ex_19_3_refactoring).*
