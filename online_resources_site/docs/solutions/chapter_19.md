@@ -57,3 +57,31 @@ def check_topic_owner(topic, user):
 ```
 
 *You can also see the full project for this solution [here](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_19/ex_19_3_refactoring).*
+
+## 19-4: Protecting `new_entry`
+
+Currently, a user can add a new entry to another user’s learning log by entering a URL with the ID of a topic belonging to another user. Prevent this attack by checking that the current user owns the entry’s topic before saving the new entry.
+
+*Note: This solution builds on the refactoring done in 19-3.*
+
+```python title="views.py"
+...
+@login_required    
+def new_entry(request, topic_id):
+    """Add a new entry for a particular topic."""
+    topic = Topic.objects.get(id=topic_id)
+    check_topic_owner(topic, request.user)
+    ...
+
+...
+def check_topic_owner(topic, user):
+    """Make sure the currently logged-in user owns the topic that's 
+    being requested.
+
+    Raise Http404 error if the user does not own the topic.
+    """
+    if topic.owner != user:
+        raise Http404
+```
+
+*You can also see the full project for this solution [here](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_19/ex_19_4_protecting_new_entry).*
