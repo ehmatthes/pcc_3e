@@ -14,3 +14,9 @@ We applied Bootstrap’s styles to the login page. Make similar changes to the r
 
 *The full solution is [here](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_20/ex_20_1_other_forms).*
 
+*Here's the register page before styling, and after styling:*
+
+![The register page for Learning Log, without using Bootstrap styling.](../images/solutions_images/ll_register_before_styling.png)
+
+![The register page for Learning Log, using Bootstrap styling.](../images/solutions_images/ll_register_after_styling.png)
+
