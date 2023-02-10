@@ -24,10 +24,36 @@ Add a user authentication and registration system to the `Blog` project you star
 
 ## 19-3: Refactoring
 
-There are...
+There are two places in *views.py* where we make sure the user associated with a topic matches the currently logged-in user. Put the code for this check in a function called `check_topic_owner()`, and call this function where appropriate.
+
+*These are the three parts of views.py that are affected by this refactoring work:*
 
 ```python title="views.py"
+...
+@login_required
+def topic(request, topic_id):
+    """Show a single topic and all its entries."""
+    topic = Topic.objects.get(id=topic_id)
+    check_topic_owner(topic, request.user)
+    ...
 
+...
+@login_required
+def edit_entry(request, entry_id):
+    """Edit an existing entry."""
+    entry = Entry.objects.get(id=entry_id)
+    topic = entry.topic
+    check_topic_owner(topic, request.user)
+    ...
+
+def check_topic_owner(topic, user):
+    """Make sure the currently logged-in user owns the topic that's 
+    being requested.
+
+    Raise Http404 error if the user does not own the topic.
+    """
+    if topic.owner != user:
+        raise Http404
 ```
 
-*You can also see the full project [here](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_19/ex_19_3_refactoring).*
+*You can also see the full project for this solution [here](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_19/ex_19_3_refactoring).*
