@@ -10,18 +10,18 @@
     <a href="{% url 'blogs:new_post' blog.id %}">Create a new post</a>
   </p>
 
-  {% for post in posts %}
+{% for post in posts %}
     <div class="card mb-3">
       <!-- Card header with timestamp and edit link -->
-      <h4 class="card-header">
-        {{ post.date_added|date:'M d, Y H:i' }}
-        <small><a href="{% url 'blogs:edit_post' post.id %}">
-          edit post</a></small>
-      </h4>
+      <h4 class="card-header">{{ post.title }}</h4>
       <div class="card-body">
         <!-- Card body with post body -->
-        <h5 class="card-title">{{ post.title }}</h5>
         <p class="card-text">{{ post.body|linebreaks }}</p>
+        <p class="text-end">{{ post.date_added|date:'M d, Y H:i' }}</p>
+      </div>
+      <div class="card-footer text-muted">
+        <p class="text-end"><a href="{% url 'blogs:edit_post' post.id %}">
+          edit post</a></p>
       </div>
     </div>
   {% empty %}

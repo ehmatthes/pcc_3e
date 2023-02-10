@@ -22,4 +22,6 @@ We applied Bootstrap’s styles to the login page. Make similar changes to the r
 
 Use Bootstrap to style the Blog project you created in Chapter 19.
 
-*The full solution is [here](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_20/ex_20_2_stylish_blog).*
+*The full solution is [here](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_20/ex_20_2_stylish_blog). It may help to look at the Bootstrap documentation for styling [cards](https://getbootstrap.com/docs/5.2/components/card/) and [text](https://getbootstrap.com/docs/5.2/utilities/text/). Here's the home page, after applying styles similar to what Learning Log uses:*
+
+![The home page for Blog Host, using Boostrap styling.](../images/solutions_images/blog_home_page_styled.png)
