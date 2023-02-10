@@ -26,7 +26,7 @@ Add a user authentication and registration system to the `Blog` project you star
 
 There are two places in *views.py* where we make sure the user associated with a topic matches the currently logged-in user. Put the code for this check in a function called `check_topic_owner()`, and call this function where appropriate.
 
-*These are the three parts of views.py that are affected by this refactoring work:*
+*These are the three parts of views.py that are affected by this refactoring work. You can also see the full project for this solution [here](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_19/ex_19_3_refactoring).*
 
 ```python title="views.py"
 ...
@@ -56,13 +56,11 @@ def check_topic_owner(topic, user):
         raise Http404
 ```
 
-*You can also see the full project for this solution [here](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_19/ex_19_3_refactoring).*
-
 ## 19-4: Protecting `new_entry`
 
 Currently, a user can add a new entry to another user’s learning log by entering a URL with the ID of a topic belonging to another user. Prevent this attack by checking that the current user owns the entry’s topic before saving the new entry.
 
-*Note: This solution builds on the refactoring done in 19-3.*
+*Note: This solution builds on the refactoring done in 19-3. You can see the full project for this solution [here](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_19/ex_19_4_protecting_new_entry).*
 
 ```python title="views.py"
 ...
@@ -84,4 +82,8 @@ def check_topic_owner(topic, user):
         raise Http404
 ```
 
-*You can also see the full project for this solution [here](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_19/ex_19_4_protecting_new_entry).*
+## 19-5: Protected Blog
+
+In your Blog project, make sure each blog post is connected to a particular user. Make sure all posts are publicly accessible but only registered users can add posts and edit existing posts. In the view that allows users to edit their posts, make sure the user is editing their own post before processing the form.
+
+*You can see the full project for this solution [here](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_19/ex_19_5_protected_blog).*
