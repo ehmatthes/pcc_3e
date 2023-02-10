@@ -1,16 +1,16 @@
 {% extends 'blogs/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block page_header %}
+  <h2>Log in to your account.</h2>
+{% endblock page_header %}
 
 {% block content %}
 
-  {% if form.errors %}
-    <p>Your username and password didn't match. Please try again.</p>
-  {% endif %}
-
   <form action="{% url 'accounts:login' %}" method='post'>
     {% csrf_token %}
-    {{ form.as_div }}
-
-    <button name="submit">Log in</button>
+    {% bootstrap_form form %}
+    {% bootstrap_button button_type="submit" content="Log in" %}
   </form>
 
 {% endblock content %}

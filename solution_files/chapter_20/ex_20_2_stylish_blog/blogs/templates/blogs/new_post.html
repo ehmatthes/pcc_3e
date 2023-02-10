@@ -1,14 +1,18 @@
 {% extends "blogs/base.html" %}
+{% load django_bootstrap5 %}
+
+{% block page_header %}
+  <h2>Create a new post.</h2>
+{% endblock page_header %}
 
 {% block content %}
 
-  <p><a href="{% url 'blogs:blog' blog.id %}">{{ blog.title }}</a></p>
+  <p><a href="{% url 'blogs:blog' blog.id %}">{{ blog.name }}</a></p>
 
-  <p>Create a new post:</p>
   <form action="{% url 'blogs:new_post' blog.id %}" method='post'>
     {% csrf_token %}
-    {{ form.as_div }}
-    <button name='submit'>Create post</button>
+    {% bootstrap_form form %}
+    {% bootstrap_button button_type="submit" content="Create post" %}
   </form>
 
 {% endblock content %}

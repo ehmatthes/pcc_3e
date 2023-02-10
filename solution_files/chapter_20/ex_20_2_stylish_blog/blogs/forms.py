@@ -7,7 +7,6 @@ class BlogForm(forms.ModelForm):
     class Meta:
         model = Blog
         fields = ['name']
-        labels = {'name': ''}
 
 class BlogPostForm(forms.ModelForm):
     class Meta:
