@@ -15,4 +15,8 @@ urlpatterns = [
 
     # Page for creating a new blog.
     path('new_blog/', views.new_blog, name='new_blog'),
+    # Page for writing a new post.
+    path('new_post/<int:blog_id>/', views.new_post, name='new_post'),
+    # Page for editing an existing post.
+    path('edit_post/<int:post_id>/', views.edit_post, name='edit_post'),
 ]
