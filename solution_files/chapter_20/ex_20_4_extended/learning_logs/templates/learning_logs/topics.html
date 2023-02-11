@@ -6,20 +6,23 @@
 
 {% block content %}
 
-  <ul class="list-group border-bottom pb-2 mb-4">
-    <h5>My topics:</h5>
-    {% for topic in topics %}
-      <li class="list-group-item border-0">
-        <a href="{% url 'learning_logs:topic' topic.id %}">
-          {{ topic.text }}</a>
-      </li>
-    {% empty %}
-      <li class="list-group-item border-0">No topics have been added yet.</li>
-    {% endfor %}
-  </ul>
+  <!-- Only show "My topics" if the user is logged in. -->
+  {% if user.is_authenticated %}
+    <ul class="list-group border-bottom pb-2 mb-4">
+      <h5>My topics:</h5>
+      {% for topic in topics %}
+        <li class="list-group-item border-0">
+          <a href="{% url 'learning_logs:topic' topic.id %}">
+            {{ topic.text }}</a>
+        </li>
+      {% empty %}
+        <li class="list-group-item border-0">No topics have been added yet.</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 
   <ul class="list-group border-bottom pb-2 mb-4">
-    <h5>Public topics from other users:</h5>
+    <h5>Public topics:</h5>
     {% for topic in public_topics %}
       <li class="list-group-item border-0">
         <a href="{% url 'learning_logs:topic' topic.id %}">
