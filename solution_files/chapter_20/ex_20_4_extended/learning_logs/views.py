@@ -28,6 +28,7 @@ def topics(request):
             .exclude(owner=request.user)
             .order_by('date_added'))
     else:
+        # User is not authenticated; return all public topics.
         topics = None
         public_topics = Topic.objects.filter(public=True).order_by('date_added')
 
