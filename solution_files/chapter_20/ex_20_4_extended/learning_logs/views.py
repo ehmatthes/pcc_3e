@@ -34,16 +34,23 @@ def topics(request):
     context = {'topics': topics, 'public_topics': public_topics}
     return render(request, 'learning_logs/topics.html', context)
 
-@login_required
 def topic(request, topic_id):
     """Show a single topic and all its entries."""
     topic = Topic.objects.get(id=topic_id)
-    # Make sure the topic belongs to the current user.
-    if topic.owner != request.user:
+
+    # We only want to show new_entry and edit_entry links if the current
+    #   user owns this topic.
+    is_owner = False
+    if request.user == topic.owner:
+        is_owner = True
+
+    # If the topic belongs to someone else, and it is not public,
+    #   show an error page.
+    if (topic.owner != request.user) and (not topic.public):
         raise Http404
 
     entries = topic.entry_set.order_by('-date_added')
-    context = {'topic': topic, 'entries': entries}
+    context = {'topic': topic, 'entries': entries, 'is_owner': is_owner}
     return render(request, 'learning_logs/topic.html', context)
 
 @login_required
