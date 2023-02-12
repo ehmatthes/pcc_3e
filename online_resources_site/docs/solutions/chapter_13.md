@@ -43,3 +43,9 @@ This code returns a random integer between −10 and 10. Using your code in Exer
 Find an image of a raindrop and create a grid of raindrops. Make the raindrops fall toward the bottom of the screen until they disappear.
 
 [Solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_13/ex_13_3_raindrops)
+
+## 13-4: Steady Rain
+
+Modify your code in Exercise 13-3 so when a row of raindrops disappears off the bottom of the screen, a new row appears at the top of the screen and begins to fall.
+
+[Solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_13/ex_13_4_steady_rain)
