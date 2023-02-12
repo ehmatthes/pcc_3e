@@ -27,7 +27,7 @@ class StarsGame:
         while True:
             self._check_events()
             self._update_screen()
-            self.clock.tick()
+            self.clock.tick(60)
 
     def _check_events(self):
         """Respond to keypresses and mouse events."""

@@ -37,3 +37,9 @@ random_number = randint(-10, 10)
 This code returns a random integer between −10 and 10. Using your code in Exercise 13-1, adjust each star’s position by a random amount.
 
 [Solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_13/ex_13_2_better_stars)
+
+## 13-3: Raindrops
+
+Find an image of a raindrop and create a grid of raindrops. Make the raindrops fall toward the bottom of the screen until they disappear.
+
+[Solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_13/ex_13_3_raindrops)
