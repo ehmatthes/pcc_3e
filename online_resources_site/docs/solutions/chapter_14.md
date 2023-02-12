@@ -43,3 +43,8 @@ Make a set of buttons for *Alien Invasion* that allows the player to select an a
 
 *There are two solutions for this exercise. The [first solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_14/ex_14_4_difficulty_levels) has simple difficulty buttons that change the game's settings, but don't change color when you click them. You may also be interested in a slightly more complex [solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_14/ex_14_4_difficulty_levels_toggle) which highlights the button that indicates the current difficulty settings.*
 
+## 14-5: All-Time High Score
+
+The high score is reset every time a player closes and restarts *Alien Invasion*. Fix this by writing the high score to a file before calling `sys.exit()` and reading in the high score when initializing its value in `GameStats`.
+
+[Solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_14/ex_14_5_high_score)
