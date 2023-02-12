@@ -23,4 +23,17 @@ There are a few things that can be helpful to know as you work on the exercises 
 
 Find an image of a star. Make a grid of stars appear on the screen.
 
-Solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_13/ex_13_1_stars)
+[Solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_13/ex_13_1_stars)
+
+## 13-2: Better Stars
+
+You can make a more realistic star pattern by introducing randomness when you place each star. Recall from Chapter 9 that you can get a random number like this:
+
+```python
+from random import randint
+random_number = randint(-10, 10)
+```
+
+This code returns a random integer between −10 and 10. Using your code in Exercise 13-1, adjust each star’s position by a random amount.
+
+[Solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_13/ex_13_2_better_stars)

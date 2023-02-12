@@ -1,4 +1,5 @@
 import sys
+from random import randint
 
 import pygame
 
@@ -59,12 +60,20 @@ class StarsGame:
             current_x = 2 * star_width
             current_y += 2 * star_height
 
+
     def _create_star(self, x_position, y_position):
         """Create a star and place it in the grid."""
+        # Add a random offset in each direction.
         new_star = Star(self)
-        new_star.rect.x = x_position
-        new_star.rect.y = y_position
+        new_star.rect.x = x_position + self._get_star_offset()
+        new_star.rect.y = y_position + self._get_star_offset()
+
         self.stars.add(new_star)
+
+    def _get_star_offset(self):
+        """Return a random adjustment to a star's position."""
+        offset_size = 15
+        return randint(-1*offset_size, offset_size)
 
     def _update_screen(self):
         """Update images on the screen, and flip to the new screen."""
