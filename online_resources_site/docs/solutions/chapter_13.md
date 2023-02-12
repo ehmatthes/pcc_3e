@@ -36,6 +36,8 @@ random_number = randint(-10, 10)
 
 This code returns a random integer between −10 and 10. Using your code in Exercise 13-1, adjust each star’s position by a random amount.
 
+***Note:** This is a basic solution that shows working code to solve this exercise. If you want, you can experiment with different size stars, different spacing values, and different values for the amount of randomness in each star's position. From my experimentation this effect seems to work better with a relatively dense field of smaller stars.*
+
 [Solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_13/ex_13_2_better_stars)
 
 ## 13-3: Raindrops
@@ -48,4 +50,15 @@ Find an image of a raindrop and create a grid of raindrops. Make the raindrops f
 
 Modify your code in Exercise 13-3 so when a row of raindrops disappears off the bottom of the screen, a new row appears at the top of the screen and begins to fall.
 
+***Note:** This is a simple working solution as well, and has not been optimized. If you like this exercise I encourage you to experiment with different size drops, different approaches to defining the starting position for each drop, and different approaches to creating new rows of raindrops.*
+
 [Solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_13/ex_13_4_steady_rain)
+
+## 13-5: Sideways Shooter Part 2
+
+We’ve come a long way since Exercise 12-6, *Sideways Shooter*. For this exercise, try to develop *Sideways Shooter* to the same point we’ve brought *Alien Invasion* to. Add a fleet of aliens, and make them move sideways toward the ship. Or, write code that places aliens at random positions along the right side of the screen and then sends them toward the ship. Also, write code that makes the aliens disappear when they’re hit.
+
+***Note:** This is a solution to the version that sends individual aliens across the screen at random intervals.*
+
+[Solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_13/ex_13_5_sideways_shooter_2)
+
