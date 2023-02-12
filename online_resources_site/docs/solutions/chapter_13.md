@@ -40,6 +40,10 @@ This code returns a random integer between −10 and 10. Using your code in Exer
 
 [Solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_13/ex_13_2_better_stars)
 
+***Note:** Here's an entirely different approach to creating a random field of stars. Instead of making a grid with some offsets, each star is randomly placed somewhere on the screen, up to a total number of stars.*
+
+[Solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_13/ex_13_2_better_stars_alternate)
+
 ## 13-3: Raindrops
 
 Find an image of a raindrop and create a grid of raindrops. Make the raindrops fall toward the bottom of the screen until they disappear.
