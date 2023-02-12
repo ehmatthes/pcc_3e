@@ -41,5 +41,5 @@ Start with your work from Exercise 14-2 (page 283). Make the target move faster 
 
 Make a set of buttons for *Alien Invasion* that allows the player to select an appropriate starting difficulty level for the game. Each button should assign the appropriate values for the attributes in `Settings` needed to create different difficulty levels.
 
-[Solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_14/ex_14_4_difficulty_levels)
+*There are two solutions for this exercise. The [first solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_14/ex_14_4_difficulty_levels) has simple difficulty buttons that change the game's settings, but don't change color when you click them. You may also be interested in a slightly more complex [solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_14/ex_14_4_difficulty_levels_toggle) which highlights the button that indicates the current difficulty settings.*
 
