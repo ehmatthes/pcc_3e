@@ -98,7 +98,11 @@ class AlienInvasion:
         elif event.key == pygame.K_q:
             sys.exit()
         elif event.key == pygame.K_SPACE:
-            self._fire_bullet()            
+            self._fire_bullet() 
+        elif (event.key == pygame.K_p) and (not self.game_active):
+            # Don't start a new game during an active game, that's probably
+            #   an accidental keypress.
+            self._start_game()           
 
     def _check_keyup_events(self, event):
         """Respond to key releases."""
