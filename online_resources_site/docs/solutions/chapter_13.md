@@ -62,3 +62,8 @@ We’ve come a long way since Exercise 12-6, *Sideways Shooter*. For this exerci
 
 [Solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_13/ex_13_5_sideways_shooter_2)
 
+## 13-6: Game Over
+
+In *Sideways Shooter*, keep track of the number of times the ship is hit and the number of times an alien is hit by the ship. Decide on an appropriate condition for ending the game, and stop the game when this situation occurs.
+
+[Solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_13/ex_13_6_game_over)
