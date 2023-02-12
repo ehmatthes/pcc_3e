@@ -56,3 +56,9 @@ Look for methods that are doing more than one task, and refactor them to organiz
 Note: Before attempting to refactor the project, see Appendix D to learn how to restore the project to a working state if you introduce bugs while refactoring.
 
 [Solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_14/ex_14_6_refactoring)
+
+## 14-7: Expanding the Game
+
+Think of a way to expand *Alien Invasion*. For example, you could program the aliens to shoot bullets down at your ship. You can also add shields for your ship to hide behind, which can be destroyed by bullets from either side. Or you can use something like the `pygame.mixer` module to add sound effects, such as explosions and shooting sounds.
+
+*For a guide on how to add sounds, see [here](https://ehmatthes.github.io/pcc_2e/beyond_pcc/ai_player/). You can also [automate game play](https://ehmatthes.github.io/pcc_2e/beyond_pcc/ai_player/#automating-game-play), and watch your computer play Alien Invasion.*
