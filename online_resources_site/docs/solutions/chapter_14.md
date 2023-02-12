@@ -37,4 +37,9 @@ Start with your work from Exercise 14-2 (page 283). Make the target move faster 
 
 [Solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_14/ex_14_3_challenging_tp)
 
+## 14-4: Difficulty Levels
+
+Make a set of buttons for *Alien Invasion* that allows the player to select an appropriate starting difficulty level for the game. Each button should assign the appropriate values for the attributes in `Settings` needed to create different difficulty levels.
+
+[Solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_14/ex_14_4_difficulty_levels)
 
