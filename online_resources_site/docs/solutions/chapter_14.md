@@ -30,3 +30,11 @@ Because *Alien Invasion* uses keyboard input to control the ship, it would be us
 Create a rectangle at the right edge of the screen that moves up and down at a steady rate. Then on the left side of the screen, create a ship that the player can move up and down while firing bullets at the rectangular target. Add a Play button that starts the game, and when the player misses the target three times, end the game and make the Play button reappear. Let the player restart the game with this Play button.
 
 [Solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_14/ex_14_2_target_practice)
+
+## 14-3: Challenging Target Practice
+
+Start with your work from Exercise 14-2 (page 283). Make the target move faster as the game progresses, and restart the target at the original speed when the player clicks Play.
+
+[Solution](https://github.com/ehmatthes/pcc_3e/tree/main/solution_files/chapter_14/ex_14_3_challenging_tp)
+
+
