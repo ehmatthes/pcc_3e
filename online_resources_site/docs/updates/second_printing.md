@@ -17,6 +17,7 @@ If you find an error in the book that's not listed here, or can’t get somethin
     - [Chapter 6](#chapter-6)
     - [Chapter 15](#chapter-15)
     - [Chapter 16](#chapter-16)
+    - [Chapter 19](#chapter-19)
 
 ---
 
@@ -54,3 +55,13 @@ plt.style.use('seaborn-v0_8')
 ### Chapter 16
 
 As noted above for Chapter 15, use `seaborn-v0_8` wherever you see `seaborn`.
+
+### Chapter 19
+
+On page 416, the sentence:
+
+> Make a new *urls.py* file in the directory *ll_project/accounts/* and add the following...
+
+should instead read:
+
+> Make a new *urls.py* file in the directory *learning_log/accounts/* and add the following...

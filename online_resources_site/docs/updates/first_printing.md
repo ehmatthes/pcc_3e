@@ -91,6 +91,14 @@ On page 399, the listing for *topics.html* has an extra closing tag `</li>`. It 
 
 ### Chapter 19
 
+On page 416, the sentence 
+
+> Make a new *urls.py* file in the directory *ll_project/accounts/* and add the following...
+
+should instead read:
+
+> Make a new *urls.py* file in the directory *learning_log/accounts/* and add the following...
+
 On page 425, in the grayed out code for *models.py*, the `text` attribute should be lowercase:
 
 ```python
