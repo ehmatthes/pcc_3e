@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 x_values = range(1, 1001)
 y_values = [x**2 for x in x_values]
 
-plt.style.use('seaborn')
+plt.style.use('seaborn-v0_8')
 fig, ax = plt.subplots()
 ax.scatter(x_values, y_values, s=10)
 

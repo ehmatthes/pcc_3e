@@ -22,7 +22,7 @@ for row in reader:
     lows.append(low)
 
 # Plot the high and low temperatures.
-plt.style.use('seaborn')
+plt.style.use('seaborn-v0_8')
 fig, ax = plt.subplots()
 ax.plot(dates, highs, color='red')
 ax.plot(dates, lows, color='blue')

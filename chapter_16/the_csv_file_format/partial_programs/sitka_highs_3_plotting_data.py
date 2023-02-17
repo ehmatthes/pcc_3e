@@ -17,7 +17,7 @@ for row in reader:
     highs.append(high)
 
 # Plot the high temperatures.
-plt.style.use('seaborn')
+plt.style.use('seaborn-v0_8')
 fig, ax = plt.subplots()
 ax.plot(highs, color='red')
 
