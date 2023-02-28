@@ -41,6 +41,7 @@ nav:
   - "Setup Instructions":
     - "setup_instructions/index.md"
     - "Configuring VS Code": "setup_instructions/configuring_vs_code.md"
+  - "Cheat Sheets": "cheat_sheets.md"
   - "Updates":
     - "updates/index.md"
     - "First printing": "updates/first_printing.md"
