@@ -13,7 +13,7 @@ The simplest way to download the source code files for the book is to click on t
 
 [Download .zip](https://github.com/ehmatthes/pcc_3e/archive/refs/heads/main.zip){ .md-button .md-button--primary } [View on GitHub](https://github.com/ehmatthes/pcc_3e/){ .md-button }
 
-*The full set of resources for the third edition is still being developed. If you are an early reader of the third edition, some of the [second edition's resources](https://ehmatthes.github.io/pcc_2e/regular_index/) may still be useful, such as the [Cheat Sheets](https://ehmatthes.github.io/pcc_2e/cheat_sheets/cheat_sheets/) and articles such as [Finding Employment](https://ehmatthes.github.io/pcc_2e/finding_employment/).*
+*Note: Some of the [second edition's resources](https://ehmatthes.github.io/pcc_2e/regular_index/) may still be useful, such as [Finding Employment](https://ehmatthes.github.io/pcc_2e/finding_employment/) and [Recommended Reading](https://ehmatthes.github.io/pcc_2e/recommended_reading/recommended_reading/).*
 
 ---
 
