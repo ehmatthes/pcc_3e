@@ -4,7 +4,6 @@ __pycache__/
 *.pyc
 
 *_env/
-.venv/
 .venv*/
 
 online_resources_site/site/
