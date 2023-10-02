@@ -19,6 +19,7 @@ If you find an error in the book that's not listed here, or can’t get somethin
     - [Chapter 10](#chapter-10)
     - [Chapter 15](#chapter-15)
     - [Chapter 16](#chapter-16)
+    - [Chapter 17](#chapter-17)
     - [Chapter 18](#chapter-18)
     - [Chapter 19](#chapter-19)
 
@@ -76,7 +77,24 @@ plt.style.use('seaborn-v0_8')
 
 As noted above for Chapter 15, use `seaborn-v0_8` wherever you see `seaborn`.
 
+### Chapter 17
+
+On page 370, the code that starts the `for` loop should go through index `30`, not `5`:
+
+```python
+submission_dicts = []
+for submission_id in submission_ids[:30]:
+    # Make a new API call for each submission.
+    ...
+```
+
 ### Chapter 18
+
+On page 391, the path to the index.html template should read:
+
+```text
+learning_log/learning_logs/templates/learning_logs/index.html
+```
 
 On page 399, the listing for *topics.html* has an extra closing tag `</li>`. It should look like this:
 
@@ -98,6 +116,8 @@ On page 416, the sentence
 should instead read:
 
 > Make a new *urls.py* file in the directory *learning_log/accounts/* and add the following...
+
+On page 417, the word *Settting* should only have two Ts.
 
 On page 425, in the grayed out code for *models.py*, the `text` attribute should be lowercase:
 

@@ -10,6 +10,8 @@ When looking for updates it’s helpful to know which printing you’re working 
 
 - [First printing](first_printing.md)
 - [Second printing](second_printing.md)
+- [Third printing](third_printing.md)
+- [Fourth printing](fourth_printing.md)
 
 ---
 
