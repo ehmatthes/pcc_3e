@@ -8,8 +8,14 @@
       
       
       
+      
+        <link rel="prev" href="../chapter_8/">
+      
+      
+        <link rel="next" href="../chapter_10/">
+      
       <link rel="icon" href="../../images/pcc_snake_favicon-48px.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.0">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
     
     
       
@@ -17,11 +23,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.2e8b5541.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
-        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -56,7 +61,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     
@@ -80,7 +85,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Python Crash Course, Third Edition" class="md-header__button md-logo" aria-label="Python Crash Course, Third Edition" data-md-component="logo">
       
@@ -107,27 +114,31 @@
       </div>
     </div>
     
-      <form class="md-header__option" data-md-component="palette">
-        
+      
+        <form class="md-header__option" data-md-component="palette">
           
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
           
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
           
-            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
-            </label>
-          
-        
-          
-          
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
-          
-            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
-            </label>
-          
-        
-      </form>
+        </form>
+      
     
     
     
@@ -157,7 +168,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -242,8 +253,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
       
       
         
@@ -266,7 +278,7 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="Setup Instructions" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Setup Instructions
@@ -321,13 +333,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
       
       
         
           
             
+          
+        
+          
+        
           
         
           
@@ -349,7 +366,7 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="Updates" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Updates
@@ -392,6 +409,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../updates/third_printing/" class="md-nav__link">
+        Third printing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../updates/fourth_printing/" class="md-nav__link">
+        Fourth printing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../updates/which_printing/" class="md-nav__link">
         Which printing do I have?
       </a>
@@ -419,8 +464,9 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
       
       
         
@@ -479,7 +525,7 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="Solutions" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Solutions
@@ -595,7 +641,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
@@ -1083,20 +1129,20 @@
 <p>Make a class called <code>Restaurant</code>. The <code>__init__()</code> method for <code>Restaurant</code> should store two attributes: a <code>restaurant_name</code> and a <code>cuisine_type</code>. Make a method called <code>describe_restaurant()</code> that prints these two pieces of information, and a method called <code>open_restaurant()</code> that prints a message indicating that the restaurant is open.</p>
 <p>Make an instance called <code>restaurant</code> from your class. Print the two attributes individually, and then call both methods.</p>
 <div class="highlight"><span class="filename">restaurant.py</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="sd">&quot;&quot;&quot;A class representing a restaurant.&quot;&quot;&quot;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;A class representing a restaurant.&quot;&quot;&quot;</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">cuisine_type</span><span class="p">):</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="sd">&quot;&quot;&quot;Initialize the restaurant.&quot;&quot;&quot;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the restaurant.&quot;&quot;&quot;</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">cuisine_type</span> <span class="o">=</span> <span class="n">cuisine_type</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="k">def</span> <span class="nf">describe_restaurant</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="sd">&quot;&quot;&quot;Display a summary of the restaurant.&quot;&quot;&quot;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display a summary of the restaurant.&quot;&quot;&quot;</span>
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> serves wonderful </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">cuisine_type</span><span class="si">}</span><span class="s2">.&quot;</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
 <a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="k">def</span> <span class="nf">open_restaurant</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        <span class="sd">&quot;&quot;&quot;Display a message that the restaurant is open.&quot;&quot;&quot;</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display a message that the restaurant is open.&quot;&quot;&quot;</span>
 <a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> is open. Come on in!&quot;</span>
 <a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
@@ -1117,20 +1163,20 @@
 <h2 id="9-2-three-restaurants">9-2: Three Restaurants</h2>
 <p>Start with your class from Exercise 9-1. Create three different instances from the class, and call <code>describe_restaurant()</code> for each instance.</p>
 <div class="highlight"><span class="filename">three_restaurants.py</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">:</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="sd">&quot;&quot;&quot;A class representing a restaurant.&quot;&quot;&quot;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;A class representing a restaurant.&quot;&quot;&quot;</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">cuisine_type</span><span class="p">):</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        <span class="sd">&quot;&quot;&quot;Initialize the restaurant.&quot;&quot;&quot;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the restaurant.&quot;&quot;&quot;</span>
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">cuisine_type</span> <span class="o">=</span> <span class="n">cuisine_type</span>
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
 <a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="k">def</span> <span class="nf">describe_restaurant</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        <span class="sd">&quot;&quot;&quot;Display a summary of the restaurant.&quot;&quot;&quot;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display a summary of the restaurant.&quot;&quot;&quot;</span>
 <a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> serves wonderful </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">cuisine_type</span><span class="si">}</span><span class="s2">.&quot;</span>
 <a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
 <a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    <span class="k">def</span> <span class="nf">open_restaurant</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>        <span class="sd">&quot;&quot;&quot;Display a message that the restaurant is open.&quot;&quot;&quot;</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display a message that the restaurant is open.&quot;&quot;&quot;</span>
 <a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> is open. Come on in!&quot;</span>
 <a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
@@ -1153,10 +1199,10 @@
 <p>Make a class called <code>User</code>. Create two attributes called <code>first_name</code> and <code>last_name</code>, and then create several other attributes that are typically stored in a user profile. Make a method called <code>describe_user()</code> that prints a summary of the user's information. Make another method called <code>greet_user()</code> that prints a personalized greeting to the user.</p>
 <p>Create several instances representing different users, and call both methods for each user.</p>
 <div class="highlight"><span class="filename">users.py</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="sd">&quot;&quot;&quot;Represent a simple user profile.&quot;&quot;&quot;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Represent a simple user profile.&quot;&quot;&quot;</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>        <span class="sd">&quot;&quot;&quot;Initialize the user.&quot;&quot;&quot;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the user.&quot;&quot;&quot;</span>
 <a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
 <a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
 <a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">username</span>
@@ -1164,14 +1210,14 @@
 <a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="n">location</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
 <a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
 <a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    <span class="k">def</span> <span class="nf">describe_user</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>        <span class="sd">&quot;&quot;&quot;Display a summary of the user&#39;s information.&quot;&quot;&quot;</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display a summary of the user&#39;s information.&quot;&quot;&quot;</span>
 <a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Username: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Email: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">email</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Location: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">location</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>
 <a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    <span class="k">def</span> <span class="nf">greet_user</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>        <span class="sd">&quot;&quot;&quot;Display a personalized greeting to the user.&quot;&quot;&quot;</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display a personalized greeting to the user.&quot;&quot;&quot;</span>
 <a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Welcome back, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
 <a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>
 <a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="n">eric</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s1">&#39;eric&#39;</span><span class="p">,</span> <span class="s1">&#39;matthes&#39;</span><span class="p">,</span> <span class="s1">&#39;e_matthes&#39;</span><span class="p">,</span> <span class="s1">&#39;e_matthes@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;alaska&#39;</span><span class="p">)</span>
@@ -1201,30 +1247,30 @@
 <p>Add a method called <code>set_number_served()</code> that lets you set the number of customers that have been served. Call this method with a new number and print the value again.</p>
 <p>Add a method called <code>increment_number_served()</code> that lets you increment the number of customers who've been served. Call this method with any number you like that could represent how many customers were served in, say, a day of business.</p>
 <div class="highlight"><span class="filename">number_served.py</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">:</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="sd">&quot;&quot;&quot;A class representing a restaurant.&quot;&quot;&quot;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;A class representing a restaurant.&quot;&quot;&quot;</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
 <a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">cuisine_type</span><span class="p">):</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>        <span class="sd">&quot;&quot;&quot;Initialize the restaurant.&quot;&quot;&quot;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the restaurant.&quot;&quot;&quot;</span>
 <a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
 <a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">cuisine_type</span> <span class="o">=</span> <span class="n">cuisine_type</span>
 <a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">number_served</span> <span class="o">=</span> <span class="mi">0</span>
 <a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
 <a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    <span class="k">def</span> <span class="nf">describe_restaurant</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>        <span class="sd">&quot;&quot;&quot;Display a summary of the restaurant.&quot;&quot;&quot;</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display a summary of the restaurant.&quot;&quot;&quot;</span>
 <a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> serves wonderful </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">cuisine_type</span><span class="si">}</span><span class="s2">.&quot;</span>
 <a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>
 <a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>    <span class="k">def</span> <span class="nf">open_restaurant</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>        <span class="sd">&quot;&quot;&quot;Display a message that the restaurant is open.&quot;&quot;&quot;</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display a message that the restaurant is open.&quot;&quot;&quot;</span>
 <a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> is open. Come on in!&quot;</span>
 <a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>
 <a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>    <span class="k">def</span> <span class="nf">set_number_served</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number_served</span><span class="p">):</span>
-<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>        <span class="sd">&quot;&quot;&quot;Allow user to set the number of customers that have been served.&quot;&quot;&quot;</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Allow user to set the number of customers that have been served.&quot;&quot;&quot;</span>
 <a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">number_served</span> <span class="o">=</span> <span class="n">number_served</span>
 <a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>
 <a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>    <span class="k">def</span> <span class="nf">increment_number_served</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">additional_served</span><span class="p">):</span>
-<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>        <span class="sd">&quot;&quot;&quot;Allow user to increment the number of customers served.&quot;&quot;&quot;</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Allow user to increment the number of customers served.&quot;&quot;&quot;</span>
 <a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">number_served</span> <span class="o">+=</span> <span class="n">additional_served</span>
 <a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>
 <a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>
@@ -1252,10 +1298,10 @@
 <p>Add an attribute called <code>login_attempts</code> to your <code>User</code> class from Exercise 9-3 (page 162). Write a method called <code>increment_login_attempts()</code> that increments the value of <code>login_attempts</code> by 1. Write another method called <code>reset_login_attempts()</code> that resets the value of <code>login_attempts</code> to 0.</p>
 <p>Make an instance of the <code>User</code> class and call <code>increment_login_attempts()</code> several times. Print the value of <code>login_attempts</code> to make sure it was incremented properly, and then call <code>reset_login_attempts()</code>. Print <code>login_attempts</code> again to make sure it was reset to 0.</p>
 <div class="highlight"><span class="filename">login_attempts.py</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="sd">&quot;&quot;&quot;Represent a simple user profile.&quot;&quot;&quot;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Represent a simple user profile.&quot;&quot;&quot;</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>        <span class="sd">&quot;&quot;&quot;Initialize the user.&quot;&quot;&quot;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the user.&quot;&quot;&quot;</span>
 <a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
 <a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
 <a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">username</span>
@@ -1264,22 +1310,22 @@
 <a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">login_attempts</span> <span class="o">=</span> <span class="mi">0</span>
 <a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
 <a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>    <span class="k">def</span> <span class="nf">describe_user</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>        <span class="sd">&quot;&quot;&quot;Display a summary of the user&#39;s information.&quot;&quot;&quot;</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display a summary of the user&#39;s information.&quot;&quot;&quot;</span>
 <a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Username: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Email: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">email</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Location: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">location</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>
 <a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>    <span class="k">def</span> <span class="nf">greet_user</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>        <span class="sd">&quot;&quot;&quot;Display a personalized greeting to the user.&quot;&quot;&quot;</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display a personalized greeting to the user.&quot;&quot;&quot;</span>
 <a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Welcome back, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
 <a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>
 <a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>    <span class="k">def</span> <span class="nf">increment_login_attempts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>        <span class="sd">&quot;&quot;&quot;Increment the value of login_attempts.&quot;&quot;&quot;</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Increment the value of login_attempts.&quot;&quot;&quot;</span>
 <a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">login_attempts</span> <span class="o">+=</span> <span class="mi">1</span>
 <a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>
 <a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>    <span class="k">def</span> <span class="nf">reset_login_attempts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>        <span class="sd">&quot;&quot;&quot;Reset login_attempts to 0.&quot;&quot;&quot;</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Reset login_attempts to 0.&quot;&quot;&quot;</span>
 <a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">login_attempts</span> <span class="o">=</span> <span class="mi">0</span>
 <a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>
 <a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a><span class="n">eric</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s1">&#39;eric&#39;</span><span class="p">,</span> <span class="s1">&#39;matthes&#39;</span><span class="p">,</span> <span class="s1">&#39;e_matthes&#39;</span><span class="p">,</span> <span class="s1">&#39;e_matthes@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;alaska&#39;</span><span class="p">)</span>
@@ -1311,43 +1357,43 @@
 <h2 id="9-6-ice-cream-stand">9-6: Ice Cream Stand</h2>
 <p>An ice cream stand is a specific kind of restaurant. Write a class called <code>IceCreamStand</code> that inherits from the <code>Restaurant</code> class you wrote in Exercise 9-1 (page 162) or Exercise 9-4 (page 166). Either version of the class will work; just pick the one you like better. Add an attribute called <code>flavors</code> that stores a list of ice cream flavors. Write a method that displays theese flavors. Create an instance of <code>IceCreamStand</code>, and call this method.</p>
 <div class="highlight"><span class="filename">ice_cream_stand.py</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">:</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="sd">&quot;&quot;&quot;A class representing a restaurant.&quot;&quot;&quot;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;A class representing a restaurant.&quot;&quot;&quot;</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
 <a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">cuisine_type</span><span class="p">):</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>        <span class="sd">&quot;&quot;&quot;Initialize the restaurant.&quot;&quot;&quot;</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the restaurant.&quot;&quot;&quot;</span>
 <a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
 <a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">cuisine_type</span> <span class="o">=</span> <span class="n">cuisine_type</span>
 <a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">number_served</span> <span class="o">=</span> <span class="mi">0</span>
 <a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>
 <a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>    <span class="k">def</span> <span class="nf">describe_restaurant</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>        <span class="sd">&quot;&quot;&quot;Display a summary of the restaurant.&quot;&quot;&quot;</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display a summary of the restaurant.&quot;&quot;&quot;</span>
 <a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> serves wonderful </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">cuisine_type</span><span class="si">}</span><span class="s2">.&quot;</span>
 <a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>
 <a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>    <span class="k">def</span> <span class="nf">open_restaurant</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>        <span class="sd">&quot;&quot;&quot;Display a message that the restaurant is open.&quot;&quot;&quot;</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display a message that the restaurant is open.&quot;&quot;&quot;</span>
 <a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> is open. Come on in!&quot;</span>
 <a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>
 <a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>    <span class="k">def</span> <span class="nf">set_number_served</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number_served</span><span class="p">):</span>
-<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>        <span class="sd">&quot;&quot;&quot;Allow user to set the number of customers that have been served.&quot;&quot;&quot;</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Allow user to set the number of customers that have been served.&quot;&quot;&quot;</span>
 <a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">number_served</span> <span class="o">=</span> <span class="n">number_served</span>
 <a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>
 <a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>    <span class="k">def</span> <span class="nf">increment_number_served</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">additional_served</span><span class="p">):</span>
-<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a>        <span class="sd">&quot;&quot;&quot;Allow user to increment the number of customers served.&quot;&quot;&quot;</span>
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Allow user to increment the number of customers served.&quot;&quot;&quot;</span>
 <a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">number_served</span> <span class="o">+=</span> <span class="n">additional_served</span>
 <a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a>
 <a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a>
 <a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="k">class</span> <span class="nc">IceCreamStand</span><span class="p">(</span><span class="n">Restaurant</span><span class="p">):</span>
-<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a>    <span class="sd">&quot;&quot;&quot;Represent an ice cream stand.&quot;&quot;&quot;</span>
+<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Represent an ice cream stand.&quot;&quot;&quot;</span>
 <a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a>
 <a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">cuisine_type</span><span class="o">=</span><span class="s1">&#39;ice cream&#39;</span><span class="p">):</span>
-<a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a>        <span class="sd">&quot;&quot;&quot;Initialize an ice cream stand.&quot;&quot;&quot;</span>
+<a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize an ice cream stand.&quot;&quot;&quot;</span>
 <a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">cuisine_type</span><span class="p">)</span>
 <a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">flavors</span> <span class="o">=</span> <span class="p">[]</span>
 <a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a>
 <a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a>    <span class="k">def</span> <span class="nf">show_flavors</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-10-38" name="__codelineno-10-38" href="#__codelineno-10-38"></a>        <span class="sd">&quot;&quot;&quot;Display the flavors available.&quot;&quot;&quot;</span>
+<a id="__codelineno-10-38" name="__codelineno-10-38" href="#__codelineno-10-38"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display the flavors available.&quot;&quot;&quot;</span>
 <a id="__codelineno-10-39" name="__codelineno-10-39" href="#__codelineno-10-39"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">We have the following flavors available:&quot;</span><span class="p">)</span>
 <a id="__codelineno-10-40" name="__codelineno-10-40" href="#__codelineno-10-40"></a>        <span class="k">for</span> <span class="n">flavor</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">flavors</span><span class="p">:</span>
 <a id="__codelineno-10-41" name="__codelineno-10-41" href="#__codelineno-10-41"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;- </span><span class="si">{</span><span class="n">flavor</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -1369,10 +1415,10 @@
 <h2 id="9-7-admin">9-7: Admin</h2>
 <p>An administrator is a special kind of user. Write a class called <code>Admin</code> that inherits from the <code>User</code> class you wrote in Exercise 9-3 (page 162) or Exercise 9-5 (page 167). Add an attribute, <code>privileges</code>, that stores a list of strings like <code>"can add post"</code>, <code>"can delete post"</code>, <code>"can ban user"</code>, and so on. Write a method called <code>show_privileges()</code> that lists the administrator's set of privileges. Create an instance of <code>Admin</code>, and call your method.</p>
 <div class="highlight"><span class="filename">admin.py</span><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="sd">&quot;&quot;&quot;Represent a simple user profile.&quot;&quot;&quot;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Represent a simple user profile.&quot;&quot;&quot;</span>
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
 <a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>        <span class="sd">&quot;&quot;&quot;Initialize the user.&quot;&quot;&quot;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the user.&quot;&quot;&quot;</span>
 <a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
 <a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
 <a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">username</span>
@@ -1381,35 +1427,35 @@
 <a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">login_attempts</span> <span class="o">=</span> <span class="mi">0</span>
 <a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>
 <a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>    <span class="k">def</span> <span class="nf">describe_user</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>        <span class="sd">&quot;&quot;&quot;Display a summary of the user&#39;s information.&quot;&quot;&quot;</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display a summary of the user&#39;s information.&quot;&quot;&quot;</span>
 <a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Username: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Email: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">email</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Location: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">location</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>
 <a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>    <span class="k">def</span> <span class="nf">greet_user</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>        <span class="sd">&quot;&quot;&quot;Display a personalized greeting to the user.&quot;&quot;&quot;</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display a personalized greeting to the user.&quot;&quot;&quot;</span>
 <a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Welcome back, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
 <a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a>
 <a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a>    <span class="k">def</span> <span class="nf">increment_login_attempts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a>        <span class="sd">&quot;&quot;&quot;Increment the value of login_attempts.&quot;&quot;&quot;</span>
+<a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Increment the value of login_attempts.&quot;&quot;&quot;</span>
 <a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">login_attempts</span> <span class="o">+=</span> <span class="mi">1</span>
 <a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a>
 <a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a>    <span class="k">def</span> <span class="nf">reset_login_attempts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a>        <span class="sd">&quot;&quot;&quot;Reset login_attempts to 0.&quot;&quot;&quot;</span>
+<a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Reset login_attempts to 0.&quot;&quot;&quot;</span>
 <a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">login_attempts</span> <span class="o">=</span> <span class="mi">0</span>
 <a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a>
 <a id="__codelineno-12-32" name="__codelineno-12-32" href="#__codelineno-12-32"></a>
 <a id="__codelineno-12-33" name="__codelineno-12-33" href="#__codelineno-12-33"></a><span class="k">class</span> <span class="nc">Admin</span><span class="p">(</span><span class="n">User</span><span class="p">):</span>
-<a id="__codelineno-12-34" name="__codelineno-12-34" href="#__codelineno-12-34"></a>    <span class="sd">&quot;&quot;&quot;A user with administrative privileges.&quot;&quot;&quot;</span>
+<a id="__codelineno-12-34" name="__codelineno-12-34" href="#__codelineno-12-34"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;A user with administrative privileges.&quot;&quot;&quot;</span>
 <a id="__codelineno-12-35" name="__codelineno-12-35" href="#__codelineno-12-35"></a>
 <a id="__codelineno-12-36" name="__codelineno-12-36" href="#__codelineno-12-36"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
-<a id="__codelineno-12-37" name="__codelineno-12-37" href="#__codelineno-12-37"></a>        <span class="sd">&quot;&quot;&quot;Initialize the admin.&quot;&quot;&quot;</span>
+<a id="__codelineno-12-37" name="__codelineno-12-37" href="#__codelineno-12-37"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the admin.&quot;&quot;&quot;</span>
 <a id="__codelineno-12-38" name="__codelineno-12-38" href="#__codelineno-12-38"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">location</span><span class="p">)</span>
 <a id="__codelineno-12-39" name="__codelineno-12-39" href="#__codelineno-12-39"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">privileges</span> <span class="o">=</span> <span class="p">[]</span>
 <a id="__codelineno-12-40" name="__codelineno-12-40" href="#__codelineno-12-40"></a>
 <a id="__codelineno-12-41" name="__codelineno-12-41" href="#__codelineno-12-41"></a>    <span class="k">def</span> <span class="nf">show_privileges</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-12-42" name="__codelineno-12-42" href="#__codelineno-12-42"></a>        <span class="sd">&quot;&quot;&quot;Display the privileges this administrator has.&quot;&quot;&quot;</span>
+<a id="__codelineno-12-42" name="__codelineno-12-42" href="#__codelineno-12-42"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display the privileges this administrator has.&quot;&quot;&quot;</span>
 <a id="__codelineno-12-43" name="__codelineno-12-43" href="#__codelineno-12-43"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Privileges:&quot;</span><span class="p">)</span>
 <a id="__codelineno-12-44" name="__codelineno-12-44" href="#__codelineno-12-44"></a>        <span class="k">for</span> <span class="n">privilege</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">privileges</span><span class="p">:</span>
 <a id="__codelineno-12-45" name="__codelineno-12-45" href="#__codelineno-12-45"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;- </span><span class="si">{</span><span class="n">privilege</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -1439,10 +1485,10 @@
 <h2 id="9-8-privileges">9-8: Privileges</h2>
 <p>Write a separate <code>Privileges</code> class. The class should have one attribute, <code>privileges</code>, that stores a list of strings as described in Exercise 9-7. Move the <code>show_privileges()</code> method to this class. Make a <code>Privileges</code> instance as an attribute in the <code>Admin</code> class. Create a new instance of <code>Admin</code> and use your method to show its privileges.</p>
 <div class="highlight"><span class="filename">privileges.py</span><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    <span class="sd">&quot;&quot;&quot;Represent a simple user profile.&quot;&quot;&quot;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Represent a simple user profile.&quot;&quot;&quot;</span>
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
 <a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>        <span class="sd">&quot;&quot;&quot;Initialize the user.&quot;&quot;&quot;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the user.&quot;&quot;&quot;</span>
 <a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
 <a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
 <a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">username</span>
@@ -1451,30 +1497,30 @@
 <a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">login_attempts</span> <span class="o">=</span> <span class="mi">0</span>
 <a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>
 <a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>    <span class="k">def</span> <span class="nf">describe_user</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>        <span class="sd">&quot;&quot;&quot;Display a summary of the user&#39;s information.&quot;&quot;&quot;</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display a summary of the user&#39;s information.&quot;&quot;&quot;</span>
 <a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Username: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Email: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">email</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Location: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">location</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>
 <a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>    <span class="k">def</span> <span class="nf">greet_user</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>        <span class="sd">&quot;&quot;&quot;Display a personalized greeting to the user.&quot;&quot;&quot;</span>
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display a personalized greeting to the user.&quot;&quot;&quot;</span>
 <a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Welcome back, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
 <a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>
 <a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a>    <span class="k">def</span> <span class="nf">increment_login_attempts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a>        <span class="sd">&quot;&quot;&quot;Increment the value of login_attempts.&quot;&quot;&quot;</span>
+<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Increment the value of login_attempts.&quot;&quot;&quot;</span>
 <a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">login_attempts</span> <span class="o">+=</span> <span class="mi">1</span>
 <a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a>
 <a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a>    <span class="k">def</span> <span class="nf">reset_login_attempts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a>        <span class="sd">&quot;&quot;&quot;Reset login_attempts to 0.&quot;&quot;&quot;</span>
+<a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Reset login_attempts to 0.&quot;&quot;&quot;</span>
 <a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">login_attempts</span> <span class="o">=</span> <span class="mi">0</span>
 <a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a>
 <a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a>
 <a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a><span class="k">class</span> <span class="nc">Admin</span><span class="p">(</span><span class="n">User</span><span class="p">):</span>
-<a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a>    <span class="sd">&quot;&quot;&quot;A user with administrative privileges.&quot;&quot;&quot;</span>
+<a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;A user with administrative privileges.&quot;&quot;&quot;</span>
 <a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a>
 <a id="__codelineno-14-36" name="__codelineno-14-36" href="#__codelineno-14-36"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
-<a id="__codelineno-14-37" name="__codelineno-14-37" href="#__codelineno-14-37"></a>        <span class="sd">&quot;&quot;&quot;Initialize the admin.&quot;&quot;&quot;</span>
+<a id="__codelineno-14-37" name="__codelineno-14-37" href="#__codelineno-14-37"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the admin.&quot;&quot;&quot;</span>
 <a id="__codelineno-14-38" name="__codelineno-14-38" href="#__codelineno-14-38"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">location</span><span class="p">)</span>
 <a id="__codelineno-14-39" name="__codelineno-14-39" href="#__codelineno-14-39"></a>
 <a id="__codelineno-14-40" name="__codelineno-14-40" href="#__codelineno-14-40"></a>        <span class="c1"># Initialize an empty set of privileges.</span>
@@ -1482,7 +1528,7 @@
 <a id="__codelineno-14-42" name="__codelineno-14-42" href="#__codelineno-14-42"></a>
 <a id="__codelineno-14-43" name="__codelineno-14-43" href="#__codelineno-14-43"></a>
 <a id="__codelineno-14-44" name="__codelineno-14-44" href="#__codelineno-14-44"></a><span class="k">class</span> <span class="nc">Privileges</span><span class="p">:</span>
-<a id="__codelineno-14-45" name="__codelineno-14-45" href="#__codelineno-14-45"></a>    <span class="sd">&quot;&quot;&quot;A class to store an admin&#39;s privileges.&quot;&quot;&quot;</span>
+<a id="__codelineno-14-45" name="__codelineno-14-45" href="#__codelineno-14-45"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;A class to store an admin&#39;s privileges.&quot;&quot;&quot;</span>
 <a id="__codelineno-14-46" name="__codelineno-14-46" href="#__codelineno-14-46"></a>
 <a id="__codelineno-14-47" name="__codelineno-14-47" href="#__codelineno-14-47"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">privileges</span><span class="o">=</span><span class="p">[]):</span>
 <a id="__codelineno-14-48" name="__codelineno-14-48" href="#__codelineno-14-48"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">privileges</span> <span class="o">=</span> <span class="n">privileges</span>
@@ -1528,48 +1574,48 @@
 <h2 id="9-9-battery-upgrade">9-9: Battery Upgrade</h2>
 <p>Use the final version of <em>electric_car.py</em> from this section. Add a method to the <code>Battery</code> class called <code>upgrade_battery()</code>. This method should check the battery size and set the capacity to 65 if it isn't already. Make an electric car with a default battery size, call <code>get_range()</code> once, and then call <code>get_range()</code> a second time after upgrading the battery. You should see an increase in the car's range.</p>
 <div class="highlight"><span class="filename">battery_upgrade.py</span><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    <span class="sd">&quot;&quot;&quot;A simple attempt to represent a car.&quot;&quot;&quot;</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;A simple attempt to represent a car.&quot;&quot;&quot;</span>
 <a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
 <a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">make</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
-<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>        <span class="sd">&quot;&quot;&quot;Initialize attributes to describe a car.&quot;&quot;&quot;</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize attributes to describe a car.&quot;&quot;&quot;</span>
 <a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">make</span> <span class="o">=</span> <span class="n">make</span>
 <a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
 <a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">year</span>
 <a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">odometer_reading</span> <span class="o">=</span> <span class="mi">0</span>
 <a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>
 <a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>    <span class="k">def</span> <span class="nf">get_descriptive_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>        <span class="sd">&quot;&quot;&quot;Return a neatly formatted descriptive name.&quot;&quot;&quot;</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Return a neatly formatted descriptive name.&quot;&quot;&quot;</span>
 <a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>        <span class="n">long_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">make</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="si">}</span><span class="s2">&quot;</span>
 <a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>        <span class="k">return</span> <span class="n">long_name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
 <a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>
 <a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>    <span class="k">def</span> <span class="nf">read_odometer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a>        <span class="sd">&quot;&quot;&quot;Print a statement showing the car&#39;s mileage.&quot;&quot;&quot;</span>
+<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Print a statement showing the car&#39;s mileage.&quot;&quot;&quot;</span>
 <a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;This car has </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">odometer_reading</span><span class="si">}</span><span class="s2"> miles on it.&quot;</span><span class="p">)</span>
 <a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a>
 <a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a>    <span class="k">def</span> <span class="nf">update_odometer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mileage</span><span class="p">):</span>
-<a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a>        <span class="sd">&quot;&quot;&quot;Set the odometer reading to the given value.&quot;&quot;&quot;</span>
+<a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Set the odometer reading to the given value.&quot;&quot;&quot;</span>
 <a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a>        <span class="k">if</span> <span class="n">mileage</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">odometer_reading</span><span class="p">:</span>
 <a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">odometer_reading</span> <span class="o">=</span> <span class="n">mileage</span>
 <a id="__codelineno-16-24" name="__codelineno-16-24" href="#__codelineno-16-24"></a>        <span class="k">else</span><span class="p">:</span>
 <a id="__codelineno-16-25" name="__codelineno-16-25" href="#__codelineno-16-25"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You can&#39;t roll back an odometer!&quot;</span><span class="p">)</span>
 <a id="__codelineno-16-26" name="__codelineno-16-26" href="#__codelineno-16-26"></a>
 <a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a>    <span class="k">def</span> <span class="nf">increment_odometer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">miles</span><span class="p">):</span>
-<a id="__codelineno-16-28" name="__codelineno-16-28" href="#__codelineno-16-28"></a>        <span class="sd">&quot;&quot;&quot;Add the given amount to the odometer reading.&quot;&quot;&quot;</span>
+<a id="__codelineno-16-28" name="__codelineno-16-28" href="#__codelineno-16-28"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Add the given amount to the odometer reading.&quot;&quot;&quot;</span>
 <a id="__codelineno-16-29" name="__codelineno-16-29" href="#__codelineno-16-29"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">odometer_reading</span> <span class="o">+=</span> <span class="n">miles</span>
 <a id="__codelineno-16-30" name="__codelineno-16-30" href="#__codelineno-16-30"></a>
 <a id="__codelineno-16-31" name="__codelineno-16-31" href="#__codelineno-16-31"></a><span class="k">class</span> <span class="nc">Battery</span><span class="p">:</span>
-<a id="__codelineno-16-32" name="__codelineno-16-32" href="#__codelineno-16-32"></a>    <span class="sd">&quot;&quot;&quot;A simple attempt to model a battery for an electric car.&quot;&quot;&quot;</span>
+<a id="__codelineno-16-32" name="__codelineno-16-32" href="#__codelineno-16-32"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;A simple attempt to model a battery for an electric car.&quot;&quot;&quot;</span>
 <a id="__codelineno-16-33" name="__codelineno-16-33" href="#__codelineno-16-33"></a>
 <a id="__codelineno-16-34" name="__codelineno-16-34" href="#__codelineno-16-34"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">battery_size</span><span class="o">=</span><span class="mi">40</span><span class="p">):</span>
-<a id="__codelineno-16-35" name="__codelineno-16-35" href="#__codelineno-16-35"></a>        <span class="sd">&quot;&quot;&quot;Initialize the battery&#39;s attributes.&quot;&quot;&quot;</span>
+<a id="__codelineno-16-35" name="__codelineno-16-35" href="#__codelineno-16-35"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the battery&#39;s attributes.&quot;&quot;&quot;</span>
 <a id="__codelineno-16-36" name="__codelineno-16-36" href="#__codelineno-16-36"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">battery_size</span> <span class="o">=</span> <span class="n">battery_size</span>
 <a id="__codelineno-16-37" name="__codelineno-16-37" href="#__codelineno-16-37"></a>
 <a id="__codelineno-16-38" name="__codelineno-16-38" href="#__codelineno-16-38"></a>    <span class="k">def</span> <span class="nf">describe_battery</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-16-39" name="__codelineno-16-39" href="#__codelineno-16-39"></a>        <span class="sd">&quot;&quot;&quot;Print a statement describing the battery size.&quot;&quot;&quot;</span>
+<a id="__codelineno-16-39" name="__codelineno-16-39" href="#__codelineno-16-39"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Print a statement describing the battery size.&quot;&quot;&quot;</span>
 <a id="__codelineno-16-40" name="__codelineno-16-40" href="#__codelineno-16-40"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;This car has a </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">battery_size</span><span class="si">}</span><span class="s2">-kWh battery.&quot;</span><span class="p">)</span>
 <a id="__codelineno-16-41" name="__codelineno-16-41" href="#__codelineno-16-41"></a>
 <a id="__codelineno-16-42" name="__codelineno-16-42" href="#__codelineno-16-42"></a>    <span class="k">def</span> <span class="nf">get_range</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-16-43" name="__codelineno-16-43" href="#__codelineno-16-43"></a>        <span class="sd">&quot;&quot;&quot;Print a statement about the range this battery provides.&quot;&quot;&quot;</span>
+<a id="__codelineno-16-43" name="__codelineno-16-43" href="#__codelineno-16-43"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Print a statement about the range this battery provides.&quot;&quot;&quot;</span>
 <a id="__codelineno-16-44" name="__codelineno-16-44" href="#__codelineno-16-44"></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">battery_size</span> <span class="o">==</span> <span class="mi">40</span><span class="p">:</span>
 <a id="__codelineno-16-45" name="__codelineno-16-45" href="#__codelineno-16-45"></a>            <span class="nb">range</span> <span class="o">=</span> <span class="mi">150</span>
 <a id="__codelineno-16-46" name="__codelineno-16-46" href="#__codelineno-16-46"></a>        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">battery_size</span> <span class="o">==</span> <span class="mi">65</span><span class="p">:</span>
@@ -1578,7 +1624,7 @@
 <a id="__codelineno-16-49" name="__codelineno-16-49" href="#__codelineno-16-49"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;This car can go about </span><span class="si">{</span><span class="nb">range</span><span class="si">}</span><span class="s2"> miles on a full charge.&quot;</span><span class="p">)</span>
 <a id="__codelineno-16-50" name="__codelineno-16-50" href="#__codelineno-16-50"></a>
 <a id="__codelineno-16-51" name="__codelineno-16-51" href="#__codelineno-16-51"></a>    <span class="k">def</span> <span class="nf">upgrade_battery</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-16-52" name="__codelineno-16-52" href="#__codelineno-16-52"></a>        <span class="sd">&quot;&quot;&quot;Upgrade the battery if possible.&quot;&quot;&quot;</span>
+<a id="__codelineno-16-52" name="__codelineno-16-52" href="#__codelineno-16-52"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Upgrade the battery if possible.&quot;&quot;&quot;</span>
 <a id="__codelineno-16-53" name="__codelineno-16-53" href="#__codelineno-16-53"></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">battery_size</span> <span class="o">==</span> <span class="mi">40</span><span class="p">:</span>
 <a id="__codelineno-16-54" name="__codelineno-16-54" href="#__codelineno-16-54"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">battery_size</span> <span class="o">=</span> <span class="mi">65</span>
 <a id="__codelineno-16-55" name="__codelineno-16-55" href="#__codelineno-16-55"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Upgraded the battery to 65 kWh.&quot;</span><span class="p">)</span>
@@ -1587,10 +1633,10 @@
 <a id="__codelineno-16-58" name="__codelineno-16-58" href="#__codelineno-16-58"></a>
 <a id="__codelineno-16-59" name="__codelineno-16-59" href="#__codelineno-16-59"></a>
 <a id="__codelineno-16-60" name="__codelineno-16-60" href="#__codelineno-16-60"></a><span class="k">class</span> <span class="nc">ElectricCar</span><span class="p">(</span><span class="n">Car</span><span class="p">):</span>
-<a id="__codelineno-16-61" name="__codelineno-16-61" href="#__codelineno-16-61"></a>    <span class="sd">&quot;&quot;&quot;Represent aspects of a car, specific to electric vehicles.&quot;&quot;&quot;</span>
+<a id="__codelineno-16-61" name="__codelineno-16-61" href="#__codelineno-16-61"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Represent aspects of a car, specific to electric vehicles.&quot;&quot;&quot;</span>
 <a id="__codelineno-16-62" name="__codelineno-16-62" href="#__codelineno-16-62"></a>
 <a id="__codelineno-16-63" name="__codelineno-16-63" href="#__codelineno-16-63"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">make</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
-<a id="__codelineno-16-64" name="__codelineno-16-64" href="#__codelineno-16-64"></a>        <span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-16-64" name="__codelineno-16-64" href="#__codelineno-16-64"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-16-65" name="__codelineno-16-65" href="#__codelineno-16-65"></a><span class="sd">        Initialize attributes of the parent class.</span>
 <a id="__codelineno-16-66" name="__codelineno-16-66" href="#__codelineno-16-66"></a><span class="sd">        Then initialize attributes specific to an electric car.</span>
 <a id="__codelineno-16-67" name="__codelineno-16-67" href="#__codelineno-16-67"></a><span class="sd">        &quot;&quot;&quot;</span>
@@ -1618,30 +1664,30 @@
 <div class="highlight"><span class="filename">restaurant.py</span><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="sd">&quot;&quot;&quot;A class representing a restaurant.&quot;&quot;&quot;</span>
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
 <a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">:</span>
-<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>    <span class="sd">&quot;&quot;&quot;A class representing a restaurant.&quot;&quot;&quot;</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;A class representing a restaurant.&quot;&quot;&quot;</span>
 <a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>
 <a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">cuisine_type</span><span class="p">):</span>
-<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>        <span class="sd">&quot;&quot;&quot;Initialize the restaurant.&quot;&quot;&quot;</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the restaurant.&quot;&quot;&quot;</span>
 <a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
 <a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">cuisine_type</span> <span class="o">=</span> <span class="n">cuisine_type</span>
 <a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">number_served</span> <span class="o">=</span> <span class="mi">0</span>
 <a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>
 <a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>    <span class="k">def</span> <span class="nf">describe_restaurant</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>        <span class="sd">&quot;&quot;&quot;Display a summary of the restaurant.&quot;&quot;&quot;</span>
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display a summary of the restaurant.&quot;&quot;&quot;</span>
 <a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> serves wonderful </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">cuisine_type</span><span class="si">}</span><span class="s2">.&quot;</span>
 <a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>
 <a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a>    <span class="k">def</span> <span class="nf">open_restaurant</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a>        <span class="sd">&quot;&quot;&quot;Display a message that the restaurant is open.&quot;&quot;&quot;</span>
+<a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display a message that the restaurant is open.&quot;&quot;&quot;</span>
 <a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a>        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> is open. Come on in!&quot;</span>
 <a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a>
 <a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a>    <span class="k">def</span> <span class="nf">set_number_served</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number_served</span><span class="p">):</span>
-<a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a>        <span class="sd">&quot;&quot;&quot;Allow user to set the number of customers that have been served.&quot;&quot;&quot;</span>
+<a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Allow user to set the number of customers that have been served.&quot;&quot;&quot;</span>
 <a id="__codelineno-18-24" name="__codelineno-18-24" href="#__codelineno-18-24"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">number_served</span> <span class="o">=</span> <span class="n">number_served</span>
 <a id="__codelineno-18-25" name="__codelineno-18-25" href="#__codelineno-18-25"></a>
 <a id="__codelineno-18-26" name="__codelineno-18-26" href="#__codelineno-18-26"></a>    <span class="k">def</span> <span class="nf">increment_number_served</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">additional_served</span><span class="p">):</span>
-<a id="__codelineno-18-27" name="__codelineno-18-27" href="#__codelineno-18-27"></a>        <span class="sd">&quot;&quot;&quot;Allow user to increment the number of customers served.&quot;&quot;&quot;</span>
+<a id="__codelineno-18-27" name="__codelineno-18-27" href="#__codelineno-18-27"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Allow user to increment the number of customers served.&quot;&quot;&quot;</span>
 <a id="__codelineno-18-28" name="__codelineno-18-28" href="#__codelineno-18-28"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">number_served</span> <span class="o">+=</span> <span class="n">additional_served</span>
 </code></pre></div>
 <div class="highlight"><span class="filename">my_restaurant.py</span><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kn">from</span> <span class="nn">restaurant</span> <span class="kn">import</span> <span class="n">Restaurant</span>
@@ -1659,10 +1705,10 @@
 <div class="highlight"><span class="filename">user.py</span><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="sd">&quot;&quot;&quot;A collection of classes for modeling users.&quot;&quot;&quot;</span>
 <a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>
 <a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
-<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>    <span class="sd">&quot;&quot;&quot;Represent a simple user profile.&quot;&quot;&quot;</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Represent a simple user profile.&quot;&quot;&quot;</span>
 <a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>
 <a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
-<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>        <span class="sd">&quot;&quot;&quot;Initialize the user.&quot;&quot;&quot;</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the user.&quot;&quot;&quot;</span>
 <a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
 <a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
 <a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">username</span>
@@ -1671,30 +1717,30 @@
 <a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">login_attempts</span> <span class="o">=</span> <span class="mi">0</span>
 <a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>
 <a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>    <span class="k">def</span> <span class="nf">describe_user</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>        <span class="sd">&quot;&quot;&quot;Display a summary of the user&#39;s information.&quot;&quot;&quot;</span>
+<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display a summary of the user&#39;s information.&quot;&quot;&quot;</span>
 <a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Username: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Email: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">email</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Location: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">location</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a>
 <a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a>    <span class="k">def</span> <span class="nf">greet_user</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a>        <span class="sd">&quot;&quot;&quot;Display a personalized greeting to the user.&quot;&quot;&quot;</span>
+<a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display a personalized greeting to the user.&quot;&quot;&quot;</span>
 <a id="__codelineno-21-24" name="__codelineno-21-24" href="#__codelineno-21-24"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Welcome back, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
 <a id="__codelineno-21-25" name="__codelineno-21-25" href="#__codelineno-21-25"></a>
 <a id="__codelineno-21-26" name="__codelineno-21-26" href="#__codelineno-21-26"></a>    <span class="k">def</span> <span class="nf">increment_login_attempts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-21-27" name="__codelineno-21-27" href="#__codelineno-21-27"></a>        <span class="sd">&quot;&quot;&quot;Increment the value of login_attempts.&quot;&quot;&quot;</span>
+<a id="__codelineno-21-27" name="__codelineno-21-27" href="#__codelineno-21-27"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Increment the value of login_attempts.&quot;&quot;&quot;</span>
 <a id="__codelineno-21-28" name="__codelineno-21-28" href="#__codelineno-21-28"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">login_attempts</span> <span class="o">+=</span> <span class="mi">1</span>
 <a id="__codelineno-21-29" name="__codelineno-21-29" href="#__codelineno-21-29"></a>
 <a id="__codelineno-21-30" name="__codelineno-21-30" href="#__codelineno-21-30"></a>    <span class="k">def</span> <span class="nf">reset_login_attempts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-21-31" name="__codelineno-21-31" href="#__codelineno-21-31"></a>        <span class="sd">&quot;&quot;&quot;Reset login_attempts to 0.&quot;&quot;&quot;</span>
+<a id="__codelineno-21-31" name="__codelineno-21-31" href="#__codelineno-21-31"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Reset login_attempts to 0.&quot;&quot;&quot;</span>
 <a id="__codelineno-21-32" name="__codelineno-21-32" href="#__codelineno-21-32"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">login_attempts</span> <span class="o">=</span> <span class="mi">0</span>
 <a id="__codelineno-21-33" name="__codelineno-21-33" href="#__codelineno-21-33"></a>
 <a id="__codelineno-21-34" name="__codelineno-21-34" href="#__codelineno-21-34"></a>
 <a id="__codelineno-21-35" name="__codelineno-21-35" href="#__codelineno-21-35"></a><span class="k">class</span> <span class="nc">Admin</span><span class="p">(</span><span class="n">User</span><span class="p">):</span>
-<a id="__codelineno-21-36" name="__codelineno-21-36" href="#__codelineno-21-36"></a>    <span class="sd">&quot;&quot;&quot;A user with administrative privileges.&quot;&quot;&quot;</span>
+<a id="__codelineno-21-36" name="__codelineno-21-36" href="#__codelineno-21-36"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;A user with administrative privileges.&quot;&quot;&quot;</span>
 <a id="__codelineno-21-37" name="__codelineno-21-37" href="#__codelineno-21-37"></a>
 <a id="__codelineno-21-38" name="__codelineno-21-38" href="#__codelineno-21-38"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
-<a id="__codelineno-21-39" name="__codelineno-21-39" href="#__codelineno-21-39"></a>        <span class="sd">&quot;&quot;&quot;Initialize the admin.&quot;&quot;&quot;</span>
+<a id="__codelineno-21-39" name="__codelineno-21-39" href="#__codelineno-21-39"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the admin.&quot;&quot;&quot;</span>
 <a id="__codelineno-21-40" name="__codelineno-21-40" href="#__codelineno-21-40"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">location</span><span class="p">)</span>
 <a id="__codelineno-21-41" name="__codelineno-21-41" href="#__codelineno-21-41"></a>
 <a id="__codelineno-21-42" name="__codelineno-21-42" href="#__codelineno-21-42"></a>        <span class="c1"># Initialize an empty set of privileges.</span>
@@ -1702,7 +1748,7 @@
 <a id="__codelineno-21-44" name="__codelineno-21-44" href="#__codelineno-21-44"></a>
 <a id="__codelineno-21-45" name="__codelineno-21-45" href="#__codelineno-21-45"></a>
 <a id="__codelineno-21-46" name="__codelineno-21-46" href="#__codelineno-21-46"></a><span class="k">class</span> <span class="nc">Privileges</span><span class="p">:</span>
-<a id="__codelineno-21-47" name="__codelineno-21-47" href="#__codelineno-21-47"></a>    <span class="sd">&quot;&quot;&quot;A class to store an admin&#39;s privileges.&quot;&quot;&quot;</span>
+<a id="__codelineno-21-47" name="__codelineno-21-47" href="#__codelineno-21-47"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;A class to store an admin&#39;s privileges.&quot;&quot;&quot;</span>
 <a id="__codelineno-21-48" name="__codelineno-21-48" href="#__codelineno-21-48"></a>
 <a id="__codelineno-21-49" name="__codelineno-21-49" href="#__codelineno-21-49"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">privileges</span><span class="o">=</span><span class="p">[]):</span>
 <a id="__codelineno-21-50" name="__codelineno-21-50" href="#__codelineno-21-50"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">privileges</span> <span class="o">=</span> <span class="n">privileges</span>
@@ -1745,10 +1791,10 @@
 <div class="highlight"><span class="filename">user.py</span><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="sd">&quot;&quot;&quot;A class for modeling users.&quot;&quot;&quot;</span>
 <a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>
 <a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
-<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>    <span class="sd">&quot;&quot;&quot;Represent a simple user profile.&quot;&quot;&quot;</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Represent a simple user profile.&quot;&quot;&quot;</span>
 <a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>
 <a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
-<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>        <span class="sd">&quot;&quot;&quot;Initialize the user.&quot;&quot;&quot;</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the user.&quot;&quot;&quot;</span>
 <a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
 <a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
 <a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">username</span>
@@ -1757,22 +1803,22 @@
 <a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">login_attempts</span> <span class="o">=</span> <span class="mi">0</span>
 <a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a>
 <a id="__codelineno-24-15" name="__codelineno-24-15" href="#__codelineno-24-15"></a>    <span class="k">def</span> <span class="nf">describe_user</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-24-16" name="__codelineno-24-16" href="#__codelineno-24-16"></a>        <span class="sd">&quot;&quot;&quot;Display a summary of the user&#39;s information.&quot;&quot;&quot;</span>
+<a id="__codelineno-24-16" name="__codelineno-24-16" href="#__codelineno-24-16"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display a summary of the user&#39;s information.&quot;&quot;&quot;</span>
 <a id="__codelineno-24-17" name="__codelineno-24-17" href="#__codelineno-24-17"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-24-18" name="__codelineno-24-18" href="#__codelineno-24-18"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Username: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-24-19" name="__codelineno-24-19" href="#__codelineno-24-19"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Email: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">email</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-24-20" name="__codelineno-24-20" href="#__codelineno-24-20"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Location: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">location</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-24-21" name="__codelineno-24-21" href="#__codelineno-24-21"></a>
 <a id="__codelineno-24-22" name="__codelineno-24-22" href="#__codelineno-24-22"></a>    <span class="k">def</span> <span class="nf">greet_user</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-24-23" name="__codelineno-24-23" href="#__codelineno-24-23"></a>        <span class="sd">&quot;&quot;&quot;Display a personalized greeting to the user.&quot;&quot;&quot;</span>
+<a id="__codelineno-24-23" name="__codelineno-24-23" href="#__codelineno-24-23"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Display a personalized greeting to the user.&quot;&quot;&quot;</span>
 <a id="__codelineno-24-24" name="__codelineno-24-24" href="#__codelineno-24-24"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Welcome back, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
 <a id="__codelineno-24-25" name="__codelineno-24-25" href="#__codelineno-24-25"></a>
 <a id="__codelineno-24-26" name="__codelineno-24-26" href="#__codelineno-24-26"></a>    <span class="k">def</span> <span class="nf">increment_login_attempts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-24-27" name="__codelineno-24-27" href="#__codelineno-24-27"></a>        <span class="sd">&quot;&quot;&quot;Increment the value of login_attempts.&quot;&quot;&quot;</span>
+<a id="__codelineno-24-27" name="__codelineno-24-27" href="#__codelineno-24-27"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Increment the value of login_attempts.&quot;&quot;&quot;</span>
 <a id="__codelineno-24-28" name="__codelineno-24-28" href="#__codelineno-24-28"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">login_attempts</span> <span class="o">+=</span> <span class="mi">1</span>
 <a id="__codelineno-24-29" name="__codelineno-24-29" href="#__codelineno-24-29"></a>
 <a id="__codelineno-24-30" name="__codelineno-24-30" href="#__codelineno-24-30"></a>    <span class="k">def</span> <span class="nf">reset_login_attempts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-24-31" name="__codelineno-24-31" href="#__codelineno-24-31"></a>        <span class="sd">&quot;&quot;&quot;Reset login_attempts to 0.&quot;&quot;&quot;</span>
+<a id="__codelineno-24-31" name="__codelineno-24-31" href="#__codelineno-24-31"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Reset login_attempts to 0.&quot;&quot;&quot;</span>
 <a id="__codelineno-24-32" name="__codelineno-24-32" href="#__codelineno-24-32"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">login_attempts</span> <span class="o">=</span> <span class="mi">0</span>
 </code></pre></div>
 <div class="highlight"><span class="filename">admin.py</span><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="sd">&quot;&quot;&quot;A collection of classes for modeling an admin user account.&quot;&quot;&quot;</span>
@@ -1780,10 +1826,10 @@
 <a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="kn">from</span> <span class="nn">user</span> <span class="kn">import</span> <span class="n">User</span>
 <a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>
 <a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="k">class</span> <span class="nc">Admin</span><span class="p">(</span><span class="n">User</span><span class="p">):</span>
-<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>    <span class="sd">&quot;&quot;&quot;A user with administrative privileges.&quot;&quot;&quot;</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;A user with administrative privileges.&quot;&quot;&quot;</span>
 <a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>
 <a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
-<a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>        <span class="sd">&quot;&quot;&quot;Initialize the admin.&quot;&quot;&quot;</span>
+<a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the admin.&quot;&quot;&quot;</span>
 <a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">location</span><span class="p">)</span>
 <a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>
 <a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a>        <span class="c1"># Initialize an empty set of privileges.</span>
@@ -1791,7 +1837,7 @@
 <a id="__codelineno-25-14" name="__codelineno-25-14" href="#__codelineno-25-14"></a>
 <a id="__codelineno-25-15" name="__codelineno-25-15" href="#__codelineno-25-15"></a>
 <a id="__codelineno-25-16" name="__codelineno-25-16" href="#__codelineno-25-16"></a><span class="k">class</span> <span class="nc">Privileges</span><span class="p">:</span>
-<a id="__codelineno-25-17" name="__codelineno-25-17" href="#__codelineno-25-17"></a>    <span class="sd">&quot;&quot;&quot;A class to store an admin&#39;s privileges.&quot;&quot;&quot;</span>
+<a id="__codelineno-25-17" name="__codelineno-25-17" href="#__codelineno-25-17"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;A class to store an admin&#39;s privileges.&quot;&quot;&quot;</span>
 <a id="__codelineno-25-18" name="__codelineno-25-18" href="#__codelineno-25-18"></a>
 <a id="__codelineno-25-19" name="__codelineno-25-19" href="#__codelineno-25-19"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">privileges</span><span class="o">=</span><span class="p">[]):</span>
 <a id="__codelineno-25-20" name="__codelineno-25-20" href="#__codelineno-25-20"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">privileges</span> <span class="o">=</span> <span class="n">privileges</span>
@@ -1835,14 +1881,14 @@
 <div class="highlight"><span class="filename">dice.py</span><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
 <a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>
 <a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="k">class</span> <span class="nc">Die</span><span class="p">:</span>
-<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>    <span class="sd">&quot;&quot;&quot;Represent a die, which can be rolled.&quot;&quot;&quot;</span>
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Represent a die, which can be rolled.&quot;&quot;&quot;</span>
 <a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>
 <a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sides</span><span class="o">=</span><span class="mi">6</span><span class="p">):</span>
-<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>        <span class="sd">&quot;&quot;&quot;Initialize the die.&quot;&quot;&quot;</span>
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the die.&quot;&quot;&quot;</span>
 <a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">sides</span> <span class="o">=</span> <span class="n">sides</span>
 <a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>
 <a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a>    <span class="k">def</span> <span class="nf">roll_die</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a>        <span class="sd">&quot;&quot;&quot;Return a number between 1 and the number of sides.&quot;&quot;&quot;</span>
+<a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Return a number between 1 and the number of sides.&quot;&quot;&quot;</span>
 <a id="__codelineno-28-12" name="__codelineno-28-12" href="#__codelineno-28-12"></a>        <span class="k">return</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sides</span><span class="p">)</span>
 <a id="__codelineno-28-13" name="__codelineno-28-13" href="#__codelineno-28-13"></a>
 <a id="__codelineno-28-14" name="__codelineno-28-14" href="#__codelineno-28-14"></a><span class="c1"># Make a 6-sided die, and show the results of 10 rolls.</span>
@@ -1919,7 +1965,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
 <a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>
 <a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="k">def</span> <span class="nf">get_winning_ticket</span><span class="p">(</span><span class="n">possibilities</span><span class="p">):</span>
-<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>    <span class="sd">&quot;&quot;&quot;Return a winning ticket from a set of possibilities.&quot;&quot;&quot;</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a winning ticket from a set of possibilities.&quot;&quot;&quot;</span>
 <a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>    <span class="n">winning_ticket</span> <span class="o">=</span> <span class="p">[]</span>
 <a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>
 <a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a>    <span class="c1"># We don&#39;t want to repeat winning numbers or letters, so we&#39;ll use a</span>
@@ -1945,7 +1991,7 @@
 <a id="__codelineno-32-27" name="__codelineno-32-27" href="#__codelineno-32-27"></a>    <span class="k">return</span> <span class="kc">True</span>
 <a id="__codelineno-32-28" name="__codelineno-32-28" href="#__codelineno-32-28"></a>
 <a id="__codelineno-32-29" name="__codelineno-32-29" href="#__codelineno-32-29"></a><span class="k">def</span> <span class="nf">make_random_ticket</span><span class="p">(</span><span class="n">possibilities</span><span class="p">):</span>
-<a id="__codelineno-32-30" name="__codelineno-32-30" href="#__codelineno-32-30"></a>    <span class="sd">&quot;&quot;&quot;Return a random ticket from a set of possibilities.&quot;&quot;&quot;</span>
+<a id="__codelineno-32-30" name="__codelineno-32-30" href="#__codelineno-32-30"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a random ticket from a set of possibilities.&quot;&quot;&quot;</span>
 <a id="__codelineno-32-31" name="__codelineno-32-31" href="#__codelineno-32-31"></a>    <span class="n">ticket</span> <span class="o">=</span> <span class="p">[]</span>
 <a id="__codelineno-32-32" name="__codelineno-32-32" href="#__codelineno-32-32"></a>    <span class="c1"># We don&#39;t want to repeat numbers or letters, so we&#39;ll use a while loop.</span>
 <a id="__codelineno-32-33" name="__codelineno-32-33" href="#__codelineno-32-33"></a>    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">ticket</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span>
@@ -2008,44 +2054,6 @@
       
         <footer class="md-footer">
   
-    
-      
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" hidden>
-      
-        
-        <a href="../chapter_8/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Chapter 8" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Chapter 8
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../chapter_10/" class="md-footer__link md-footer__link--next" aria-label="Next: Chapter 10" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Chapter 10
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -2067,10 +2075,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.instant"], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.instant"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.48f2be22.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a51614de.min.js"></script>
       
     
   </body>
