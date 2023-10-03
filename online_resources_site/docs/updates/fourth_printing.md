@@ -12,7 +12,9 @@ Code that produces warnings but still runs correctly is noted under Errata, as t
 
 If you find an error in the book that's not listed here, or can’t get something to work, please let me know. You can reach me through email at ehmatthes@gmail.com, or on Twitter at @ehmatthes.
 
-
+- [Updates](#updates)
+- [Errata](#errata)
+    - [Chapter 19](#chapter-19)
 
 ---
 
@@ -26,4 +28,6 @@ There are no updates to note at this time.
 Errata
 ---
 
-There are no errata to note at this time.
+### Chapter 19
+
+On page 417 under *The login Template* the path to the `accounts/` directory should be `learning_log/accounts/`, not `ll_project/accounts/`. The full path to the `login.html` template should be: `learning_log/accounts/templates/registration/login.html`.

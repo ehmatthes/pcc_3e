@@ -87,4 +87,6 @@ should instead read:
 
 > Make a new *urls.py* file in the directory *learning_log/accounts/* and add the following...
 
-On page 417, the word *Settting* should only have two Ts.
+On page 417 under *The login Template* the path to the `accounts/` directory should be `learning_log/accounts/`, not `ll_project/accounts/`. The full path to the `login.html` template should be: `learning_log/accounts/templates/registration/login.html`.
+
+Also on page 417, the word *Settting* should only have two Ts.
