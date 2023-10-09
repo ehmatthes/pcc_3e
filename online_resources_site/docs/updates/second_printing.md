@@ -13,10 +13,11 @@ Code that produces warnings but still runs correctly is noted under Errata, as t
 If you find an error in the book that's not listed here, or can’t get something to work, please let me know. You can reach me through email at ehmatthes@gmail.com, or on Twitter at @ehmatthes.
 
 - [Updates](#updates)
+    - [Chapter 16](#chapter-16)
 - [Errata](#errata)
     - [Chapter 6](#chapter-6)
     - [Chapter 15](#chapter-15)
-    - [Chapter 16](#chapter-16)
+    - [Chapter 16](#chapter-16_1)
     - [Chapter 17](#chapter-17)
     - [Chapter 18](#chapter-18)
     - [Chapter 19](#chapter-19)
@@ -26,7 +27,16 @@ If you find an error in the book that's not listed here, or can’t get somethin
 Updates
 ---
 
-There are no updates to note at this time.
+### Chapter 16
+
+On Windows, the calls to `path.read_text()` should all have an `encoding='utf-8'` argument. On page 330, that would look like this:
+
+```python
+path = Path('weather_data/sitka_weather_07-2021_simple.csv')
+lines = path.read_text(encoding='utf-8').splitlines()
+```
+
+This also affects the calls to `path.read_text()` on pages 339 and 343. There are a few other grayed-out references to `path.read_text()` that should include this argument, but that shouldn't affect the code you're entering. Those are on pages 332, 334, 336, 339, 345, and 348.
 
 ---
 
