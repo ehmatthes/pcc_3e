@@ -1,4 +1,4 @@
---
+---
 hide:
   - footer
 title: Third Printing
