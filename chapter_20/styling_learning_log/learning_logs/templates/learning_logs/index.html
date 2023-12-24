@@ -9,8 +9,13 @@
       topics you're learning about. Whenever you learn something new
       about a topic, make an entry summarizing what you've learned.</p>
 
-      <a class="btn btn-primary btn-lg mt-1"
+      {% if not user.is_authenticated %}
+        <a class="btn btn-primary btn-lg mt-1"
           href="{% url 'accounts:register' %}">Register &raquo;</a>
+      {% else %}
+        <a class="btn btn-primary btn-lg mt-1"
+          href="{% url 'learning_logs:topics' %}">Topics &raquo;</a>
+      {% endif %}
     </div>
   </div>
 {% endblock page_header %}
