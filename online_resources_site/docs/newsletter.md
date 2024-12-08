@@ -6,7 +6,7 @@ title: Newsletter
 
 # Newsletter
 
-I write a weekly newsletter about (almost) all things Python at [Mostly Python](https://www.mostlypython.com). There are paid subscriptions available to support this ongoing work, but you can also sign up for a free subscription with access to all the same content. (Paid subscribers see some posts before free subscribers, but all posts end up available to everyone within 6 weeks.)
+I write a weekly newsletter called [Mostly Python](https://www.mostlypython.com). There are paid subscriptions available to support this ongoing work, but you can also sign up for a free subscription with access to all the same content. (Paid subscribers see some posts before free subscribers, but all posts end up available to everyone within 6 weeks.)
 
 Most of what I write will be meaningful to anyone who has worked through a significant portion of *Python Crash Course*, and is interested in current takes on a variety of topics centered around Python. My goal is to help people transition out of the beginner mindset, and keep up with things that are happening in the Python world.
 
@@ -24,7 +24,7 @@ If you're curious to read some posts, you might want to start with one of these:
 
 - [Django from first principles series](https://www.mostlypython.com/django-from-first-principles-2/)
 
-    This ongoing series builds a standard Django project by starting with a single .py file.
+    This series builds a standard Django project by starting with a single .py file.
     
 - [Reader questions](https://www.mostlypython.com/tag/reader-questions/)
 

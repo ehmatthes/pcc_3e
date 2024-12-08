@@ -22,7 +22,7 @@ If you have any questions about Python Crash Course, feel free to get in touch:
 
 Email: [ehmatthes@gmail.com](mailto:ehmatthes@gmail.com)
 
-Twitter: [@ehmatthes](https://twitter.com/ehmatthes)
+Bluesky: [@ehmatthes.bsky.social](https://bsky.app/profile/ehmatthes.bsky.social)
 
 Mastodon: [@ehmatthes@fosstodon.org](https://fosstodon.org/@ehmatthes)
 
@@ -31,4 +31,4 @@ Mastodon: [@ehmatthes@fosstodon.org](https://fosstodon.org/@ehmatthes)
 [![Python Crash Course, 3rd Edition cover](images/pcc_3e_cover-170px.png)](https://nostarch.com/python-crash-course-3rd-edition)
 
 
-Available from [No Starch Press](https://nostarch.com/python-crash-course-3rd-edition), [Amazon](https://www.amazon.com/Python-Crash-Course-Eric-Matthes-dp-1718502702/dp/1718502702/), and [Barnes & Noble](https://www.barnesandnoble.com/w/python-crash-course-3rd-edition-eric-matthes/1141287011). You can also find *Python Crash Course* in person at Barnes & Noble bookstores, and other fine booksellers worldwide.
+Available from [No Starch Press](https://nostarch.com/python-crash-course-3rd-edition), [Amazon](https://www.amazon.com/Python-Crash-Course-Eric-Matthes-dp-1718502702/dp/1718502702/), and [Barnes & Noble](https://www.barnesandnoble.com/w/python-crash-course-3rd-edition-eric-matthes/1142968265). You can also find *Python Crash Course* in person at Barnes & Noble bookstores, and other fine booksellers worldwide.
