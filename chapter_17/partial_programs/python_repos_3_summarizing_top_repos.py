@@ -21,7 +21,6 @@ print(f"Repositories returned: {len(repo_dicts)}")
 
 print("\nSelected information about each repository:")
 for repo_dict in repo_dicts:
-    print("\nSelected information about first repository:")
     print(f"Name: {repo_dict['name']}")
     print(f"Owner: {repo_dict['owner']['login']}")
     print(f"Stars: {repo_dict['stargazers_count']}")
