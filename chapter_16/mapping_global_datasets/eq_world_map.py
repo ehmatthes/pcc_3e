@@ -1,8 +1,10 @@
 from pathlib import Path
 import json
-
 import plotly.express as px
+import plotly.io as pio
 
+# force Plotly to pop the figure into your default web browser
+pio.renderers.default = "browser"
 
 # Read data as a string and convert to a Python object.
 path = Path('eq_data/eq_data_30_day_m1.geojson')
