@@ -66,6 +66,6 @@ If you find any errors, please feel free to get in touch:
 
 Email: [ehmatthes@gmail.com](mailto:ehmatthes@gmail.com)
 
-Bluesky: [@ehmatthes.bsky.social](https://bsky.app/profile/ehmatthes.bsky.social)
-
 Mastodon: [@ehmatthes@fosstodon.org](https://fosstodon.org/@ehmatthes)
+
+Bluesky: [@ehmatthes.bsky.social](https://bsky.app/profile/ehmatthes.bsky.social)

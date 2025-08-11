@@ -12,7 +12,7 @@ If you have any questions about Python Crash Course, feel free to get in touch:
 
 Email: ehmatthes@gmail.com
 
-Mastodon: [@ehmatthes@fosstodon.org](http://twitter.com/ehmatthes/)
+Mastodon: [@ehmatthes@fosstodon.org](https://fosstodon.org/@ehmatthes)
 
 Bluesky: [@ehmatthes.bsky.social](https://bsky.app/profile/ehmatthes.bsky.social)
 
