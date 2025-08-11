@@ -14,4 +14,4 @@ Mastodon: [@ehmatthes@fosstodon.org](http://twitter.com/ehmatthes/)
 
 Bluesky: [@ehmatthes.bsky.social](https://bsky.app/profile/ehmatthes.bsky.social)
 
-[Mostly Python](https://www.mostlypython.com) (biweekly newsletter)
+Biweekly newsletter: [Mostly Python](https://www.mostlypython.com)
