@@ -10,4 +10,8 @@ If you have any questions about Python Crash Course, feel free to get in touch:
 
 Email: ehmatthes@gmail.com
 
-Twitter: [@ehmatthes](http://twitter.com/ehmatthes/)
+Mastodon: [@ehmatthes@fosstodon.org](http://twitter.com/ehmatthes/)
+
+Bluesky: [@ehmatthes.bsky.social](https://bsky.app/profile/ehmatthes.bsky.social)
+
+[Mostly Python](https://www.mostlypython.com) (biweekly newsletter)
