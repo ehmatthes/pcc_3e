@@ -37,6 +37,6 @@ If you're stuck on something and what you see here isn't helping, please feel fr
 
 Email: [ehmatthes@gmail.com](mailto:ehmatthes@gmail.com)
 
-Twitter: [@ehmatthes](https://twitter.com/ehmatthes/)
-
 Mastodon: [@ehmatthes@fosstodon.org](https://fosstodon.org/@ehmatthes)
+
+Bluesky: [@ehmatthes.bsky.social](https://bsky.app/profile/ehmatthes.bsky.social)

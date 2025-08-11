@@ -15,4 +15,4 @@ When looking for updates it’s helpful to know which printing you’re working 
 
 ---
 
-If you find an error in the book or can’t get something to work, please let me know! You can reach me through email at ehmatthes@gmail.com, on Mastodon at [fosstodon.org/@ehmatthes](https://fosstodon.org/@ehmatthes) or on Twitter at [@ehmatthes](https://twitter.com/ehmatthes).
+If you find an error in the book or can’t get something to work, please let me know! You can reach me through email at ehmatthes@gmail.com, on Mastodon at [@ehmatthes@fosstodon.org](https://fosstodon.org/@ehmatthes) or on Bluesky at [@ehmatthes.bsky.social](https://bsky.app/profile/ehmatthes.bsky.social).

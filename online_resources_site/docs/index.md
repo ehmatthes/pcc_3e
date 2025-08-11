@@ -26,6 +26,8 @@ Mastodon: [@ehmatthes@fosstodon.org](https://fosstodon.org/@ehmatthes)
 
 Bluesky: [@ehmatthes.bsky.social](https://bsky.app/profile/ehmatthes.bsky.social)
 
+Biweekly newsletter: [Mostly Python](https://www.mostlypython.com)
+
 ---
 
 [![Python Crash Course, 3rd Edition cover](images/pcc_3e_cover-170px.png)](https://nostarch.com/python-crash-course-3rd-edition)
