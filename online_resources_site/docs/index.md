@@ -28,6 +28,8 @@ Bluesky: [@ehmatthes.bsky.social](https://bsky.app/profile/ehmatthes.bsky.social
 
 Biweekly newsletter: [Mostly Python](https://www.mostlypython.com)
 
+I'd love to know what you think of *Python Crash Course*! Please consider taking a [brief survey](https://docs.google.com/forms/d/e/1FAIpQLSfiVAFj9SwGKFR6m-SelLcw4jz-0zBmVbLNkE-0j0ktjz6VBg/viewform).
+
 ---
 
 [![Python Crash Course, 3rd Edition cover](images/pcc_3e_cover-170px.png)](https://nostarch.com/python-crash-course-3rd-edition)
