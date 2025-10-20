@@ -34,9 +34,9 @@ def new_blog(request):
         # POST data submitted; process data.
         form = BlogForm(data=request.POST)
         if form.is_valid():
-            blog = form.save(commit=False)
-            blog.owner = request.user
-            blog.save()
+            new_blog = form.save(commit=False)
+            new_blog.owner = request.user
+            new_blog.save()
             return redirect('blogs:blogs')
 
     # Display a blank or invalid form.
