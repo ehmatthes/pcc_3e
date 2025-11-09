@@ -68,6 +68,30 @@ plt.style.use('seaborn-v0_8')
 
 As noted above for Chapter 15, use `seaborn-v0_8` wherever you see `seaborn`.
 
+Also on page 351, the line that starts the `for` loop over `all_eq_dicts` is missing. This line was shown in earlier listings, but was left out on this page. The listing on page 351 should look like this:
+
+```python
+--snip--
+mags, lons, lats, eq_titles = [], [], [], []
+for eq_dict in all_eq_dicts:
+    mag = eq_dict['properties']['mag']
+    lon = eq_dict['geometry']['coordinates'][0]
+    lat = eq_dict['geometry']['coordinates'][1]
+    eq_title = eq_dict['properties']['title']
+    mags.append(mag)
+    lons.append(lon)
+    lats.append(lat)
+    eq_titles.append(eq_title)
+
+title = 'Global Earthquakes'
+fig = px.scatter_geo(lat=lats, lon=lons, size=mags, title=title,
+        --snip--
+        projection='natural earth',
+        hover_name=eq_titles,
+    )
+fig.show()
+```
+
 ### Chapter 17
 
 On page 370, the code that starts the `for` loop should go through index `30`, not `5`:
