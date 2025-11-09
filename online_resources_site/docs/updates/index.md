@@ -12,6 +12,9 @@ When looking for updates it’s helpful to know which printing you’re working 
 - [Second printing](second_printing.md)
 - [Third printing](third_printing.md)
 - [Fourth printing](fourth_printing.md)
+- [Fifth printing](fifth_printing.md)
+- [Sixth printing](sixth_printing.md)
+- [Seventh printing](seventh_printing.md)
 
 ---
 
