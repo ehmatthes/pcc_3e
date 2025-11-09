@@ -61,9 +61,52 @@ Learning Log already depends on specific versions of four different packages, so
 
 When we deploy Learning Log, Upsun will install all the packages listed in *requirements.txt*, creating an environment with the same packages we’re using locally. Because of this, we can be confident the deployed project will function just like it has on our local system. This approach to managing a project is critical as you start to build and maintain multiple projects on your system.
 
+Using Git to Track the Project's Files
+---
 
+As discussed in Chapter 17, Git is a version control program that allows you to take a snapshot of the code in your project each time you implement a new feature successfully. If anything goes wrong, you can easily return to the last working snapshot of your project; for example, if you accidentally
+introduce a bug while working on a new feature. Each snapshot is called a *commit*.
 
+Using Git, you can try implementing new features without worrying about breaking your project. When you’re deploying to a live server, you need to make sure you’re deploying a working version of your project. To read more about Git and version control, see Appendix D.
 
+### Installing Git
+
+Git may already be installed on your system. To find out, open a new terminal window and issue the command `git --version`:
+
+```sh
+(ll_env)learning_log$ git --version
+git version 2.51.0
+```
+
+If you get a message indicating that Git is not installed, see the installation instructions in Appendix D.
+
+### Configuring Git
+
+Git keeps track of who makes changes to a project, even when only one person is working on the project. To do this, Git needs to know your username and email. You must provide a username, but you can make up an email for your practice projects:
+
+```sh
+(ll_env)learning_log$ git config --global user.name "eric"
+(ll_env)learning_log$ git config --global user.email "eric@example.com"
+```
+
+If you forget this step, Git will prompt you for this information when you make your first commit.
+
+### Ignoring Files
+
+We don’t need Git to track every file in the project, so we’ll tell it to ignore some files. Create a file called *.gitignore* in the folder that contains *manage.py*. Notice that this filename begins with a dot and has no file extension. Here’s the code that goes in *.gitignore*:
+
+```txt
+.gitignore ll_env/
+__pycache__/
+*.sqlite3
+```
+
+We tell Git to ignore the entire *ll_env* directory, because we can re-create it automatically at any time. We also don’t track the *\__pycache__* directory, which contains the *.pyc* files that are created automatically when the *.py* files are executed. We don’t track changes to the local database, because it’s a bad habit: if you’re ever using SQLite on a server, you might accidentally overwrite the live database with your local test database when you push the project to the server. The asterisk in `*.sqlite3` tells Git to ignore any file that ends with the extension *.sqlite3*.
+
+!!! note
+    If you’re using macOS, add *.DS_Store* to your *.gitignore* file. This is a file that stores information about folder settings on macOS, and it has nothing to do with this project.
+
+### Committing the Project
 
 
 
