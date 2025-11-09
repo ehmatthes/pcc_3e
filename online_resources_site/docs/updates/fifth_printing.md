@@ -1,10 +1,10 @@
 ---
 hide:
   - footer
-title: Fourth Printing
+title: Fifth Printing
 ---
 
-# Updates and Errata - Fourth printing
+# Updates and Errata - Fifth printing
 
 This page is broken into two parts, Updates and Errata. *Updates* address issues that affect whether your code will run or not. *Errata* refer to minor issues such as typos, and errors in grayed-out code that probably won’t affect the code you’re entering.
 
