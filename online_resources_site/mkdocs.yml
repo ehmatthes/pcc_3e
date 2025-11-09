@@ -52,6 +52,7 @@ nav:
     - "Sixth printing": "updates/sixth_printing.md"
     - "Seventh printing": "updates/seventh_printing.md"
     - "Which printing do I have?": "updates/which_printing.md"
+    - "Deploying Django": "updates/deploying_django.md"
   - "Solutions":
     - "solutions/index.md"
     - "Chapter 2": "solutions/chapter_2.md"
