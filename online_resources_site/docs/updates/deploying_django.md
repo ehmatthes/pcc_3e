@@ -274,7 +274,29 @@ When you maintain a deployed project, you'll almost certainly want access to the
 
 ```sh
 $ upsun ssh
-
+$ ls
+$ python manage.py createsuperuser
+ll_admin_remote
+exit
+$
 ```
 
+When you first run the platform environment:ssh command, you may get another prompt about the authenticity of this host. If you see this message, enter Y and you should be logged in to a remote terminal session.
 
+After running the ssh command, your terminal acts just like a terminal on the remote server. Note that your prompt has changed to indicate that you’re in a web session associated with the project named ll_project . If you issue the ls command, you’ll see the files that have been pushed to the Platform.sh server.
+
+Issue the same createsuperuser command we used in Chapter 18 . This time, I entered an admin username, ll_admin_live, that’s distinct from the one I used locally . When you’re finished working in the remote terminal session, enter the exit command . Your prompt will indicate that you’re working in your local system again.
+
+Now you can add /admin/ to the end of the URL for the live app and log in to the admin site. If others have already started using your project, be aware that you’ll have access to all their data! Take this responsibility seriously, and users will continue to trust you with their data.
+
+!!! note
+    Windows users will use the same commands shown here (such as ls instead of dir), because you’re running a Linux terminal through a remote connection.
+
+Finishing Chapter 20
+---
+
+You can now go back to the book and pick up on page 459, at the *Creating Custom Error Pages* section. The only difference you’ll need to keep in mind is that you’ll use the `upsun` whenever you see the command `platform` used in the book. Also, any reference to Platform.sh should be read as a reference to Upsun.
+
+---
+
+If any of the steps shown here do not work and you can't figure out how to proceed, please [reach out](../contact.md). I would like to keep these instructions up to date, and I always enjoy hearing from people. :)
