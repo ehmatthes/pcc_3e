@@ -73,7 +73,7 @@ Using Git, you can try implementing new features without worrying about breaking
 
 Git may already be installed on your system. To find out, open a new terminal window and issue the command `git --version`:
 
-```sh
+```sh hl_lines="1"
 (ll_env)learning_log$ git --version
 git version 2.51.0
 ```
@@ -95,7 +95,7 @@ If you forget this step, Git will prompt you for this information when you make 
 
 We don’t need Git to track every file in the project, so we’ll tell it to ignore some files. Create a file called *.gitignore* in the folder that contains *manage.py*. Notice that this filename begins with a dot and has no file extension. Here’s the code that goes in *.gitignore*:
 
-```txt
+```txt title=".gitignore"
 .gitignore ll_env/
 __pycache__/
 *.sqlite3
@@ -110,7 +110,7 @@ We tell Git to ignore the entire *ll_env* directory, because we can re-create it
 
 We need to initialize a Git repository for Learning Log, add all the necessary files to the repository, and commit the initial state of the project. Here’s how to do that:
 
-```sh
+```sh hl_lines="1 3 4 10 13"
 (ll_env)learning_log$ git init
 Initialized empty Git repository in /Users/eric/.../learning_log/.git/
 (ll_env)learning_log$ git add .
@@ -150,21 +150,14 @@ After adding a new requirement, the *requirements.txt* file needs to be updated.
 
 Now add `django_simple_deploy` to `INSTALLED_APPS`, just like you did with `django-bootstrap5` earlier:
 
-```python
+```python hl_lines="6" title="ll_project/settings.py"
 --snip--
 INSTALLED_APPS = [
-    # My apps.
-    'learning_logs',
-    'accounts',
-
+    --snip-
     # Third party apps.
     'django_bootstrap5',
     'django_simple_deploy',
-
-    # Default django apps.
     --snip--
-]
---snip--
 ```
 
 Note that the package name is `django-simple-deploy` with hyphens, but the installed app is named `django_simple_deploy` with underscores. This is the pattern that almost all third-party Python packages follow.
@@ -213,7 +206,7 @@ You need to tell `django-simple-deploy` the name of the project on `Upsun`, and 
 
 An external tool has just made a number of changes to your project. Another strength of Git is that it lets you see exactly what changes were made:
 
-```sh
+```sh hl_lines="1"
 $ git status
 	modified:   .gitignore
 	modified:   ll_project/settings.py
@@ -241,7 +234,7 @@ You can open the other files in your text editor and see what was added. These f
 
 When you're finished reviewing the changes that were made, make a new commit:
 
-```sh
+```sh  hl_lines="1-3"
 $ git add .
 $ git commit -am "Configured for deployment to Upsun."
 $ git status
