@@ -19,7 +19,7 @@ Upsun currently offers a 15-day free trial, but in order to deploy your project 
 You'll be prompted to add a payment method wehn you create an empty project on Upsun's servers.
 
 !!! note
-    Many hosting companies used to offer free trials, without requiring a credit card. With the growth of cryptocurrency miners, bot networks, and a rapid rise in abusive users, almost every company now requires a credit card as an anti-abuse measure.
+    Many hosting companies used to offer free trials, without requiring users to set up a payment method. With the growth of cryptocurrency miners, bot networks, and a rapid rise in abusive users, almost every company now requires users to set up a payment method as an anti-abuse measure.
 
 ## Flex and Fixed plans
 
@@ -189,13 +189,51 @@ This command should open a browser, where you can confirm the terminal-based log
 
 Now run the `create` command, to generate a new project on Upsun:
 
-```sh
+```sh hl_lines="1 5 12 17 23"
 (ll_env)learning_log$ upsun create --title ll_project_remote
+Enter a number to choose an organization (-o):
+  [0] My Projects (<org-id>)
+  [1] eric_fixed (<org-id>)
+ > 1
+ Creating a project under the organization eric_fixed (<org-id>)
+
+* Region (--region)
+The region where the project will be hosted.
+  --snip--
+  [us-4.platform.sh] Charleston, United States (Google)
+> us-4.platform.sh
+
+Default branch (--default-branch)
+The default Git branch name for the project (the production environment)
+Default: main
+> main
+
+Local Git repository detected: /.../learning_log
+Set the new project ll_project_remote as the remote for this repository directory? [Y/n] y
+
+The estimated monthly cost of this project is: $12.00 USD
+Are you sure you want to continue? [Y/n] y
+
+The Upsun Bot is activating your project
+
+      ▄     ▄  
+      ▄█▄▄▄█▄  
+    ▄██▄███▄██▄
+    █ █▀▀▀▀▀█ █
+       ▀▀ ▀▀   
+
+The project is now ready!
+--snip--
 ```
+
+!!! note
+    This is the point at which Upsun will verify that you have a payment method on file. If you see a message reading "Insufficient credit to create a new project", follow the link to add a payment method.
 
 The new remote project needs a name. You can use any name with underscores, but it's helpful to use a name similar to what you used when running `django startproject`. At the same time, it's nice to use a name that's distinct from names that have already been used. The name `ll_project_remote` lets you distinguish between the *ll_project* directory on your local system, and the remote project on Upsun.
 
-You'll be prompted for which organization to use; make sure to use the one that's on the Fixed plan. You'll be asked to choose a region; any one should work, but it's usually better to choose one relatively close to your location. After you've answered all the questions, you should see a dancing robot as Upsun creates the remote resources for you.
+You'll be prompted for which organization to use; make sure to use the one that's on the Fixed plan. You'll be asked to choose a region; any one should work, but it's usually better to choose one relatively close to your location. You'll be prompted for which branch to use. There's only one branch, `main`, so use that. Finally, you'll need to confirm the estimated cost, which you'll be charged if you keep your project deployed beyond the free trial period.
+
+After you've answered all the questions, you should see a dancing robot as Upsun creates the remote resources for you.
 
 ### Configuring Learning Log for Upsun
 
@@ -203,15 +241,42 @@ Now you have a project that works locally, and an empty project on Upsun's serve
 
 `django-simple-deploy` avoids that issue by making all the necessary changes for you. Running the `manage.py deploy` command makes those configuration changes:
 
-```sh
+```sh hl_lines="1"
 (ll_env)learning_log$ python manage.py deploy --deployed-project-name ll_project_remote
+Configuring project for deployment...
+Logging run of `manage.py deploy`...
+Created /.../dsd_logs/dsd_2025-11-10-185305.log.
+
+Deployment target: Upsun
+  Using plugin: dsd_upsun
+  --snip--
+
+--- Your project is now configured for deployment on Upsun. ---
+
+To deploy your project, you will need to:
+- Commit the changes made in the configuration process.
+    $ git status
+    $ git add .
+    $ git commit -am "Configured project for deployment."
+- Push your project to Upsun's servers:
+    $ upsun push
+- Open your project:
+    $ upsun url    
+- As you develop your project further:
+    - Make local changes
+    - Commit your local changes
+    - Run `upsun push`
+
+- You can find a full record of this configuration in the dsd_logs directory.
 ```
 
 You need to tell `django-simple-deploy` the name of the project on `Upsun`, and the `--deployed-project-name` argument lets you do that. After running this command, you should see a summary of the changes that were made to your project in preparation for pushing it to Upsun. `django-simple-deploy` looks for a clean Git status before it makes configuration changes, so if you forgot to run `git commit` before calling `deploy`, you might have to make another commit and then run `deploy` a second time.
 
+The final block of output summarizes how to review the changes that were made, push your project to Upsun's servers, and open your project. It also summarizes briefly how to push subsequent changes from your local system to Upsun. We'll follow these steps now to finish the deployment.
+
 ### Reviewing and committing configuration changes
 
-An external tool has just made a number of changes to your project. Another strength of Git is that it lets you see exactly what changes were made:
+An external tool has just made a number of changes to your project. Git helps you see exactly what changes were made:
 
 ```sh hl_lines="1"
 (ll_env)learning_log$ git status
@@ -226,9 +291,25 @@ Untracked files:
 
 This output shows that three files were modified, and some new files were added. You can see what changes were made by running `git diff <file-path>`. For example, here's the changes made to the *settings.py* file:
 
-```sh
+```sh hl_lines="1"
 (ll_env)learning_log$ git diff ll_project/settings.py
-
+--snip--
++# Upsun settings.
++import os
++
++if os.environ.get("PLATFORM_APPLICATION_NAME"):
++    # Import some Upsun settings from the environment.
++    from platformshconfig import Config
++
++    config = Config()
++
++    try:
++        ALLOWED_HOSTS.append("*")
++    except NameError:
++        ALLOWED_HOSTS = ["*"]
++
++    DEBUG = False
+--snip--
 ```
 
 It takes a little to get used to the format of a `git diff` listing. If what you see isn't entirely clear, look at this output and then look at the file in your text editor. The `git diff` output should show you where to focus your attention in the file.
@@ -237,7 +318,7 @@ The important part to notice here is that a conditional block has been added to 
 
 If you run `git diff` against the other files listed you'll see that a *dsd_logs* directory is being ignored, and a couple requirements were added that need to be installed in Upsun's environment.
 
-You can open the other files in your text editor and see what was added. These files tell Upsun how to build the project in their remote environment, and which resources to attach to the project. The *.platform* name appears here because Upsun has not fully transitioned away from their former name, Platform.sh.
+You can open the new files, such as *.platform.app.yaml* in your text editor and see what was added. These files tell Upsun how to build the project in their remote environment, and which resources to attach to the project. The *.platform* name appears here because Upsun has not fully transitioned away from their former name, Platform.sh.
 
 When you're finished reviewing the changes that were made, make a new commit:
 
@@ -255,46 +336,65 @@ It's a good habit to check `git status` after committing more significant change
 
 Now it's time to push the project to Upsun:
 
-```sh
+```sh hl_lines="1 4"
 (ll_env)learning_log$ upsun push
+$ upsun push
+Selected project: ll_project_remote (<id>)
+Pushing HEAD to the environment main (type: production).
+Are you sure you want to continue? [Y/n] y
+--snip--
+To git.us-4.platform.sh:uexe5p4cbfote.git
+   * [new branch]      HEAD -> main
 ```
 
-This command pushes all your project's files to Upsun's servers. It also causes Upsun to set up an environment from which the project can be served to end users. It installs the project's requirements, runs the database migrations, and starts listening for requests. This process can take about 3-10 minutes.
+This command pushes all your project's files to Upsun's servers. You'll be asked one last time to confirm that you want to push your project to Upsun. The `push` command also causes Upsun to set up an environment from which the project can be served to end users. It installs the project's requirements, runs the database migrations, and starts listening for requests. This process can take about 3-10 minutes. There's a lot of output, but I encourage you to skim through it. It won't all make sense, but a lot will. You can see it copying files, installing packages, running migrations, and getting ready to process requests.
 
 When your project has been pushed, you can open it with the `url` command:
 
-```sh
+```sh hl_lines="1 5"
 (ll_env)learning_log$ upsun url
+Enter a number to open a URL
+  [0] https://main-bvxea6i-uexe5p4cbfote.us-4.platformsh.site/
+  [1] http://main-bvxea6i-uexe5p4cbfote.us-4.platformsh.site/
+ > 0
+https://main-bvxea6i-uexe5p4cbfote.us-4.platformsh.site/
 ```
 
+When you run this command, you'll be shown a couple URLs where your project can be seen. Enter `0` for the URL with `https`, and your project will open in a new browser tab:
 
-When you run this command, you'll be shown a couple URLs where your project can be seen. Enter `0`, and your project will open in a new browser tab:
-[screenshot, with remote URL highlighted]
+![Learning Log home page, with remote URL highlighted in address bar](../images/ll_home_page_deployed.png)
 
 This looks just like the project does when you used the `runserver` command, but now anyone can access your project. If you want someone else to try it out, just share the URL as you would for any web site you want to share.
 
-Upsun created a new database when it built the project; none of the data that you entered locally was copied over to the remote project. Take a moment to register an account on your deployed instance of Learning Log.
+Upsun created a new database when it built the project, so none of the data you entered locally was copied over to the remote project. Take a moment to register an account on your deployed instance of Learning Log. If you can register an account, you'll know your database is working correctly.
 
 ### Creating a superuser
 
 When you maintain a deployed project, you'll almost certainly want access to the Django admin site. For that, you need a superuser. The `ssh` command lets you run the same terminal commands you were using locally, on the remote project:
 
-```sh
+```sh hl_lines="1 2 4 5 10"
 (ll_env)learning_log$ upsun ssh
-$ ls
-$ python manage.py createsuperuser
-ll_admin_remote
-exit
-(ll_env)learning_log$ 
+web@ll_project_remote.0:~$ ls
+accounts  learning_logs  ll_project  logs  manage.py  requirements.txt  static
+web@ll_project_remote.0:~$ python manage.py createsuperuser
+Username (leave blank to use 'web'): ll_admin_remote
+Email address: 
+Password: 
+Password (again): 
+Superuser created successfully.
+web@ll_project_remote.0:~$ exit
+logout
+Connection to ssh.us-4.platform.sh closed.
+(ll_env)learning_log$
 ```
 
-When you first run the platform environment:ssh command, you may get another prompt about the authenticity of this host. If you see this message, enter Y and you should be logged in to a remote terminal session.
+When you first run the `upsun ssh` command, you may get another prompt about the authenticity of this host. If you see this message, enter `Y` and you should be logged in to a remote terminal session.
 
-After running the ssh command, your terminal acts just like a terminal on the remote server. Note that your prompt has changed to indicate that you’re in a web session associated with the project named ll_project . If you issue the ls command, you’ll see the files that have been pushed to the Platform.sh server.
+After running the `ssh` command, your terminal acts just like a terminal on the remote server. Note that your prompt has changed to indicate that you’re in a web session associated with the project named `ll_project_remote`. If you issue the `ls` command, you’ll see the files that have been pushed to the server.
 
-Issue the same createsuperuser command we used in Chapter 18 . This time, I entered an admin username, ll_admin_live, that’s distinct from the one I used locally . When you’re finished working in the remote terminal session, enter the exit command . Your prompt will indicate that you’re working in your local system again.
+Issue the same `createsuperuser` command we used in Chapter 18 . This time, I entered an admin username, `ll_admin_remote`, that’s distinct from the one I used locally . When you’re finished working in the remote terminal session, enter the `exit` command . Your prompt will indicate that you’re working in your local system again.
 
-Now you can add /admin/ to the end of the URL for the live app and log in to the admin site. If others have already started using your project, be aware that you’ll have access to all their data! Take this responsibility seriously, and users will continue to trust you with their data.
+Now you can add `/admin/` to the end of the URL for the live app and log in to the admin site. If others have already started using your project, be aware that you’ll have access to all their data! Take this responsibility seriously, and users will continue to trust you with their data.
 
 !!! note
     Windows users will use the same commands shown here (such as ls instead of dir), because you’re running a Linux terminal through a remote connection.
@@ -302,8 +402,8 @@ Now you can add /admin/ to the end of the URL for the live app and log in to the
 Finishing Chapter 20
 ---
 
-You can now go back to the book and pick up on page 459, at the *Creating Custom Error Pages* section. The only difference you’ll need to keep in mind is that you’ll use the `upsun` whenever you see the command `platform` used in the book. Also, any reference to Platform.sh should be read as a reference to Upsun.
+You can now go back to the book and pick up on page 459, at the *Creating Custom Error Pages* section. The only difference you’ll need to keep in mind is that you’ll use `upsun` whenever you see the command `platform` used in the book. Also, any reference to Platform.sh should be read as a reference to Upsun.
 
 ---
 
-If any of the steps shown here do not work and you can't figure out how to proceed, please [reach out](../contact.md). I would like to keep these instructions up to date, and I always enjoy hearing from people. :)
+If any of the steps shown here don't work and you can't figure out how to proceed, please [reach out](../contact.md). I would like to keep these instructions up to date, and I always enjoy hearing from people. :)
