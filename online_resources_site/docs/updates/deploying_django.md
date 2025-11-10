@@ -12,7 +12,14 @@ In the second half of Chapter 20, the book walks you through the process of depl
 
 ## Making an Upsun Account
 
-To make an account, go to [https://upsun.com](https://upsun.com) and click the Free Trial button. Currently, Upsun offers a 15-day free trial. At the time of this writing, a credit card is not required to use the free trial.
+To make an account, go to [https://upsun.com](https://upsun.com) and click the Free Trial button.
+
+Upsun currently offers a 15-day free trial, but in order to deploy your project you'll need to have a credit card on file. If you destroy your project before the 15-day period is up, your card should not be charged.
+
+You'll be prompted to add a payment method wehn you create an empty project on Upsun's servers.
+
+!!! note
+    Many hosting companies used to offer free trials, without requiring a credit card. With the growth of cryptocurrency miners, bot networks, and a rapid rise in abusive users, almost every company now requires a credit card as an anti-abuse measure.
 
 ## Flex and Fixed plans
 
