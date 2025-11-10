@@ -147,7 +147,7 @@ At this point you should have an Upsun account with an organization on the Fixed
 It's time to deploy the project. We'll use `django-simple-deploy`, a tool that automates initial Django deployments. With `django-simple-deploy`, you install a plugin for the host you're working with (in this case Upsun), and it takes care of the configuration work necessary to build a working remote version of the project.
 
 !!! note
-    Disclaimer: I'm the maintainer of `django-simple-deploy`. I created this project after watching countless Django developers struggle with the initial deployment process. It's not just for beginners; it helps *everyone* avoid typos and other small mistakes that cause so many deployment attempts to fail.
+    Disclaimer: I'm the maintainer of `django-simple-deploy`. I created this project after watching countless Django developers struggle with the initial deployment process. It's not just for beginners; it helps *everyone* avoid typos and other small mistakes that cause so many deployment attempts to fail. The full documentation for `django-simple-deploy` can be found [here](https://django-simple-deploy.readthedocs.io/en/latest/).
 
 First, install `dsd-upsun`, the plugin that handles deployment to Upsun:
 
@@ -406,6 +406,8 @@ Finishing Chapter 20
 ---
 
 You can now go back to the book and pick up on page 459, at the *Creating Custom Error Pages* section. The only difference you’ll need to keep in mind is that you’ll use `upsun` whenever you see the command `platform` used in the book. Also, any reference to Platform.sh should be read as a reference to Upsun.
+
+For more specific information about deploying Django projects to Upsun, see the main [Django documentation page](https://fixed.docs.upsun.com/guides/django.html) for Fixed deployments.
 
 Destroying the remote project
 ---
