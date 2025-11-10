@@ -23,17 +23,17 @@ You'll be prompted to add a payment method when you create an empty project on U
 
 ## Flex and Fixed plans
 
-Upsun offers two types of deployment plans, *Flex* and *Fixed*. With a Flex plan, you can adjust the size of individual resources as your project grows. With Fixed plans, you choose an overall set of resources, and then you can upgrade those resources as a group when your project grows.
+Upsun offers two types of deployment plans, *Flex* and *Fixed*. With a Flex plan, you can adjust the size of individual resources as your project grows. With a Fixed plan, you choose an overall set of resources, and then you can upgrade those resources as a group when your project grows.
 
 Upsun steers people towards Flex plans, but it's more expensive and not needed when you're first learning to deploy a small project.
 
 ### Adding a Fixed Organization
 
-When you create an account on Upsun, you also create a default *Organization*. That default organization is on their Flex plan. Make a new Organization on the Fixed plan by clicking the drop down arrow next to **My Projects** on the dashboard, and then clicking **New organization**:
+When you create an account on Upsun, you also create a default *Organization*. That default organization is on their Flex plan. Make a new Organization on the Fixed plan by clicking the dropdown arrow next to **My Projects** on the dashboard, and then clicking **New organization**:
 
 ![The dialog for adding a new organization on Upsun](../images/upsun_new_org_dialog.png)
 
-In the **Create organization** dialog that appears, make a name for your new organization. I used the form `<first_name>_fixed`. Make sure to change the **Organization type** to "Fixed".
+In the **Create organization** dialog that appears, choose a name for your new organization. I used the form `<first_name>_fixed`. Make sure to change the **Organization type** to "Fixed".
 
 ![The create organization form on Upsun](../images/upsun_create_org_form_bordered.png)
 
@@ -327,7 +327,7 @@ When you're finished reviewing the changes that were made, make a new commit:
 
 ```sh  hl_lines="1-3"
 (ll_env)learning_log$ git add .
-(ll_env)learning_log$ git commit -am "Configured for deployment to Upsun."
+(ll_env)learning_log$ git commit -am "Configured project for deployment to Upsun."
 (ll_env)learning_log$ git status
 On branch main
 nothing to commit, working tree clean
@@ -454,7 +454,7 @@ Click **Edit plan**, scroll down, and click **Delete project**. You'll see a dia
 
 Once you enter the project name, you can click the button labeled **Yes, Delete Project**.
 
-You *should* see an empty dashboard after confirming the deletion. If you see the message "Create your first project", your deletion was almost certainly successful. I've run many test deployments on Upsun, and seen many odd errors and messages along the lines of "Something went wrong." If you see anything like this, just go back to [https://console.upsun.com](https://console.upsun.com). If you see any remaining resources, click those three vertical dots, or look for a Settings tab. You usually have to scroll to the bottom of a page to find the Delete button, but it should be there.
+You should see an empty dashboard after confirming the deletion. If you see the message "Create your first project", your deletion was almost certainly successful. I've run many test deployments on Upsun, and seen many odd errors and messages along the lines of "Something went wrong." If you see anything like this, just go back to [https://console.upsun.com](https://console.upsun.com). If you see any remaining resources, click those three vertical dots, or look for a Settings tab. You usually have to scroll to the bottom of a page to find the Delete button, but it should be there.
 
 ---
 
