@@ -197,5 +197,82 @@ The new remote project needs a name. You can use any name with underscores, but 
 
 You'll be prompted for which organization to use; make sure to use the one that's on the Fixed plan. You'll be asked to choose a region; any one should work, but it's usually better to choose one relatively close to your location. After you've answered all the questions, you should see a dancing robot as Upsun creates the remote resources for you.
 
+### Configuring Learning Log for Upsun
+
+Now you have a project that works locally, and an empty project on Upsun's servers. The project needs some new files and configuration changes in order to work on Upsun. You can add those files manually, but it's easy to make a small mistake like a typo, or miss a required file. These simple mistakes can take a long time to sort out, even for experienced developers, because every hosting platform has slightly different requirements.
+
+`django-simple-deploy` avoids that issue by making all the necessary changes for you. Running the `manage.py deploy` command makes those configuration changes:
+
+```sh
+$ python manage.py deploy --deployed-project-name ll_project_remote
+```
+
+You need to tell `django-simple-deploy` the name of the project on `Upsun`, and the `--deployed-project-name` argument lets you do that. After running this command, you should see a summary of the changes that were made to your project in preparation for pushing it to Upsun. `django-simple-deploy` looks for a clean Git status before it makes configuration changes, so if you forgot to run `git commit` before calling `deploy`, you might have to make another commit and then run `deploy` a second time.
+
+### Reviewing and committing configuration changes
+
+An external tool has just made a number of changes to your project. Another strength of Git is that it lets you see exactly what changes were made:
+
+```sh
+$ git status
+	modified:   .gitignore
+	modified:   ll_project/settings.py
+	modified:   requirements.txt
+
+Untracked files:
+	.platform.app.yaml
+	.platform/
+```
+
+This output shows that three files were modified, and some new files were added. You can see what changes were made by running `git diff <file-path>`. For example, here's the changes made to the *settings.py* file:
+
+```sh
+$ git diff ll_project/settings.py
+
+```
+
+It takes a little to get used to the format of a `git diff` listing. If what you see isn't entirely clear, look at this output and then look at the file in your text editor. The `git diff` output should show you where to focus your attention in the file.
+
+The important part to notice here is that a conditional block has been added to the end of the settings file. Briefly, if the project is running in an Upsun environment, these settings will override the settings that were defined earlier in the file. Those settings will still work on your system, but the Upsun-specific settings will take effect in the Upsun environment.
+
+If you run `git diff` against the other files listed you'll see that a *dsd_logs* directory is being ignored, and a couple requirements were added that need to be installed in Upsun's environment.
+
+You can open the other files in your text editor and see what was added. These files tell Upsun how to build the project in their remote environment, and which resources to attach to the project. The *.platform* name appears here because Upsun has not fully transitioned away from their former name, Platform.sh.
+
+When you're finished reviewing the changes that were made, make a new commit:
+
+```sh
+$ git add .
+$ git commit -am "Configured for deployment to Upsun."
+$ git status
+On branch main
+nothing to commit, working tree clean
+```
+
+It's a good habit to check `git status` after committing more significant changes, to make sure you haven't missed anything. It's quite easy, for example, to forget to run `git add` and find that you've got a few files that haven't actually been committed yet.
+
+### Pushing the project to Upsun
+
+Now it's time to push the project to Upsun:
+
+```sh
+$ upsun push
+```
+
+This command pushes all your project's files to Upsun's servers. It also causes Upsun to set up an environment from which the project can be served to end users. It installs the project's requirements, runs the database migrations, and starts listening for requests. This process can take about 3-10 minutes.
+
+When your project has been pushed, you can open it with the `url` command:
+
+```sh
+$ upsun url
+```
+
+When you run this command, you'll be shown a couple URLs where your project can be seen. Enter `0`, and your project will open in a new browser tab:
+
+[screenshot, with remote URL highlighted]
+
+This looks just like the project does when you used the `runserver` command, but now anyone can access your project. If you want someone else to try it out, just share the URL as you would for any web site you want to share.
+
+
 
 
