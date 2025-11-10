@@ -1,0 +1,2067 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../which_printing/">
+      
+      
+        <link rel="next" href="../../solutions/">
+      
+      
+      <link rel="icon" href="../../images/pcc_snake_favicon-48px.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.19">
+    
+    
+      
+        <title>Deploying Learning Log - Python Crash Course, Third Edition</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#deploying-learning-log" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Python Crash Course, Third Edition" class="md-header__button md-logo" aria-label="Python Crash Course, Third Edition" data-md-component="logo">
+      
+  <img src="../../images/pcc_snake_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Crash Course, Third Edition
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Deploying Learning Log
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Python Crash Course, Third Edition" class="md-nav__button md-logo" aria-label="Python Crash Course, Third Edition" data-md-component="logo">
+      
+  <img src="../../images/pcc_snake_logo.png" alt="logo">
+
+    </a>
+    Python Crash Course, Third Edition
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../new_in_3e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What's new?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../setup_instructions/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Setup Instructions
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Setup Instructions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup_instructions/configuring_vs_code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring VS Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheat_sheets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cheat Sheets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Updates
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Updates
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first_printing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    First printing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../second_printing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Second printing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../third_printing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Third printing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fourth_printing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fourth printing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fifth_printing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fifth printing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sixth_printing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sixth printing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../seventh_printing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Seventh printing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../which_printing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Which printing do I have?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Deploying Django
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Deploying Django
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#making-an-upsun-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Making an Upsun Account
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flex-and-fixed-plans" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flex and Fixed plans
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flex and Fixed plans">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-fixed-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a Fixed Organization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-upsun-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Upsun CLI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-requirementstxt-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a requirements.txt file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-git-to-track-the-projects-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Git to Track the Project's Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Git to Track the Project's Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ignoring-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ignoring Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#committing-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Committing the Project
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploying-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploying the project
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploying the project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-django-simple-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing django-simple-deploy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-project-on-upsun" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Project on Upsun
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-learning-log-for-upsun" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Learning Log for Upsun
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviewing-and-committing-configuration-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reviewing and committing configuration changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pushing-the-project-to-upsun" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pushing the project to Upsun
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-superuser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a superuser
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finishing-chapter-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finishing Chapter 20
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#destroying-the-remote-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Destroying the remote project
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Destroying the remote project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deleting-with-the-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting with the CLI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-through-the-upsun-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting through the Upsun dashboard
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../solutions/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Solutions
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Solutions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/chapter_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/chapter_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/chapter_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/chapter_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/chapter_6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/chapter_7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 7
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/chapter_8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 8
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/chapter_9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 9
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/chapter_10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/chapter_11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 11
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/chapter_12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 12
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/chapter_13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 13
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/chapter_14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 14
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/chapter_15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 15
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/chapter_16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 16
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/chapter_17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 17
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/chapter_18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 18
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/chapter_19/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 19
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/chapter_20/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 20
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../survey/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Survey
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../newsletter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Newsletter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#making-an-upsun-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Making an Upsun Account
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flex-and-fixed-plans" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flex and Fixed plans
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flex and Fixed plans">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-fixed-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a Fixed Organization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-upsun-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Upsun CLI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-requirementstxt-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a requirements.txt file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-git-to-track-the-projects-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Git to Track the Project's Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Git to Track the Project's Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ignoring-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ignoring Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#committing-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Committing the Project
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploying-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploying the project
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploying the project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-django-simple-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing django-simple-deploy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-project-on-upsun" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Project on Upsun
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-learning-log-for-upsun" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Learning Log for Upsun
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviewing-and-committing-configuration-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reviewing and committing configuration changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pushing-the-project-to-upsun" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pushing the project to Upsun
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-superuser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a superuser
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finishing-chapter-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finishing Chapter 20
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#destroying-the-remote-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Destroying the remote project
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Destroying the remote project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deleting-with-the-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting with the CLI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-through-the-upsun-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting through the Upsun dashboard
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="deploying-learning-log">Deploying Learning Log</h1>
+<p>Building a Django project that works on your system is satisfying, but it gets even more satisfying when you see your site deployed where anyone can access it.</p>
+<p>In the second half of Chapter 20, the book walks you through the process of deploying Learning Log to the hosting company Platform.sh. That company has rebranded as <a href="https://upsun.com">Upsun</a>, and they've changed their approach to deployment somewhat. The printed instructions no longer work for deployment, but the instructions here are fully up to date. If you run into any steps that don't seem to work, please <a href="../../contact/">reach out</a> and I will update these instructions. Thank you!</p>
+<h2 id="making-an-upsun-account">Making an Upsun Account</h2>
+<p>To make an account, go to <a href="https://upsun.com">https://upsun.com</a> and click the Free Trial button.</p>
+<p>Upsun currently offers a 15-day free trial, but in order to deploy your project you'll need to have a credit card on file. If you destroy your project before the 15-day period is up, your card should not be charged.</p>
+<p>You'll be prompted to add a payment method when you create an empty project on Upsun's servers.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Many hosting companies used to offer free trials, without requiring users to set up a payment method. With the growth of cryptocurrency miners, bot networks, and a rapid rise in abusive users, almost every company now requires users to set up a payment method as an anti-abuse measure.</p>
+</div>
+<h2 id="flex-and-fixed-plans">Flex and Fixed plans</h2>
+<p>Upsun offers two types of deployment plans, <em>Flex</em> and <em>Fixed</em>. With a Flex plan, you can adjust the size of individual resources as your project grows. With a Fixed plan, you choose an overall set of resources, and then you can upgrade those resources as a group when your project grows.</p>
+<p>Upsun steers people towards Flex plans, but it's more expensive and not needed when you're first learning to deploy a small project.</p>
+<h3 id="adding-a-fixed-organization">Adding a Fixed Organization</h3>
+<p>When you create an account on Upsun, you also create a default <em>Organization</em>. That default organization is on their Flex plan. Make a new Organization on the Fixed plan by clicking the dropdown arrow next to <strong>My Projects</strong> on the dashboard, and then clicking <strong>New organization</strong>:</p>
+<p><img alt="The dialog for adding a new organization on Upsun" src="../../images/upsun_new_org_dialog.png" /></p>
+<p>In the <strong>Create organization</strong> dialog that appears, choose a name for your new organization. I used the form <code>&lt;first_name&gt;_fixed</code>. Make sure to change the <strong>Organization type</strong> to "Fixed".</p>
+<p><img alt="The create organization form on Upsun" src="../../images/upsun_create_org_form_bordered.png" /></p>
+<p>Click the <strong>Create organization</strong> button, and you should see a confirmation that your organization is set up to use Upsun's Fixed resources:</p>
+<p><img alt="Organization page showing &quot;Fixed&quot;" src="../../images/upsun_fixed_org_bordered.png" /></p>
+<h2 id="the-upsun-cli">The Upsun CLI</h2>
+<p>To deploy and manage a project on Platform.sh, you’ll need the tools available in the Command Line Interface (CLI). To install the latest version of the CLI, visit <a href="https://docs.upsun.com/administration/cli.html">https://docs.upsun.com/administration/cli.html</a> and follow the instructions for your operating system. If you're on Windows and haven't installed something like this in a terminal before, I recommend using <a href="https://scoop.sh">Scoop</a>, a tool for installing utilities on Windows. Scoop makes it easy to install the Upsun CLI, and many other tools you might find helpful as you continue working on more complex programming projects.</p>
+<h2 id="creating-a-requirementstxt-file">Creating a <em>requirements.txt</em> file</h2>
+<p>The remote server needs to know which packages Learning Log depends on, so we’ll use pip to generate a file listing them. Again, from an active virtual environment, issue the following command:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">(</span>ll_env<span class="o">)</span>learning_log$<span class="w"> </span>pip<span class="w"> </span>freeze<span class="w"> </span>&gt;<span class="w"> </span>requirements.txt
+</code></pre></div>
+<p>The freeze command tells pip to write the names of all the packages currently installed in the project into the file <em>requirements.txt</em>. Open this file to see the packages and version numbers installed in your project:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>asgiref==3.10.0
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>django==5.2.8
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>django-bootstrap5==25.2
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>sqlparse==0.5.3
+</code></pre></div>
+<p>Learning Log already depends on specific versions of four different packages, so it requires a matching environment to run properly on a remote server. (We installed two of these packages manually, and two others were installed automatically as dependencies of those packages.)</p>
+<p>When we deploy Learning Log, Upsun will install all the packages listed in <em>requirements.txt</em>, creating an environment with the same packages we’re using locally. Because of this, we can be confident the deployed project will function just like it has on our local system. This approach to managing a project is critical as you start to build and maintain multiple projects on your system.</p>
+<h2 id="using-git-to-track-the-projects-files">Using Git to Track the Project's Files</h2>
+<p>As discussed in Chapter 17, Git is a version control program that allows you to take a snapshot of the code in your project each time you implement a new feature successfully. If anything goes wrong, you can easily return to the last working snapshot of your project; for example, if you accidentally
+introduce a bug while working on a new feature. Each snapshot is called a <em>commit</em>.</p>
+<p>Using Git, you can try implementing new features without worrying about breaking your project. When you’re deploying to a live server, you need to make sure you’re deploying a working version of your project. To read more about Git and version control, see Appendix D.</p>
+<h3 id="installing-git">Installing Git</h3>
+<p>Git may already be installed on your system. To find out, open a new terminal window and issue the command <code>git --version</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="hll"><span class="o">(</span>ll_env<span class="o">)</span>learning_log$<span class="w"> </span>git<span class="w"> </span>--version
+</span><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>git<span class="w"> </span>version<span class="w"> </span><span class="m">2</span>.51.0
+</code></pre></div>
+<p>If you get a message indicating that Git is not installed, see the installation instructions in Appendix D.</p>
+<h3 id="configuring-git">Configuring Git</h3>
+<p>Git keeps track of who makes changes to a project, even when only one person is working on the project. To do this, Git needs to know your username and email. You must provide a username, but you can make up an email for your practice projects:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">(</span>ll_env<span class="o">)</span>learning_log$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;eric&quot;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="o">(</span>ll_env<span class="o">)</span>learning_log$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;eric@example.com&quot;</span>
+</code></pre></div>
+<p>If you forget this step, Git will prompt you for this information when you make your first commit.</p>
+<h3 id="ignoring-files">Ignoring Files</h3>
+<p>We don’t need Git to track every file in the project, so we’ll tell it to ignore some files. Create a file called <em>.gitignore</em> in the folder that contains <em>manage.py</em>. Notice that this filename begins with a dot and has no file extension. Here’s the code that goes in <em>.gitignore</em>:</p>
+<div class="highlight"><span class="filename">.gitignore</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>.gitignore ll_env/
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>__pycache__/
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>*.sqlite3
+</code></pre></div>
+<p>We tell Git to ignore the entire <em>ll_env</em> directory, because we can re-create it automatically at any time. We also don’t track the <em>__pycache__</em> directory, which contains the <em>.pyc</em> files that are created automatically when the <em>.py</em> files are executed. We don’t track changes to the local database, because it’s a bad habit: if you’re ever using SQLite on a server, you might accidentally overwrite the live database with your local test database when you push the project to the server. The asterisk in <code>*.sqlite3</code> tells Git to ignore any file that ends with the extension <em>.sqlite3</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you’re using macOS, add <em>.DS_Store</em> to your <em>.gitignore</em> file. This is a file that stores information about folder settings on macOS, and it has nothing to do with this project.</p>
+</div>
+<h3 id="committing-the-project">Committing the Project</h3>
+<p>We need to initialize a Git repository for Learning Log, add all the necessary files to the repository, and commit the initial state of the project. Here’s how to do that:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="hll"><span class="o">(</span>ll_env<span class="o">)</span>learning_log$<span class="w"> </span>git<span class="w"> </span>init
+</span><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Initialized<span class="w"> </span>empty<span class="w"> </span>Git<span class="w"> </span>repository<span class="w"> </span><span class="k">in</span><span class="w"> </span>/Users/eric/.../learning_log/.git/
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="hll"><span class="o">(</span>ll_env<span class="o">)</span>learning_log$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>.
+</span><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="hll"><span class="o">(</span>ll_env<span class="o">)</span>learning_log$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-am<span class="w"> </span><span class="s2">&quot;Initial state, before deployment.&quot;</span>
+</span><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="o">[</span>main<span class="w"> </span><span class="o">(</span>root-commit<span class="o">)</span><span class="w"> </span>c7ffaad<span class="o">]</span><span class="w"> </span>Initial<span class="w"> </span>state,<span class="w"> </span>before<span class="w"> </span>deployment.
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="m">42</span><span class="w"> </span>files<span class="w"> </span>changed,<span class="w"> </span><span class="m">879</span><span class="w"> </span>insertions<span class="o">(</span>+<span class="o">)</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>create<span class="w"> </span>mode<span class="w"> </span><span class="m">100644</span><span class="w"> </span>.gitignore
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>--snip--
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>create<span class="w"> </span>mode<span class="w"> </span><span class="m">100644</span><span class="w"> </span>requirements.txt
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="hll"><span class="o">(</span>ll_env<span class="o">)</span>learning_log$<span class="w"> </span>git<span class="w"> </span>status
+</span><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>On<span class="w"> </span>branch<span class="w"> </span>main
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>nothing<span class="w"> </span>to<span class="w"> </span>commit,<span class="w"> </span>working<span class="w"> </span>tree<span class="w"> </span>clean
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="hll"><span class="o">(</span>ll_env<span class="o">)</span>learning_log$
+</span></code></pre></div>
+<p>We issue the <code>git init</code> command to initialize an empty repository in the directory containing Learning Log. We then use the <code>git add .</code> command, which adds all the files that aren’t being ignored to the repository . (Don’t forget the dot.) Next, we issue the command <code>git commit -am "commit message"</code>: the <code>-a</code> flag tells Git to include all changed files in this commit, and the <code>-m</code> flag tells Git to record a log message .</p>
+<p>Issuing the <code>git status</code> command indicates that we’re on the <em>main</em> branch and that our working tree is <em>clean</em>. This is the status you’ll want to see anytime you push your project to a remote server.</p>
+<h2 id="deploying-the-project">Deploying the project</h2>
+<p>At this point you should have an Upsun account with an organization on the Fixed plan, and the Upsun CLI should be installed on your system. You should have a <em>requirements.txt</em> file, listing all the project's requirements. You should have made an initial Git commit, so if anything doesn't work you can restore your project to this known working state.</p>
+<h3 id="installing-django-simple-deploy">Installing <code>django-simple-deploy</code></h3>
+<p>It's time to deploy the project. We'll use <code>django-simple-deploy</code>, a tool that automates initial Django deployments. With <code>django-simple-deploy</code>, you install a plugin for the host you're working with (in this case Upsun), and it takes care of the configuration work necessary to build a working remote version of the project.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Disclaimer: I'm the maintainer of <code>django-simple-deploy</code>. I created this project after watching countless Django developers struggle with the initial deployment process. It's not just for beginners; it helps <em>everyone</em> avoid typos and other small mistakes that cause so many deployment attempts to fail. The full documentation for <code>django-simple-deploy</code> can be found <a href="https://django-simple-deploy.readthedocs.io/en/latest/">here</a>.</p>
+</div>
+<p>First, install <code>dsd-upsun</code>, the plugin that handles deployment to Upsun:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="o">(</span>ll_env<span class="o">)</span>learning_log$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>dsd-upsun
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="o">(</span>ll_env<span class="o">)</span>learning_log$<span class="w"> </span>pip<span class="w"> </span>freeze<span class="w"> </span>&gt;<span class="w"> </span>requirements.txt
+</code></pre></div>
+<p>After adding a new requirement, the <em>requirements.txt</em> file needs to be updated. If you open <em>requirements.txt</em> again, you'll see that <code>django-simple-deploy</code> has been added along with <code>dsd-upsun</code>.</p>
+<p>Now add <code>django_simple_deploy</code> to <code>INSTALLED_APPS</code>, just like you did with <code>django-bootstrap5</code> earlier:</p>
+<div class="highlight"><span class="filename">ll_project/settings.py</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="o">--</span><span class="n">snip</span><span class="o">--</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="o">--</span><span class="n">snip</span><span class="o">-</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="c1"># Third party apps.</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="s1">&#39;django_bootstrap5&#39;</span><span class="p">,</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="hll">    <span class="s1">&#39;django_simple_deploy&#39;</span><span class="p">,</span>
+</span><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="o">--</span><span class="n">snip</span><span class="o">--</span>
+</code></pre></div>
+<p>Note that the name here is <code>django_simple_deploy</code> with underscores, even though the package name is <code>django-simple-deploy</code> with hyphens. This is the pattern that almost all third-party Python packages follow.</p>
+<p>These changes need to be committed before making Upsun-specific configuration changes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="o">(</span>ll_env<span class="o">)</span>learning_log$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-am<span class="w"> </span><span class="s2">&quot;Added django-simple-deploy.&quot;</span>
+</code></pre></div>
+<p>Frequently committing known states of a project is an important habit as your projects become more complex.</p>
+<h3 id="creating-a-project-on-upsun">Creating a Project on Upsun</h3>
+<p>Now it's time to make a new project on Upsun. First, authenticate with the CLI:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="o">(</span>ll_env<span class="o">)</span>learning_log$<span class="w"> </span>upsun<span class="w"> </span>login
+</code></pre></div>
+<p>This command should open a browser, where you can confirm the terminal-based login.</p>
+<p>Now run the <code>create</code> command, to generate a new project on Upsun:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="hll"><span class="o">(</span>ll_env<span class="o">)</span>learning_log$<span class="w"> </span>upsun<span class="w"> </span>create<span class="w"> </span>--title<span class="w"> </span>ll_project_remote
+</span><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>Enter<span class="w"> </span>a<span class="w"> </span>number<span class="w"> </span>to<span class="w"> </span>choose<span class="w"> </span>an<span class="w"> </span>organization<span class="w"> </span><span class="o">(</span>-o<span class="o">)</span>:
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="w"> </span>My<span class="w"> </span>Projects<span class="w"> </span><span class="o">(</span>&lt;org-id&gt;<span class="o">)</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">  </span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span>eric_fixed<span class="w"> </span><span class="o">(</span>&lt;org-id&gt;<span class="o">)</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="hll"><span class="w"> </span>&gt;<span class="w"> </span><span class="m">1</span>
+</span><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w"> </span>Creating<span class="w"> </span>a<span class="w"> </span>project<span class="w"> </span>under<span class="w"> </span>the<span class="w"> </span>organization<span class="w"> </span>eric_fixed<span class="w"> </span><span class="o">(</span>&lt;org-id&gt;<span class="o">)</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>*<span class="w"> </span>Region<span class="w"> </span><span class="o">(</span>--region<span class="o">)</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>The<span class="w"> </span>region<span class="w"> </span>where<span class="w"> </span>the<span class="w"> </span>project<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>hosted.
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">  </span>--snip--
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">  </span><span class="o">[</span>us-4.platform.sh<span class="o">]</span><span class="w"> </span>Charleston,<span class="w"> </span>United<span class="w"> </span>States<span class="w"> </span><span class="o">(</span>Google<span class="o">)</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="hll">&gt;<span class="w"> </span>us-4.platform.sh
+</span><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>Default<span class="w"> </span>branch<span class="w"> </span><span class="o">(</span>--default-branch<span class="o">)</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>The<span class="w"> </span>default<span class="w"> </span>Git<span class="w"> </span>branch<span class="w"> </span>name<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>project<span class="w"> </span><span class="o">(</span>the<span class="w"> </span>production<span class="w"> </span>environment<span class="o">)</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>Default:<span class="w"> </span>main
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="hll">&gt;<span class="w"> </span>main
+</span><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>Local<span class="w"> </span>Git<span class="w"> </span>repository<span class="w"> </span>detected:<span class="w"> </span>/.../learning_log
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>Set<span class="w"> </span>the<span class="w"> </span>new<span class="w"> </span>project<span class="w"> </span>ll_project_remote<span class="w"> </span>as<span class="w"> </span>the<span class="w"> </span>remote<span class="w"> </span><span class="k">for</span><span class="w"> </span>this<span class="w"> </span>repository<span class="w"> </span>directory?<span class="w"> </span><span class="o">[</span>Y/n<span class="o">]</span><span class="w"> </span>y
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>The<span class="w"> </span>estimated<span class="w"> </span>monthly<span class="w"> </span>cost<span class="w"> </span>of<span class="w"> </span>this<span class="w"> </span>project<span class="w"> </span>is:<span class="w"> </span><span class="nv">$12</span>.00<span class="w"> </span>USD
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="hll">Are<span class="w"> </span>you<span class="w"> </span>sure<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span><span class="k">continue</span>?<span class="w"> </span><span class="o">[</span>Y/n<span class="o">]</span><span class="w"> </span>y
+</span><a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a>The<span class="w"> </span>Upsun<span class="w"> </span>Bot<span class="w"> </span>is<span class="w"> </span>activating<span class="w"> </span>your<span class="w"> </span>project
+<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a>
+<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="w">      </span>▄<span class="w">     </span>▄<span class="w">  </span>
+<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a><span class="w">      </span>▄█▄▄▄█▄<span class="w">  </span>
+<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="w">    </span>▄██▄███▄██▄
+<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a><span class="w">    </span>█<span class="w"> </span>█▀▀▀▀▀█<span class="w"> </span>█
+<a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a><span class="w">       </span>▀▀<span class="w"> </span>▀▀<span class="w">   </span>
+<a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a>
+<a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a>The<span class="w"> </span>project<span class="w"> </span>is<span class="w"> </span>now<span class="w"> </span>ready!
+<a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a>--snip--
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is the point at which Upsun will verify that you have a payment method on file. If you see a message reading "Insufficient credit to create a new project", follow the link to add a payment method.</p>
+</div>
+<p>The new remote project needs a name. You can use any name with underscores, but it's helpful to use a name similar to what you used when running <code>django startproject</code>. At the same time, it's nice to use a name that's distinct from names that have already been used. The name <code>ll_project_remote</code> lets you distinguish between the <em>ll_project</em> directory on your local system, and the remote project on Upsun.</p>
+<p>You'll be prompted for which organization to use; make sure to use the one that's on the Fixed plan. You'll be asked to choose a region; any one should work, but it's usually better to choose one relatively close to your location. You'll be prompted for which branch to use. There's only one branch, <code>main</code>, so use that. Finally, you'll need to confirm the estimated cost, which you'll be charged if you keep your project deployed beyond the free trial period.</p>
+<p>After you've answered all the questions, you should see a dancing robot as Upsun creates the remote resources for you.</p>
+<h3 id="configuring-learning-log-for-upsun">Configuring Learning Log for Upsun</h3>
+<p>Now you have a project that works locally, and an empty project on Upsun's servers. The project needs some new files and configuration changes in order to work on Upsun. You can add those files manually, but it's easy to make a small mistake like a typo, or miss a required file. These simple mistakes can take a long time to sort out, even for experienced developers, because every hosting platform has slightly different requirements.</p>
+<p><code>django-simple-deploy</code> avoids that issue by making all the necessary changes for you. Running the <code>manage.py deploy</code> command makes those configuration changes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="hll"><span class="o">(</span>ll_env<span class="o">)</span>learning_log$<span class="w"> </span>python<span class="w"> </span>manage.py<span class="w"> </span>deploy<span class="w"> </span>--deployed-project-name<span class="w"> </span>ll_project_remote
+</span><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Configuring<span class="w"> </span>project<span class="w"> </span><span class="k">for</span><span class="w"> </span>deployment...
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>Logging<span class="w"> </span>run<span class="w"> </span>of<span class="w"> </span><span class="sb">`</span>manage.py<span class="w"> </span>deploy<span class="sb">`</span>...
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>Created<span class="w"> </span>/.../dsd_logs/dsd_2025-11-10-185305.log.
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>Deployment<span class="w"> </span>target:<span class="w"> </span>Upsun
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">  </span>Using<span class="w"> </span>plugin:<span class="w"> </span>dsd_upsun
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">  </span>--snip--
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>---<span class="w"> </span>Your<span class="w"> </span>project<span class="w"> </span>is<span class="w"> </span>now<span class="w"> </span>configured<span class="w"> </span><span class="k">for</span><span class="w"> </span>deployment<span class="w"> </span>on<span class="w"> </span>Upsun.<span class="w"> </span>---
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>To<span class="w"> </span>deploy<span class="w"> </span>your<span class="w"> </span>project,<span class="w"> </span>you<span class="w"> </span>will<span class="w"> </span>need<span class="w"> </span>to:
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>-<span class="w"> </span>Commit<span class="w"> </span>the<span class="w"> </span>changes<span class="w"> </span>made<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>configuration<span class="w"> </span>process.
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="w">    </span>$<span class="w"> </span>git<span class="w"> </span>status
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="w">    </span>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>.
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="w">    </span>$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-am<span class="w"> </span><span class="s2">&quot;Configured project for deployment.&quot;</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>-<span class="w"> </span>Push<span class="w"> </span>your<span class="w"> </span>project<span class="w"> </span>to<span class="w"> </span>Upsun<span class="err">&#39;</span>s<span class="w"> </span>servers:
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="w">    </span>$<span class="w"> </span>upsun<span class="w"> </span>push
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>-<span class="w"> </span>Open<span class="w"> </span>your<span class="w"> </span>project:
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="w">    </span>$<span class="w"> </span>upsun<span class="w"> </span>url<span class="w">    </span>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>-<span class="w"> </span>As<span class="w"> </span>you<span class="w"> </span>develop<span class="w"> </span>your<span class="w"> </span>project<span class="w"> </span>further:
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="w">    </span>-<span class="w"> </span>Make<span class="w"> </span><span class="nb">local</span><span class="w"> </span>changes
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="w">    </span>-<span class="w"> </span>Commit<span class="w"> </span>your<span class="w"> </span><span class="nb">local</span><span class="w"> </span>changes
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a><span class="w">    </span>-<span class="w"> </span>Run<span class="w"> </span><span class="sb">`</span>upsun<span class="w"> </span>push<span class="sb">`</span>
+<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>
+<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a>-<span class="w"> </span>You<span class="w"> </span>can<span class="w"> </span>find<span class="w"> </span>a<span class="w"> </span>full<span class="w"> </span>record<span class="w"> </span>of<span class="w"> </span>this<span class="w"> </span>configuration<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>dsd_logs<span class="w"> </span>directory.
+</code></pre></div>
+<p>You need to tell <code>django-simple-deploy</code> the name of the project on <code>Upsun</code>, and the <code>--deployed-project-name</code> argument lets you do that. After running this command, you should see a summary of the changes that were made to your project in preparation for pushing it to Upsun. <code>django-simple-deploy</code> looks for a clean Git status before it makes configuration changes, so if you forgot to run <code>git commit</code> before calling <code>deploy</code>, you might have to make another commit and then run <code>deploy</code> a second time.</p>
+<p>The final block of output summarizes how to review the changes that were made, push your project to Upsun's servers, and open your project. It also summarizes briefly how to push subsequent changes from your local system to Upsun. We'll follow these steps now to finish the deployment.</p>
+<h3 id="reviewing-and-committing-configuration-changes">Reviewing and committing configuration changes</h3>
+<p>An external tool has just made a number of changes to your project. Git helps you see exactly what changes were made:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="hll"><span class="o">(</span>ll_env<span class="o">)</span>learning_log$<span class="w"> </span>git<span class="w"> </span>status
+</span><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span>modified:<span class="w">   </span>.gitignore
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span>modified:<span class="w">   </span>ll_project/settings.py
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span>modified:<span class="w">   </span>requirements.txt
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>Untracked<span class="w"> </span>files:
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span>.platform.app.yaml
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">    </span>.platform/
+</code></pre></div>
+<p>This output shows that three files were modified, and some new files were added. You can see what changes were made by running <code>git diff &lt;file-path&gt;</code>. For example, here's the changes made to the <em>settings.py</em> file:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="hll"><span class="o">(</span>ll_env<span class="o">)</span>learning_log$<span class="w"> </span>git<span class="w"> </span>diff<span class="w"> </span>ll_project/settings.py
+</span><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>--snip--
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>+#<span class="w"> </span>Upsun<span class="w"> </span>settings.
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>+import<span class="w"> </span>os
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>+
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>+if<span class="w"> </span>os.environ.get<span class="o">(</span><span class="s2">&quot;PLATFORM_APPLICATION_NAME&quot;</span><span class="o">)</span>:
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>+<span class="w">    </span><span class="c1"># Import some Upsun settings from the environment.</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>+<span class="w">    </span>from<span class="w"> </span>platformshconfig<span class="w"> </span>import<span class="w"> </span>Config
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>+
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>+<span class="w">    </span><span class="nv">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Config<span class="o">()</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>+
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>+<span class="w">    </span>try:
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>+<span class="w">        </span>ALLOWED_HOSTS.append<span class="o">(</span><span class="s2">&quot;*&quot;</span><span class="o">)</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>+<span class="w">    </span>except<span class="w"> </span>NameError:
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>+<span class="w">        </span><span class="nv">ALLOWED_HOSTS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;*&quot;</span><span class="o">]</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>+
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>+<span class="w">    </span><span class="nv">DEBUG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>False
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>--snip--
+</code></pre></div>
+<p>It takes a little to get used to the format of a <code>git diff</code> listing. If what you see isn't entirely clear, look at this output and then look at the file in your text editor. The <code>git diff</code> output should show you where to focus your attention in the file.</p>
+<p>The important part to notice here is that a conditional block has been added to the end of the settings file. Briefly, if the project is running in an Upsun environment, these settings will override the settings that were defined earlier in the file. Those settings will still work on your system, but the Upsun-specific settings will take effect in the Upsun environment.</p>
+<p>If you run <code>git diff</code> against the other files listed you'll see that a <em>dsd_logs</em> directory is being ignored, and a couple requirements were added that need to be installed in Upsun's environment.</p>
+<p>You can open the new files, such as <em>.platform.app.yaml</em> in your text editor and see what was added. These files tell Upsun how to build the project in their remote environment, and which resources to attach to the project. The <em>.platform</em> name appears here because Upsun has not fully transitioned away from their former name, Platform.sh.</p>
+<p>When you're finished reviewing the changes that were made, make a new commit:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="hll"><span class="o">(</span>ll_env<span class="o">)</span>learning_log$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>.
+</span><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="hll"><span class="o">(</span>ll_env<span class="o">)</span>learning_log$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-am<span class="w"> </span><span class="s2">&quot;Configured project for deployment to Upsun.&quot;</span>
+</span><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="hll"><span class="o">(</span>ll_env<span class="o">)</span>learning_log$<span class="w"> </span>git<span class="w"> </span>status
+</span><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>On<span class="w"> </span>branch<span class="w"> </span>main
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>nothing<span class="w"> </span>to<span class="w"> </span>commit,<span class="w"> </span>working<span class="w"> </span>tree<span class="w"> </span>clean
+</code></pre></div>
+<p>It's a good habit to check <code>git status</code> after committing more significant changes, to make sure you haven't missed anything. It's quite easy, for example, to forget to run <code>git add</code> and find that you've got a few files that haven't actually been committed yet.</p>
+<h3 id="pushing-the-project-to-upsun">Pushing the project to Upsun</h3>
+<p>Now it's time to push the project to Upsun:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="hll"><span class="o">(</span>ll_env<span class="o">)</span>learning_log$<span class="w"> </span>upsun<span class="w"> </span>push
+</span><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>$<span class="w"> </span>upsun<span class="w"> </span>push
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>Selected<span class="w"> </span>project:<span class="w"> </span>ll_project_remote<span class="w"> </span><span class="o">(</span>&lt;id&gt;<span class="o">)</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="hll">Pushing<span class="w"> </span>HEAD<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>environment<span class="w"> </span>main<span class="w"> </span><span class="o">(</span>type:<span class="w"> </span>production<span class="o">)</span>.
+</span><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>Are<span class="w"> </span>you<span class="w"> </span>sure<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span><span class="k">continue</span>?<span class="w"> </span><span class="o">[</span>Y/n<span class="o">]</span><span class="w"> </span>y
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>--snip--
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>To<span class="w"> </span>git.us-4.platform.sh:uexe5p4cbfote.git
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">   </span>*<span class="w"> </span><span class="o">[</span>new<span class="w"> </span>branch<span class="o">]</span><span class="w">      </span>HEAD<span class="w"> </span>-&gt;<span class="w"> </span>main
+</code></pre></div>
+<p>This command pushes all your project's files to Upsun's servers. You'll be asked one last time to confirm that you want to push your project to Upsun. The <code>push</code> command also causes Upsun to set up an environment from which the project can be served to end users. It installs the project's requirements, runs the database migrations, and starts listening for requests. This process can take about 3-10 minutes. There's a lot of output, but I encourage you to skim through it. It won't all make sense, but a lot will. You can see it copying files, installing packages, running migrations, and getting ready to process requests.</p>
+<p>When your project has been pushed, you can open it with the <code>url</code> command:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="hll"><span class="o">(</span>ll_env<span class="o">)</span>learning_log$<span class="w"> </span>upsun<span class="w"> </span>url
+</span><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>Enter<span class="w"> </span>a<span class="w"> </span>number<span class="w"> </span>to<span class="w"> </span>open<span class="w"> </span>a<span class="w"> </span>URL
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">  </span><span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="w"> </span>https://main-bvxea6i-uexe5p4cbfote.us-4.platformsh.site/
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">  </span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span>http://main-bvxea6i-uexe5p4cbfote.us-4.platformsh.site/
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="hll"><span class="w"> </span>&gt;<span class="w"> </span><span class="m">0</span>
+</span><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>https://main-bvxea6i-uexe5p4cbfote.us-4.platformsh.site/
+</code></pre></div>
+<p>When you run this command, you'll be shown a couple URLs where your project can be seen. Enter <code>0</code> for the URL with <code>https</code>, and your project will open in a new browser tab:</p>
+<p><img alt="Learning Log home page, with remote URL highlighted in address bar" src="../../images/ll_home_page_deployed.png" /></p>
+<p>This looks just like the project does when you used the <code>runserver</code> command, but now anyone can access your project. If you want someone else to try it out, just share the URL as you would for any web site you want to share.</p>
+<p>Upsun created a new database when it built the project, so none of the data you entered locally was copied over to the remote project. Take a moment to register an account on your deployed instance of Learning Log. If you can register an account, you'll know your database is working correctly.</p>
+<h3 id="creating-a-superuser">Creating a superuser</h3>
+<p>When you maintain a deployed project, you'll almost certainly want access to the Django admin site. For that, you need a superuser. The <code>ssh</code> command lets you run the same terminal commands you were using locally, on the remote project:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="hll"><span class="o">(</span>ll_env<span class="o">)</span>learning_log$<span class="w"> </span>upsun<span class="w"> </span>ssh
+</span><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="hll">web@ll_project_remote.0:~$<span class="w"> </span>ls
+</span><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>accounts<span class="w">  </span>learning_logs<span class="w">  </span>ll_project<span class="w">  </span>logs<span class="w">  </span>manage.py<span class="w">  </span>requirements.txt<span class="w">  </span>static
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="hll">web@ll_project_remote.0:~$<span class="w"> </span>python<span class="w"> </span>manage.py<span class="w"> </span>createsuperuser
+</span><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="hll">Username<span class="w"> </span><span class="o">(</span>leave<span class="w"> </span>blank<span class="w"> </span>to<span class="w"> </span>use<span class="w"> </span><span class="s1">&#39;web&#39;</span><span class="o">)</span>:<span class="w"> </span>ll_admin_remote
+</span><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>Email<span class="w"> </span>address:<span class="w"> </span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>Password:<span class="w"> </span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>Password<span class="w"> </span><span class="o">(</span>again<span class="o">)</span>:<span class="w"> </span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>Superuser<span class="w"> </span>created<span class="w"> </span>successfully.
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="hll">web@ll_project_remote.0:~$<span class="w"> </span><span class="nb">exit</span>
+</span><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="nb">logout</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>Connection<span class="w"> </span>to<span class="w"> </span>ssh.us-4.platform.sh<span class="w"> </span>closed.
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="o">(</span>ll_env<span class="o">)</span>learning_log$
+</code></pre></div>
+<p>When you first run the <code>upsun ssh</code> command, you may get another prompt about the authenticity of this host. If you see this message, enter <code>Y</code> and you should be logged in to a remote terminal session.</p>
+<p>After running the <code>ssh</code> command, your terminal acts just like a terminal on the remote server. Note that your prompt has changed to indicate that you’re in a web session associated with the project named <code>ll_project_remote</code>. If you issue the <code>ls</code> command, you’ll see the files that have been pushed to the server.</p>
+<p>Issue the same <code>createsuperuser</code> command we used in Chapter 18 . This time, I entered an admin username, <code>ll_admin_remote</code>, that’s distinct from the one I used locally . When you’re finished working in the remote terminal session, enter the <code>exit</code> command . Your prompt will indicate that you’re working in your local system again.</p>
+<p>Now you can add <code>/admin/</code> to the end of the URL for the live app and log in to the admin site. If others have already started using your project, be aware that you’ll have access to all their data! Take this responsibility seriously, and users will continue to trust you with their data.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Windows users will use the same commands shown here (such as ls instead of dir), because you’re running a Linux terminal through a remote connection.</p>
+</div>
+<h2 id="finishing-chapter-20">Finishing Chapter 20</h2>
+<p>You can now go back to the book and pick up on page 459, at the <em>Creating Custom Error Pages</em> section. The only difference you’ll need to keep in mind is that you’ll use <code>upsun</code> whenever you see the command <code>platform</code> used in the book. Also, any reference to Platform.sh should be read as a reference to Upsun.</p>
+<p>For more specific information about deploying Django projects to Upsun, see the main <a href="https://fixed.docs.upsun.com/guides/django.html">Django documentation page</a> for Fixed deployments.</p>
+<h2 id="destroying-the-remote-project">Destroying the remote project</h2>
+<p>You'll begin to accrue charges for your deployment if you leave it running beyond the free trial period. The instructions in the book for deleting the remote project should work, but I want to repeat them here so there's no confusion.</p>
+<h3 id="deleting-with-the-cli">Deleting with the CLI</h3>
+<p>In your local project environment, you can use the <code>project:delete</code> command to destroy your remote project:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="hll">$<span class="w"> </span>upsun<span class="w"> </span>project:delete
+</span><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>You<span class="w"> </span>are<span class="w"> </span>about<span class="w"> </span>to<span class="w"> </span>delete<span class="w"> </span>the<span class="w"> </span>project:
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">  </span>ll_project_remote<span class="w"> </span><span class="o">(</span>&lt;id&gt;<span class="o">)</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w"> </span>*<span class="w"> </span>This<span class="w"> </span>action<span class="w"> </span>is<span class="w"> </span>irreversible.
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w"> </span>*<span class="w"> </span>Your<span class="w"> </span>site<span class="w"> </span>will<span class="w"> </span>no<span class="w"> </span>longer<span class="w"> </span>be<span class="w"> </span>accessible.
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w"> </span>*<span class="w"> </span>All<span class="w"> </span>data<span class="w"> </span>associated<span class="w"> </span>with<span class="w"> </span>this<span class="w"> </span>project<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>deleted,<span class="w"> </span>including<span class="w"> </span>backups.
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="w"> </span>*<span class="w"> </span>You<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>charged<span class="w"> </span>at<span class="w"> </span>the<span class="w"> </span>end<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>month<span class="w"> </span><span class="k">for</span><span class="w"> </span>any<span class="w"> </span>remaining<span class="w"> </span>project<span class="w"> </span>costs.
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="hll">Are<span class="w"> </span>you<span class="w"> </span>sure<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>delete<span class="w"> </span>this<span class="w"> </span>project?<span class="w"> </span><span class="o">[</span>y/N<span class="o">]</span><span class="w"> </span>y
+</span><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="hll">Type<span class="w"> </span>the<span class="w"> </span>project<span class="w"> </span>title<span class="w"> </span>to<span class="w"> </span>confirm:<span class="w"> </span>ll_project_remote
+</span><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>The<span class="w"> </span>project<span class="w"> </span>ll_project<span class="w"> </span><span class="o">(</span>&lt;id&gt;<span class="o">)</span><span class="w"> </span>was<span class="w"> </span>deleted.
+</code></pre></div>
+<p>This is a reliable way to delete your project. However, you should log in to <a href="https://upsun.com">https://upsun.com</a> and visit your dashboard to verify you don't have any active resources remaining.</p>
+<h3 id="deleting-through-the-upsun-dashboard">Deleting through the Upsun dashboard</h3>
+<p>Every hosting company I've ever worked with has a browser-based dashboard. Some are more complex than others, so make sure you poke around and see how your host's dashboard is organized.</p>
+<p>On Upsun, visit <a href="https://console.upsun.com">https://console.upsun.com</a>. Here's what that page looks like after deploying Learning Log:</p>
+<p><img alt="The Upsun dashboard, showing one project named ll_project_remote" src="../../images/upsun_dashboard.png" /></p>
+<p>If you click the three vertical dots, you should see an option labeled <strong>Edit plan</strong>:</p>
+<p><img alt="three project options: Project access, Project settings, Edit plan" src="../../images/upsun_edit_plan.png" /></p>
+<p>Click <strong>Edit plan</strong>, scroll down, and click <strong>Delete project</strong>. You'll see a dialog for confirming the deletion:</p>
+<p><img alt="&quot;Delete project&quot; dialog, showing ll_project_remote" src="../../images/upsun_delete_project.png" /></p>
+<p>Once you enter the project name, you can click the button labeled <strong>Yes, Delete Project</strong>.</p>
+<p>You should see an empty dashboard after confirming the deletion. If you see the message "Create your first project", your deletion was almost certainly successful. I've run many test deployments on Upsun, and seen many odd errors and messages along the lines of "Something went wrong." If you see anything like this, just go back to <a href="https://console.upsun.com">https://console.upsun.com</a>. If you see any remaining resources, click those three vertical dots, or look for a Settings tab. You usually have to scroll to the bottom of a page to find the Delete button, but it should be there.</p>
+<hr />
+<p>If any of the steps shown here don't work and you can't figure out how to proceed, please <a href="../../contact/">reach out</a>. I would like to keep these instructions up to date, and I always enjoy hearing from people. :)</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.instant"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.dd8806f2.min.js"></script>
+      
+    
+  </body>
+</html>

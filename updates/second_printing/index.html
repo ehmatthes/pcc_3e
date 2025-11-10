@@ -388,6 +388,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -513,6 +521,15 @@
   <a href="#chapter-16" class="md-nav__link">
     <span class="md-ellipsis">
       Chapter 16
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chapter-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 20
     </span>
   </a>
   
@@ -650,11 +667,95 @@
   
   
     <li class="md-nav__item">
+      <a href="../fifth_printing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fifth printing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sixth_printing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sixth printing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../seventh_printing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Seventh printing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../which_printing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Which printing do I have?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploying_django/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying Django
   </span>
   
 
@@ -1273,6 +1374,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#chapter-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 20
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1365,10 +1475,11 @@
 <h1 id="updates-and-errata-second-printing">Updates and Errata - Second printing</h1>
 <p>This page is broken into two parts, Updates and Errata. <em>Updates</em> address issues that affect whether your code will run or not. <em>Errata</em> refer to minor issues such as typos, and errors in grayed-out code that probably won’t affect the code you’re entering.</p>
 <p>Code that produces warnings but still runs correctly is noted under Errata, as this is a fairly common occurrence and the code often still works for a long time while producing warnings.</p>
-<p>If you find an error in the book that's not listed here, or can’t get something to work, please let me know. You can reach me through email at ehmatthes@gmail.com, or on Twitter at @ehmatthes.</p>
+<p>If you find an error in the book that's not listed here, or can’t get something to work, please <a href="../../contact/">let me know</a>.</p>
 <ul>
 <li><a href="#updates">Updates</a><ul>
 <li><a href="#chapter-16">Chapter 16</a></li>
+<li><a href="#chapter-20">Chapter 20</a></li>
 </ul>
 </li>
 <li><a href="#errata">Errata</a><ul>
@@ -1389,6 +1500,9 @@
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">lines</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
 </code></pre></div>
 <p>This also affects the calls to <code>path.read_text()</code> on pages 339 and 343. There are a few other grayed-out references to <code>path.read_text()</code> that should include this argument, but that shouldn't affect the code you're entering. Those are on pages 332, 334, 336, 339, 345, and 348.</p>
+<h3 id="chapter-20">Chapter 20</h3>
+<p>The second half of Chapter 20, starting on page 445, focuses on the process of deploying Learning Log to the hosting company Platform.sh. That company has rebranded as Upsun, and they've changed their approach to deployment somewhat.</p>
+<p>Fully up-to-date instructions for deploying Learning Log are posted on the <a href="../deploying_django/">Deploying Django</a> page. If anything in these instructions is not working for you, please don't hesitate to <a href="../../contact/">reach out</a>.</p>
 <hr />
 <h2 id="errata">Errata</h2>
 <h3 id="chapter-6">Chapter 6</h3>
@@ -1404,16 +1518,37 @@
 </code></pre></div>
 <h3 id="chapter-16_1">Chapter 16</h3>
 <p>As noted above for Chapter 15, use <code>seaborn-v0_8</code> wherever you see <code>seaborn</code>.</p>
+<p>Also on page 351, the line that starts the <code>for</code> loop over <code>all_eq_dicts</code> is missing. This line was shown in earlier listings, but was left out on this page. The listing on page 351 should look like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">--</span><span class="n">snip</span><span class="o">--</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">mags</span><span class="p">,</span> <span class="n">lons</span><span class="p">,</span> <span class="n">lats</span><span class="p">,</span> <span class="n">eq_titles</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">for</span> <span class="n">eq_dict</span> <span class="ow">in</span> <span class="n">all_eq_dicts</span><span class="p">:</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">mag</span> <span class="o">=</span> <span class="n">eq_dict</span><span class="p">[</span><span class="s1">&#39;properties&#39;</span><span class="p">][</span><span class="s1">&#39;mag&#39;</span><span class="p">]</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">lon</span> <span class="o">=</span> <span class="n">eq_dict</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">][</span><span class="s1">&#39;coordinates&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">lat</span> <span class="o">=</span> <span class="n">eq_dict</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">][</span><span class="s1">&#39;coordinates&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="n">eq_title</span> <span class="o">=</span> <span class="n">eq_dict</span><span class="p">[</span><span class="s1">&#39;properties&#39;</span><span class="p">][</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="n">mags</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mag</span><span class="p">)</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="n">lons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lon</span><span class="p">)</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="n">lats</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lat</span><span class="p">)</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="n">eq_titles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">eq_title</span><span class="p">)</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Global Earthquakes&#39;</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter_geo</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="n">lats</span><span class="p">,</span> <span class="n">lon</span><span class="o">=</span><span class="n">lons</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">mags</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>        <span class="o">--</span><span class="n">snip</span><span class="o">--</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>        <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;natural earth&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>        <span class="n">hover_name</span><span class="o">=</span><span class="n">eq_titles</span><span class="p">,</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    <span class="p">)</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
 <h3 id="chapter-17">Chapter 17</h3>
 <p>On page 370, the code that starts the <code>for</code> loop should go through index <code>30</code>, not <code>5</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">submission_dicts</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">for</span> <span class="n">submission_id</span> <span class="ow">in</span> <span class="n">submission_ids</span><span class="p">[:</span><span class="mi">30</span><span class="p">]:</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="c1"># Make a new API call for each submission.</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="o">...</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">submission_dicts</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">for</span> <span class="n">submission_id</span> <span class="ow">in</span> <span class="n">submission_ids</span><span class="p">[:</span><span class="mi">30</span><span class="p">]:</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="c1"># Make a new API call for each submission.</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="o">...</span>
 </code></pre></div>
 <h3 id="chapter-18">Chapter 18</h3>
 <p>On page 391, the path to the index.html template should read:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>learning_log/learning_logs/templates/learning_logs/index.html
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>learning_log/learning_logs/templates/learning_logs/index.html
 </code></pre></div>
 <h3 id="chapter-19">Chapter 19</h3>
 <p>On page 416, the sentence:</p>
