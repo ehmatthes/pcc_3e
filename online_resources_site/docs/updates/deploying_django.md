@@ -1,18 +1,18 @@
 ---
 hide:
   - footer
-title: Deploying Django
+title: Deploying Learning Log
 ---
 
-# Deploying Django
+# Deploying Learning Log
 
 Building a Django project that works on your system is satisfying, but it gets even more satisfying when you see your site deployed where anyone can access it.
 
-In the second half of Chapter 20, the book walks you through the process of deploying to the hosting company Platform.sh. That company has rebranded as [Upsun](https://upsun.com), and they've changed their approach to deployment somewhat. The printed instructions no longer work for deployment, but the instructions here are fully up to date. If you run into any steps that don't seem to work, please [reach out](../contact.md) and I will update these instructions. Thank you!
+In the second half of Chapter 20, the book walks you through the process of deploying Learning Log to the hosting company Platform.sh. That company has rebranded as [Upsun](https://upsun.com), and they've changed their approach to deployment somewhat. The printed instructions no longer work for deployment, but the instructions here are fully up to date. If you run into any steps that don't seem to work, please [reach out](../contact.md) and I will update these instructions. Thank you!
 
 ## Making an Upsun Account
 
-To make an account, go to [https://upsun.com](https://upsun.com) and click the Free Trial button. Currently, Upsun offers a 15-day free trial.
+To make an account, go to [https://upsun.com](https://upsun.com) and click the Free Trial button. Currently, Upsun offers a 15-day free trial. At the time of this writing, a credit card is not required to use the free trial.
 
 ## Flex and Fixed plans
 
@@ -22,7 +22,7 @@ Upsun steers people towards Flex plans, but it's more expensive and not needed w
 
 ### Adding a Fixed Organization
 
-When you create an account on Upsun, you also create an *Organization* on their Flex plan. Make a new Organization on the Fixed plan by clicking the drop down arrow next to My Projects on the dashboard, and then clicking **New organization**:
+When you create an account on Upsun, you also create a default *Organization*. That default organization is on their Flex plan. Make a new Organization on the Fixed plan by clicking the drop down arrow next to **My Projects** on the dashboard, and then clicking **New organization**:
 
 ![The dialog for adding a new organization on Upsun](../images/upsun_new_org_dialog.png)
 
@@ -30,14 +30,14 @@ In the **Create organization** dialog that appears, make a name for your new org
 
 ![The create organization form on Upsun](../images/upsun_create_org_form_bordered.png)
 
-Click the **Create organization** button, and you should see a clear indication that your organization is set up use Upsun's Fixed resources:
+Click the **Create organization** button, and you should see a confirmation that your organization is set up to use Upsun's Fixed resources:
 
 ![Organization page showing "Fixed"](../images/upsun_fixed_org_bordered.png)
 
 The Upsun CLI
 ---
 
-To deploy and manage a project on Platform.sh, you’ll need the tools available in the Command Line Interface (CLI). To install the latest version of the CLI, visit [https://docs.upsun.com/administration/cli.html](https://docs.upsun.com/administration/cli.html) and follow the instructions for your operating system. If you're on Windows and haven't installed something like this in a terminal before, I recommend using [Scoop](https://scoop.sh). Scoop makes it easy to install the Upsun CLI, and many other tools you might find helpful as you continue working on more complex programming projects.
+To deploy and manage a project on Platform.sh, you’ll need the tools available in the Command Line Interface (CLI). To install the latest version of the CLI, visit [https://docs.upsun.com/administration/cli.html](https://docs.upsun.com/administration/cli.html) and follow the instructions for your operating system. If you're on Windows and haven't installed something like this in a terminal before, I recommend using [Scoop](https://scoop.sh), a tool for installing utilities on Windows. Scoop makes it easy to install the Upsun CLI, and many other tools you might find helpful as you continue working on more complex programming projects.
 
 Creating a *requirements.txt* file
 ---
@@ -183,7 +183,7 @@ This command should open a browser, where you can confirm the terminal-based log
 Now run the `create` command, to generate a new project on Upsun:
 
 ```sh
-$ upsun create --title ll_project_remote
+(ll_env)learning_log$ upsun create --title ll_project_remote
 ```
 
 The new remote project needs a name. You can use any name with underscores, but it's helpful to use a name similar to what you used when running `django startproject`. At the same time, it's nice to use a name that's distinct from names that have already been used. The name `ll_project_remote` lets you distinguish between the *ll_project* directory on your local system, and the remote project on Upsun.
@@ -197,7 +197,7 @@ Now you have a project that works locally, and an empty project on Upsun's serve
 `django-simple-deploy` avoids that issue by making all the necessary changes for you. Running the `manage.py deploy` command makes those configuration changes:
 
 ```sh
-$ python manage.py deploy --deployed-project-name ll_project_remote
+(ll_env)learning_log$ python manage.py deploy --deployed-project-name ll_project_remote
 ```
 
 You need to tell `django-simple-deploy` the name of the project on `Upsun`, and the `--deployed-project-name` argument lets you do that. After running this command, you should see a summary of the changes that were made to your project in preparation for pushing it to Upsun. `django-simple-deploy` looks for a clean Git status before it makes configuration changes, so if you forgot to run `git commit` before calling `deploy`, you might have to make another commit and then run `deploy` a second time.
@@ -207,7 +207,7 @@ You need to tell `django-simple-deploy` the name of the project on `Upsun`, and 
 An external tool has just made a number of changes to your project. Another strength of Git is that it lets you see exactly what changes were made:
 
 ```sh hl_lines="1"
-$ git status
+(ll_env)learning_log$ git status
 	modified:   .gitignore
 	modified:   ll_project/settings.py
 	modified:   requirements.txt
@@ -220,7 +220,7 @@ Untracked files:
 This output shows that three files were modified, and some new files were added. You can see what changes were made by running `git diff <file-path>`. For example, here's the changes made to the *settings.py* file:
 
 ```sh
-$ git diff ll_project/settings.py
+(ll_env)learning_log$ git diff ll_project/settings.py
 
 ```
 
@@ -235,9 +235,9 @@ You can open the other files in your text editor and see what was added. These f
 When you're finished reviewing the changes that were made, make a new commit:
 
 ```sh  hl_lines="1-3"
-$ git add .
-$ git commit -am "Configured for deployment to Upsun."
-$ git status
+(ll_env)learning_log$ git add .
+(ll_env)learning_log$ git commit -am "Configured for deployment to Upsun."
+(ll_env)learning_log$ git status
 On branch main
 nothing to commit, working tree clean
 ```
@@ -249,7 +249,7 @@ It's a good habit to check `git status` after committing more significant change
 Now it's time to push the project to Upsun:
 
 ```sh
-$ upsun push
+(ll_env)learning_log$ upsun push
 ```
 
 This command pushes all your project's files to Upsun's servers. It also causes Upsun to set up an environment from which the project can be served to end users. It installs the project's requirements, runs the database migrations, and starts listening for requests. This process can take about 3-10 minutes.
@@ -257,11 +257,11 @@ This command pushes all your project's files to Upsun's servers. It also causes 
 When your project has been pushed, you can open it with the `url` command:
 
 ```sh
-$ upsun url
+(ll_env)learning_log$ upsun url
 ```
 
-When you run this command, you'll be shown a couple URLs where your project can be seen. Enter `0`, and your project will open in a new browser tab:
 
+When you run this command, you'll be shown a couple URLs where your project can be seen. Enter `0`, and your project will open in a new browser tab:
 [screenshot, with remote URL highlighted]
 
 This looks just like the project does when you used the `runserver` command, but now anyone can access your project. If you want someone else to try it out, just share the URL as you would for any web site you want to share.
@@ -273,12 +273,12 @@ Upsun created a new database when it built the project; none of the data that yo
 When you maintain a deployed project, you'll almost certainly want access to the Django admin site. For that, you need a superuser. The `ssh` command lets you run the same terminal commands you were using locally, on the remote project:
 
 ```sh
-$ upsun ssh
+(ll_env)learning_log$ upsun ssh
 $ ls
 $ python manage.py createsuperuser
 ll_admin_remote
 exit
-$
+(ll_env)learning_log$ 
 ```
 
 When you first run the platform environment:ssh command, you may get another prompt about the authenticity of this host. If you see this message, enter Y and you should be logged in to a remote terminal session.
