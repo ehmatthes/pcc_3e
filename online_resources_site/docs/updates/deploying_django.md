@@ -404,6 +404,53 @@ Finishing Chapter 20
 
 You can now go back to the book and pick up on page 459, at the *Creating Custom Error Pages* section. The only difference you’ll need to keep in mind is that you’ll use `upsun` whenever you see the command `platform` used in the book. Also, any reference to Platform.sh should be read as a reference to Upsun.
 
+Destroying the remote project
+---
+
+You'll begin to accrue charges for your deployment if you leave it running beyond the free trial period. The instructions in the book for deleting the remote project should work, but I want to repeat them here so there's no confusion.
+
+### Deleting with the CLI
+
+In your local project environment, you can use the `project:delete` command to destroy your remote project:
+
+```sh hl_lines="1 10 11"
+$ upsun project:delete
+You are about to delete the project:
+  ll_project_remote (<id>)
+
+ * This action is irreversible.
+ * Your site will no longer be accessible.
+ * All data associated with this project will be deleted, including backups.
+ * You will be charged at the end of the month for any remaining project costs.
+
+Are you sure you want to delete this project? [y/N] y
+Type the project title to confirm: ll_project_remote
+
+The project ll_project (<id>) was deleted.
+```
+
+This is a reliable way to delete your project. However, you should log in to [https://upsun.com](https://upsun.com) and visit your dashboard to verify you don't have any active resources remaining.
+
+### Deleting through the Upsun dashboard
+
+Every hosting company I've ever worked with has a browser-based dashboard. Some are more complex than others, so make sure you poke around and see how your host's dashboard is organized.
+
+On Upsun, visit [https://console.upsun.com](https://console.upsun.com). Here's what that page looks like after deploying Learning Log:
+
+![The Upsun dashboard, showing one project named ll_project_remote](../images/upsun_dashboard.png)
+
+If you click the three vertical dots, you should see an option labeled **Edit plan**:
+
+![three project options: Project access, Project settings, Edit plan](../images/upsun_edit_plan.png)
+
+Click **Edit plan**, scroll down, and click **Delete project**. You'll see a dialog for confirming the deletion:
+
+!["Delete project" dialog, showing ll_project_remote](../images/upsun_delete_project.png)
+
+Once you enter the project name, you can click the button labeled **Yes, Delete Project**.
+
+You *should* see an empty dashboard after confirming the deletion. If you see the message "Create your first project", your deletion was almost certainly successful. I've run many test deployments on Upsun, and seen many odd errors and messages along the lines of "Something went wrong." If you see anything like this, just go back to [https://console.upsun.com](https://console.upsun.com). If you see any remaining resources, click those three vertical dots, or look for a Settings tab. You usually have to scroll to the bottom of a page to find the Delete button, but it should be there.
+
 ---
 
 If any of the steps shown here don't work and you can't figure out how to proceed, please [reach out](../contact.md). I would like to keep these instructions up to date, and I always enjoy hearing from people. :)
