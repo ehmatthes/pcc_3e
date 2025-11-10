@@ -273,6 +273,15 @@ When you run this command, you'll be shown a couple URLs where your project can 
 
 This looks just like the project does when you used the `runserver` command, but now anyone can access your project. If you want someone else to try it out, just share the URL as you would for any web site you want to share.
 
+Upsun created a new database when it built the project; none of the data that you entered locally was copied over to the remote project. Take a moment to register an account on your deployed instance of Learning Log.
 
+### Creating a superuser
+
+When you maintain a deployed project, you'll almost certainly want access to the Django admin site. For that, you need a superuser. The `ssh` command lets you run the same terminal commands you were using locally, on the remote project:
+
+```sh
+$ upsun ssh
+
+```
 
 
