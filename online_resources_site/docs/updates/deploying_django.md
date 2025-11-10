@@ -16,7 +16,7 @@ To make an account, go to [https://upsun.com](https://upsun.com) and click the F
 
 Upsun currently offers a 15-day free trial, but in order to deploy your project you'll need to have a credit card on file. If you destroy your project before the 15-day period is up, your card should not be charged.
 
-You'll be prompted to add a payment method wehn you create an empty project on Upsun's servers.
+You'll be prompted to add a payment method when you create an empty project on Upsun's servers.
 
 !!! note
     Many hosting companies used to offer free trials, without requiring users to set up a payment method. With the growth of cryptocurrency miners, bot networks, and a rapid rise in abusive users, almost every company now requires users to set up a payment method as an anti-abuse measure.
@@ -145,6 +145,9 @@ At this point you should have an Upsun account with an organization on the Fixed
 ### Installing `django-simple-deploy`
 
 It's time to deploy the project. We'll use `django-simple-deploy`, a tool that automates initial Django deployments. With `django-simple-deploy`, you install a plugin for the host you're working with (in this case Upsun), and it takes care of the configuration work necessary to build a working remote version of the project.
+
+!!! note
+    Disclaimer: I'm the maintainer of `django-simple-deploy`. I created this project after watching countless Django developers struggle with the initial deployment process. It's not just for beginners; it helps *everyone* avoid typos and other small mistakes that cause so many deployment attempts to fail.
 
 First, install `dsd-upsun`, the plugin that handles deployment to Upsun:
 
