@@ -57,7 +57,7 @@ django-bootstrap5==25.2
 sqlparse==0.5.3
 ```
 
-Learning Log already depends on specific versions of four different packages, so it requires a matching environment to run properly on a remote server. (We installed two of these packages manually, and two others were installed automatically as dependencies of these packages.)
+Learning Log already depends on specific versions of four different packages, so it requires a matching environment to run properly on a remote server. (We installed two of these packages manually, and two others were installed automatically as dependencies of those packages.)
 
 When we deploy Learning Log, Upsun will install all the packages listed in *requirements.txt*, creating an environment with the same packages we’re using locally. Because of this, we can be confident the deployed project will function just like it has on our local system. This approach to managing a project is critical as you start to build and maintain multiple projects on your system.
 
@@ -146,7 +146,7 @@ First, install `dsd-upsun`, the plugin that handles deployment to Upsun:
 (ll_env)learning_log$ pip freeze > requirements.txt
 ```
 
-After adding a new requirement, the *requirements.txt* file needs to be updated. When you run `pip freeze`, you can see that `django-simple-deploy` has been added along with `dsd-upsun`.
+After adding a new requirement, the *requirements.txt* file needs to be updated. If you open *requirements.txt* again, you'll see that `django-simple-deploy` has been added along with `dsd-upsun`.
 
 Now add `django_simple_deploy` to `INSTALLED_APPS`, just like you did with `django-bootstrap5` earlier:
 
@@ -160,15 +160,15 @@ INSTALLED_APPS = [
     --snip--
 ```
 
-Note that the package name is `django-simple-deploy` with hyphens, but the installed app is named `django_simple_deploy` with underscores. This is the pattern that almost all third-party Python packages follow.
+Note that the name here is `django_simple_deploy` with underscores, even though the package name is `django-simple-deploy` with hyphens. This is the pattern that almost all third-party Python packages follow.
 
-These changes need to be committed before making Upsun-specific configuration changes.
+These changes need to be committed before making Upsun-specific configuration changes:
 
 ```sh
 (ll_env)learning_log$ git commit -am "Added django-simple-deploy."
 ```
 
-Frequent commits of known states of a project is an important work habit as your projects become more complex.
+Frequently committing known states of a project is an important habit as your projects become more complex.
 
 ### Creating a Project on Upsun
 
