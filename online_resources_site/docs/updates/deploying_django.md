@@ -102,7 +102,7 @@ If you forget this step, Git will prompt you for this information when you make 
 
 We don’t need Git to track every file in the project, so we’ll tell it to ignore some files. Create a file called *.gitignore* in the folder that contains *manage.py*. Notice that this filename begins with a dot and has no file extension. Here’s the code that goes in *.gitignore*:
 
-```txt title=".gitignore"
+```txt title="File: .gitignore"
 .gitignore ll_env/
 __pycache__/
 *.sqlite3
@@ -160,7 +160,7 @@ After adding a new requirement, the *requirements.txt* file needs to be updated.
 
 Now add `django_simple_deploy` to `INSTALLED_APPS`, just like you did with `django-bootstrap5` earlier:
 
-```python hl_lines="6" title="ll_project/settings.py"
+```python hl_lines="6" title="File: ll_project/settings.py"
 --snip--
 INSTALLED_APPS = [
     --snip-
