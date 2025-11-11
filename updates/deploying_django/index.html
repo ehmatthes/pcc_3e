@@ -1747,7 +1747,7 @@ introduce a bug while working on a new feature. Each snapshot is called a <em>co
 <p>If you forget this step, Git will prompt you for this information when you make your first commit.</p>
 <h3 id="ignoring-files">Ignoring Files</h3>
 <p>We don’t need Git to track every file in the project, so we’ll tell it to ignore some files. Create a file called <em>.gitignore</em> in the folder that contains <em>manage.py</em>. Notice that this filename begins with a dot and has no file extension. Here’s the code that goes in <em>.gitignore</em>:</p>
-<div class="highlight"><span class="filename">.gitignore</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>.gitignore ll_env/
+<div class="highlight"><span class="filename">File: .gitignore</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>.gitignore ll_env/
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>__pycache__/
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>*.sqlite3
 </code></pre></div>
@@ -1788,7 +1788,7 @@ introduce a bug while working on a new feature. Each snapshot is called a <em>co
 </code></pre></div>
 <p>After adding a new requirement, the <em>requirements.txt</em> file needs to be updated. If you open <em>requirements.txt</em> again, you'll see that <code>django-simple-deploy</code> has been added along with <code>dsd-upsun</code>.</p>
 <p>Now add <code>django_simple_deploy</code> to <code>INSTALLED_APPS</code>, just like you did with <code>django-bootstrap5</code> earlier:</p>
-<div class="highlight"><span class="filename">ll_project/settings.py</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="o">--</span><span class="n">snip</span><span class="o">--</span>
+<div class="highlight"><span class="filename">File: ll_project/settings.py</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="o">--</span><span class="n">snip</span><span class="o">--</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="o">--</span><span class="n">snip</span><span class="o">-</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="c1"># Third party apps.</span>
