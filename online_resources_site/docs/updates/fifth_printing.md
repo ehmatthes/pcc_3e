@@ -15,6 +15,7 @@ If you find an error in the book that's not listed here, or can’t get somethin
 - [Updates](#updates)
     - [Chapter 20](#chapter-20)
 - [Errata](#errata)
+    - [Chapter 10](#chapter-10)
     - [Chapter 16](#chapter-16)
 
 ---
@@ -32,6 +33,10 @@ Fully up-to-date instructions for deploying Learning Log are posted on the [Depl
 
 Errata
 ---
+
+### Chapter 10
+
+The exercise *Cats and Dogs* (10-8) on page 200 should refer to "the `FileNotFoundError`", instead of "the `FileNotFound` error".
 
 ### Chapter 16
 

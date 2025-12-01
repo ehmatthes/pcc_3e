@@ -76,6 +76,8 @@ On page 167, the docstring for the `__init__()` method in *electric_car.py* shou
 
 On page 200, Exercise 10-7 should read "Wrap your code from Exercise 10-6 in a while loop..."
 
+The exercise *Cats and Dogs* (10-8) should refer to "the `FileNotFoundError`", instead of "the `FileNotFound` error".
+
 Also, Exercise 10-9 should refer to Exercise 10-8.
 
 ### Chapter 15

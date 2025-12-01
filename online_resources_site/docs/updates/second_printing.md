@@ -17,6 +17,7 @@ If you find an error in the book that's not listed here, or can’t get somethin
     - [Chapter 20](#chapter-20)
 - [Errata](#errata)
     - [Chapter 6](#chapter-6)
+    - [Chapter 10](#chapter-10)
     - [Chapter 15](#chapter-15)
     - [Chapter 16](#chapter-16_1)
     - [Chapter 17](#chapter-17)
@@ -58,6 +59,10 @@ The output at the bottom of page 95 should say `position`, not `x-position`:
 Original position: 0
 New position: 2
 ```
+
+### Chapter 10
+
+The exercise *Cats and Dogs* (10-8) on page 200 should refer to "the `FileNotFoundError`", instead of "the `FileNotFound` error".
 
 ### Chapter 15
 
