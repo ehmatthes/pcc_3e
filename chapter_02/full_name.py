@@ -1,4 +1,4 @@
-first_name = "ada"
-last_name = "lovelace"
-full_name = f"{first_name} {last_name}"
-print(full_name)
+FIRST_NAME = "Adi"
+LAST_NAME = "White"
+FULL_NAME = f"{FIRST_NAME} {LAST_NAME}"
+print(FULL_NAME)
