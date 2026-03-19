@@ -1,5 +1,5 @@
-cars = ['bmw', 'audi', 'toyota', 'subaru']
-print(cars)
+CARS = ['bmw', 'audi', 'toyota', 'subaru'.title()]
+print(CARS)
 
-cars.reverse()
-print(cars)
+CARS.reverse()
+print(CARS)
