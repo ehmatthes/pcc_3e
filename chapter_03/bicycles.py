@@ -1,4 +1,6 @@
-bicycles = ['trek', 'cannondale', 'redline', 'specialized']
-message = f"My first bicycle was a {bicycles[0].title()}."
+BICYCLES = ['trek', 'cannondale', 'redline', 'specialized', 'jennie']
+MESSAGE = f"My first bicycle was a {BICYCLES[4].title()}."
+FAVORITE_BICYCLE = BICYCLES[4]
 
-print(message)
+print(BICYCLES)
+print(f"{MESSAGE}\nMY FAVORITE BICYCLE IS {FAVORITE_BICYCLE}")
