@@ -1,7 +1,8 @@
-motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
-print(motorcycles)
+MOTORCYCLES = ['honda', 'yamaha', 'suzuki', 'ducati'.upper()]
+print(MOTORCYCLES)
 
-too_expensive = 'ducati'
-motorcycles.remove(too_expensive)
-print(motorcycles)
-print(f"\nA {too_expensive.title()} is too expensive for me.")
+# WHAT DONE IT HERE ITS THAT CREATE IT THE VARIABLE CONTAINS THE VALUE OF THE HIGH PRICE MOTO/ ALSO CAN MAKE MULTI
+TOO_EXPENSIVE = MOTORCYCLES[2] 
+MOTORCYCLES.remove(TOO_EXPENSIVE)
+print(MOTORCYCLES)
+print(f"\nA {TOO_EXPENSIVE.title()} is too expensive for me.")
