@@ -1,2 +1,3 @@
-numbers = list(range(1, 6))
-print(numbers)
+HOT_NUMBERS = list(range(56, 70))     
+
+print(HOT_NUMBERS)
