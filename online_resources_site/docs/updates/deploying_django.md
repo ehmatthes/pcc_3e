@@ -25,6 +25,13 @@ The Scalingo CLI
 
 To deploy and manage a project on Scalingo, you’ll need the tools available in the Command Line Interface (CLI). To install the latest version of the CLI, visit [https://doc.scalingo.com/tools/cli/start](https://doc.scalingo.com/tools/cli/start) and follow the instructions for your operating system.
 
+SSH Keys
+---
+
+Every hosting provider needs a way to establish trusted communications between your computer and their servers. SSH keys are one way to manage this kind of communication. To do this, you make a pair of keys; one is private, and the other is public. The private key never leaves your system. The public key is copied to the hosting provider, and the SSH protocol is used to verify communication between the two systems from that point forward.
+
+Scalingo requires a copy of your public key before you can copy your project. To create a key pair and upload your public key to Scalingo, see their [SSH Key Setup](https://doc.scalingo.com/platform/getting-started/first-steps#ssh-key-setup) instructions.
+
 Creating a *requirements.txt* file
 ---
 
