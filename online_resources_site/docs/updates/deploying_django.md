@@ -12,17 +12,18 @@ In the second half of Chapter 20, the book walks you through the process of depl
 
 The instructions here should be fully up to date. If you run into any steps that don't seem to work, please [reach out](../contact.md) and I will try to update these instructions. Thank you!
 
-## Making a Scalingo Account
+Making a Scalingo Account
+---
 
 To make an account, go to [https://scalingo.com](https://scalingo.com) and click the Free Trial button. You can practice the deployment process for 30 days. If you want to keep a project live longer than the 30-day period, you'll need to start paying for hosting.
 
 !!! note
     Many hosting companies used to offer free trials, without requiring users to set up a payment method. With the growth of cryptocurrency miners, bot networks, and a rapid rise in abusive users, almost every company now requires users to set up a payment method as an anti-abuse measure.
 
-The Upsun CLI
+The Scalingo CLI
 ---
 
-To deploy and manage a project on Platform.sh, you’ll need the tools available in the Command Line Interface (CLI). To install the latest version of the CLI, visit [https://docs.upsun.com/administration/cli.html](https://docs.upsun.com/administration/cli.html) and follow the instructions for your operating system. If you're on Windows and haven't installed something like this in a terminal before, I recommend using [Scoop](https://scoop.sh), a tool for installing utilities on Windows. Scoop makes it easy to install the Upsun CLI, and many other tools you might find helpful as you continue working on more complex programming projects.
+To deploy and manage a project on Scalingo, you’ll need the tools available in the Command Line Interface (CLI). To install the latest version of the CLI, visit [https://doc.scalingo.com/tools/cli/start](https://doc.scalingo.com/tools/cli/start) and follow the instructions for your operating system.
 
 Creating a *requirements.txt* file
 ---
