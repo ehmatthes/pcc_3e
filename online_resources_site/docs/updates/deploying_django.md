@@ -12,36 +12,12 @@ In the second half of Chapter 20, the book walks you through the process of depl
 
 The instructions here should be fully up to date. If you run into any steps that don't seem to work, please [reach out](../contact.md) and I will try to update these instructions. Thank you!
 
-## Making an Upsun Account
+## Making a Scalingo Account
 
-To make an account, go to [https://upsun.com](https://upsun.com) and click the Free Trial button.
-
-Upsun currently offers a 15-day free trial, but in order to deploy your project you'll need to have a credit card on file. If you destroy your project before the 15-day period is up, your card should not be charged.
-
-You'll be prompted to add a payment method when you create an empty project on Upsun's servers.
+To make an account, go to [https://scalingo.com](https://scalingo.com) and click the Free Trial button. You can practice the deployment process for 30 days. If you want to keep a project live longer than the 30-day period, you'll need to start paying for hosting.
 
 !!! note
     Many hosting companies used to offer free trials, without requiring users to set up a payment method. With the growth of cryptocurrency miners, bot networks, and a rapid rise in abusive users, almost every company now requires users to set up a payment method as an anti-abuse measure.
-
-## Flex and Fixed plans
-
-Upsun offers two types of deployment plans, *Flex* and *Fixed*. With a Flex plan, you can adjust the size of individual resources as your project grows. With a Fixed plan, you choose an overall set of resources, and then you can upgrade those resources as a group when your project grows.
-
-Upsun steers people towards Flex plans, but it's more expensive and not needed when you're first learning to deploy a small project.
-
-### Adding a Fixed Organization
-
-When you create an account on Upsun, you also create a default *Organization*. That default organization is on their Flex plan. Make a new Organization on the Fixed plan by clicking the dropdown arrow next to **My Projects** on the dashboard, and then clicking **New organization**:
-
-![The dialog for adding a new organization on Upsun](../images/upsun_new_org_dialog.png)
-
-In the **Create organization** dialog that appears, choose a name for your new organization. I used the form `<first_name>_fixed`. Make sure to change the **Organization type** to "Fixed".
-
-![The create organization form on Upsun](../images/upsun_create_org_form_bordered.png)
-
-Click the **Create organization** button, and you should see a confirmation that your organization is set up to use Upsun's Fixed resources:
-
-![Organization page showing "Fixed"](../images/upsun_fixed_org_bordered.png)
 
 The Upsun CLI
 ---
