@@ -8,7 +8,9 @@ title: Deploying Learning Log
 
 Building a Django project that works on your system is satisfying, but it gets even more satisfying when you see your site deployed where anyone can access it.
 
-In the second half of Chapter 20, the book walks you through the process of deploying Learning Log to the hosting company Platform.sh. That company has rebranded as [Upsun](https://upsun.com), and they've changed their approach to deployment somewhat. The printed instructions no longer work for deployment, but the instructions here are fully up to date. If you run into any steps that don't seem to work, please [reach out](../contact.md) and I will update these instructions. Thank you!
+In the second half of Chapter 20, the book walks you through the process of deploying Learning Log to the hosting company Platform.sh. That company has rebranded as Upsun, but they've changed their approach to deployment so much that I can no longer recommend them as a host for people who are learning about deployment. However, [Scalingo](https://scalingo.com) is a modern web hosting platform that supports Django. Scalingo also offers a 30-day free trial that doesn't require a credit card. This is perfect for learning about deployment.
+
+The instructions here should be fully up to date. If you run into any steps that don't seem to work, please [reach out](../contact.md) and I will try to update these instructions. Thank you!
 
 ## Making an Upsun Account
 
