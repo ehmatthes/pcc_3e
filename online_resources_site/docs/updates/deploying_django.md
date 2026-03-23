@@ -52,13 +52,12 @@ sqlparse==0.5.3
 
 Learning Log already depends on specific versions of four different packages, so it requires a matching environment to run properly on a remote server. (We installed two of these packages manually, and two others were installed automatically as dependencies of those packages.)
 
-When we deploy Learning Log, Upsun will install all the packages listed in *requirements.txt*, creating an environment with the same packages we’re using locally. Because of this, we can be confident the deployed project will function just like it has on our local system. This approach to managing a project is critical as you start to build and maintain multiple projects on your system.
+When we deploy Learning Log, Scalingo will install all the packages listed in *requirements.txt*, creating an environment with the same packages we’re using locally. Because of this, we can be confident the deployed project will function just like it has on our local system. This approach to managing a project is critical as you start to build and maintain multiple projects on your system.
 
 Using Git to Track the Project's Files
 ---
 
-As discussed in Chapter 17, Git is a version control program that allows you to take a snapshot of the code in your project each time you implement a new feature successfully. If anything goes wrong, you can easily return to the last working snapshot of your project; for example, if you accidentally
-introduce a bug while working on a new feature. Each snapshot is called a *commit*.
+As discussed in Chapter 17, Git is a version control program that allows you to take a snapshot of the code in your project each time you implement a new feature successfully. If anything goes wrong, you can easily return to the last working snapshot of your project; for example, if you accidentally introduce a bug while working on a new feature. Each snapshot is called a *commit*.
 
 Using Git, you can try implementing new features without worrying about breaking your project. When you’re deploying to a live server, you need to make sure you’re deploying a working version of your project. To read more about Git and version control, see Appendix D.
 
@@ -126,23 +125,23 @@ Issuing the `git status` command indicates that we’re on the *main* branch and
 Deploying the project
 ---
 
-At this point you should have an Upsun account with an organization on the Fixed plan, and the Upsun CLI should be installed on your system. You should have a *requirements.txt* file, listing all the project's requirements. You should have made an initial Git commit, so if anything doesn't work you can restore your project to this known working state.
+At this point you should have a Scalingo account, and the Scalingo CLI should be installed on your system. You should have a *requirements.txt* file, listing all the project's requirements. You should have made an initial Git commit, so if anything doesn't work you can restore your project to this known working state.
 
 ### Installing `django-simple-deploy`
 
-It's time to deploy the project. We'll use `django-simple-deploy`, a tool that automates initial Django deployments. With `django-simple-deploy`, you install a plugin for the host you're working with (in this case Upsun), and it takes care of the configuration work necessary to build a working remote version of the project.
+It's time to deploy the project. We'll use `django-simple-deploy`, a tool that automates initial Django deployments. With `django-simple-deploy`, you install a plugin for the host you're working with (in this case Scalingo), and it takes care of the configuration work necessary to build a working remote version of the project.
 
 !!! note
     Disclaimer: I'm the maintainer of `django-simple-deploy`. I created this project after watching countless Django developers struggle with the initial deployment process. It's not just for beginners; it helps *everyone* avoid typos and other small mistakes that cause so many deployment attempts to fail. The full documentation for `django-simple-deploy` can be found [here](https://django-simple-deploy.readthedocs.io/en/latest/).
 
-First, install `dsd-upsun`, the plugin that handles deployment to Upsun:
+First, install `dsd-scalingo`, the plugin that handles deployment to Scalingo:
 
 ```sh
-(ll_env)learning_log$ pip install dsd-upsun
+(ll_env)learning_log$ pip install dsd-scalingo
 (ll_env)learning_log$ pip freeze > requirements.txt
 ```
 
-After adding a new requirement, the *requirements.txt* file needs to be updated. If you open *requirements.txt* again, you'll see that `django-simple-deploy` has been added along with `dsd-upsun`.
+After adding a new requirement, the *requirements.txt* file needs to be updated. If you open *requirements.txt* again, you'll see that `django-simple-deploy` has been added along with `dsd-scalingo`.
 
 Now add `django_simple_deploy` to `INSTALLED_APPS`, just like you did with `django-bootstrap5` earlier:
 
@@ -158,13 +157,42 @@ INSTALLED_APPS = [
 
 Note that the name here is `django_simple_deploy` with underscores, even though the package name is `django-simple-deploy` with hyphens. This is the pattern that almost all third-party Python packages follow.
 
-These changes need to be committed before making Upsun-specific configuration changes:
+These changes need to be committed before making Scalingo-specific configuration changes:
 
 ```sh
 (ll_env)learning_log$ git commit -am "Added django-simple-deploy."
 ```
 
 Frequently committing known states of a project is an important habit as your projects become more complex.
+
+### Deploying Learning Log
+
+The simplest way to deploy your project is to use the fully automated workflow from django-simple-deploy. This will inspect your system to make sure the CLI is installed and authenticated, it will check that Scalingo has a copy of your public SSH key, it will make the necessary changes to your project, it will commit those changes, and it will push your project to Scalingo's servers. You should see your project appear in a new browser tab.
+
+First, make sure you're logged in to the Scalingo CLI:
+
+```sh
+$ scalingo login
+```
+
+Now, run the `deploy` command, in the fully-automated mode:
+
+```sh
+$ python manage.py deploy --automate-all
+```
+
+You'll need to confirm what's about to be done, and you'll see a bunch of output scroll by. You should see the deployed version of the project:
+
+[screenshot]
+
+### Understanding the Deployed Project
+
+It's nice that the deployment was handled automatically, but there are some things you should understand about how the project was configured...
+
+
+
+
+
 
 ### Creating a Project on Upsun
 
