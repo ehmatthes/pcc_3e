@@ -172,16 +172,16 @@ The simplest way to deploy your project is to use the fully automated workflow f
 First, make sure you're logged in to the Scalingo CLI:
 
 ```sh hl_lines="1"
-$ scalingo login
+(ll_env)learning_log$ scalingo login
 ```
 
 Now, run the `deploy` command, in the fully-automated mode:
 
 ```sh hl_lines="1"
-$ python manage.py deploy --automate-all
+(ll_env)learning_log$ python manage.py deploy --automate-all
 Configuring project for deployment...
 Logging run of `manage.py deploy`...
-...
+--snip--
 
 ```
 
@@ -198,7 +198,7 @@ Scalingo created a new database when it built the project, so none of the data y
 Now that the project is deployed, let's see how it works. Let's first look at the state of the project after deployment:
 
 ```sh hl_lines="1"
-$ git log --pretty=oneline
+(ll_env)learning_log$ git log --pretty=oneline
 080714 (HEAD -> main, scalingo/main) Configured project for deployment.
 cbc1c6 Added django-simple-deploy.
 fba05c Initial state, before deploying.
@@ -207,7 +207,7 @@ fba05c Initial state, before deploying.
 The `--pretty=oneline` argument for `git log` generates a more concise summary of the history of the project. There was one commit made for the deployment. We can see which files were changed by comparing the current state of the project to the previous state:
 
 ```sh hl_lines="1"
-$ git diff HEAD^ --name-only
+(ll_env)learning_log$ git diff HEAD^ --name-only
 .gitignore
 .python-version
 Procfile
@@ -220,16 +220,9 @@ The command `git diff` lets you examine the difference between any two commits, 
 
 In this case, several new files were added, and some files were changed. You can use `git diff` to examine the changes that were made to a single file:
 
-```sh hl_lines="1"
-$ git diff HEAD^ ll_project/settings.py
-...
-```
-
-A section was added to the end of the file. Here's the block that was added to *settings.py*:
-
 ```python  hl_lines="1"
-$ git diff HEAD^ ll_project/settings.py 
-...
+(ll_env)learning_log$ git diff HEAD^ ll_project/settings.py 
+--snip--
  LOGIN_URL = 'accounts:login'
 +
 +
@@ -240,7 +233,7 @@ $ git diff HEAD^ ll_project/settings.py
 
 ```
 
-Using `git diff` is helpful, and the more you use it the easier you'll be able to read the output format. Here's the full block that was added to settings.py:
+Using `git diff` is helpful, and the more you use it the easier you'll be able to read the output format. Here's the full block that was added to settings.py, in the same format you usually see in a text editor:
 
 ```python title="File: ll_project/settings.py" hl_lines="4-34"
 --snip--
@@ -290,7 +283,7 @@ When you maintain a deployed project, you'll almost certainly want access to the
 ```sh hl_lines="1 4"
 (ll_env)learning_log$ scalingo run python manage.py createsuperuser
 -----> Starting container one-off-1178  Done in 0.101 seconds
-...
+--snip--
 Username (leave blank to use 'appsdeck'): ll_admin_remote
 Email address: 
 Password: 
@@ -304,22 +297,24 @@ Now you can add `/admin/` to the end of the URL for the live app and log in to t
 
 ![Learning Log home page, with admin username highlighted](../images/ll_admin_remote.png)
 
-Pushing Further Changes
----
+### Pushing Further Changes
+
 
 Here's the last part of the output from running `deploy`:
 
-```sh
-2026-03-24 12:22:39,593 INFO: --- Your project should now be deployed on Scalingo ---
-2026-03-24 12:22:39,593 INFO: 
-2026-03-24 12:22:39,593 INFO: It should have opened up in a new browser tab. If you see a
-2026-03-24 12:22:39,593 INFO:   "server not available" message, wait a minute or two and
-2026-03-24 12:22:39,593 INFO:   refresh the tab. It sometimes takes a few minutes for the
-2026-03-24 12:22:39,593 INFO:   server to be ready.
-2026-03-24 12:22:39,593 INFO: - You can also visit your project at https://ll-project.osc-fr1.scaling.io
-2026-03-24 12:22:39,594 INFO: 
-2026-03-24 12:22:39,594 INFO: If you make further changes and want to push them to Scalingo,
-2026-03-24 12:22:39,594 INFO: commit your changes and then run `git push scalingo main`.
+```txt
+--- Your project should now be deployed on Scalingo ---
+
+It should have opened up in a new browser tab. If you see a
+  "server not available" message, wait a minute or two and
+  refresh the tab. It sometimes takes a few minutes for the
+  server to be ready.
+
+- You can also visit your project at https://ll-project.osc-fr1.scaling.io
+- If you make further changes and want to push them to Scalingo,
+  commit your changes and then run `git push scalingo main`.
+- Use `scalingo run` to run management commands:
+  `scalingo run python manage.py createsuperuser`
 ```
 
 This tells you some important information about your deployed project. It includes your project's URL, instructions for how to push new versions of your project to the remote server, and how to run `manage.py` commands. If this information is no longer showing in your terminal, you can find a copy of it in the `dsd_logs/` directory that was added to the project.
@@ -340,9 +335,11 @@ You probably don't want to pay for an ongoing deployed version of the Learning L
 
 In your local project environment, you can use the `destroy` command to destroy your remote project:
 
-```sh hl_lines="1 10 11"
-$ scalingo destroy
-...
+```sh hl_lines="1 3"
+(ll_env)learning_log$ scalingo destroy
+/!\ You're going to delete ll-project, this operation is irreversible.
+To confirm type the name of the application: ll-project
+-----> App ll-project has been deleted
 ```
 
 This is a reliable way to destroy your project. However, you should log in to [https://scalingo.com](https://scalingo.com) and visit your dashboard to verify you don't have any active resources remaining.
@@ -351,21 +348,21 @@ This is a reliable way to destroy your project. However, you should log in to [h
 
 Every hosting company I've ever worked with has a browser-based dashboard. Some are more complex than others, so make sure you poke around and see how your host's dashboard is organized.
 
-On Scalingo, visit [https://scalingo.com](https://scalingo.com). Here's what that page looks like after deploying Learning Log:
+On Scalingo, visit [https://dashboard.scalingo.com](https://dashboard.scalingo.com). Here's what that page looks like after deploying Learning Log:
 
-![The Upsun dashboard, showing one project named ll_project_remote](../images/upsun_dashboard.png)
+![The Scalingo dashboard, showing one project named ll-project](../images/scalingo_dashboard_overview.png)
 
-If you click the three vertical dots, you should see an option labeled **Edit plan**:
+If you click the project name (`ll-project`), you should see more information about the project:
 
-![three project options: Project access, Project settings, Edit plan](../images/upsun_edit_plan.png)
+![three project options: Project access, Project settings, Edit plan](../images/scalingo_dashboard_project_view.png)
 
-Click **Edit plan**, scroll down, and click **Delete project**. You'll see a dialog for confirming the deletion:
+Click **Settings**, scroll down, and click **Delete app**. You'll see a dialog for confirming the deletion:
 
-!["Delete project" dialog, showing ll_project_remote](../images/upsun_delete_project.png)
+!["Delete project" dialog, showing ll-project](../images/scaling_delete_an_app.png)
 
-Once you enter the project name, you can click the button labeled **Yes, Delete Project**.
+Once you enter the project name, you can click the button labeled **Delete <project-name>**.
 
-You should see an empty dashboard after confirming the deletion. If you see the message "Create your first project", your deletion was almost certainly successful. I've run many test deployments on Upsun, and seen many odd errors and messages along the lines of "Something went wrong." If you see anything like this, just go back to [https://console.upsun.com](https://console.upsun.com). If you see any remaining resources, click those three vertical dots, or look for a Settings tab. You usually have to scroll to the bottom of a page to find the Delete button, but it should be there.
+You should see an empty dashboard after confirming the deletion. If you see the message "Create your first resource", your deletion was almost certainly successful.
 
 ---
 
