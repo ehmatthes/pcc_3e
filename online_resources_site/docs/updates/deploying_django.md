@@ -37,13 +37,13 @@ Creating a *requirements.txt* file
 
 The remote server needs to know which packages Learning Log depends on, so we’ll use pip to generate a file listing them. Again, from an active virtual environment, issue the following command:
 
-```sh
+```sh hl_lines="1"
 (ll_env)learning_log$ pip freeze > requirements.txt
 ```
 
 The freeze command tells pip to write the names of all the packages currently installed in the project into the file *requirements.txt*. Open this file to see the packages and version numbers installed in your project:
 
-```txt
+```txt title="File: requirements.txt"
 asgiref==3.10.0
 django==5.2.8
 django-bootstrap5==25.2
@@ -76,7 +76,7 @@ If you get a message indicating that Git is not installed, see the installation 
 
 Git keeps track of who makes changes to a project, even when only one person is working on the project. To do this, Git needs to know your username and email. You must provide a username, but you can make up an email for your practice projects:
 
-```sh
+```sh hl_lines="1 2"
 (ll_env)learning_log$ git config --global user.name "eric"
 (ll_env)learning_log$ git config --global user.email "eric@example.com"
 ```
@@ -88,7 +88,7 @@ If you forget this step, Git will prompt you for this information when you make 
 We don’t need Git to track every file in the project, so we’ll tell it to ignore some files. Create a file called *.gitignore* in the folder that contains *manage.py*. Notice that this filename begins with a dot and has no file extension. Here’s the code that goes in *.gitignore*:
 
 ```txt title="File: .gitignore"
-.gitignore ll_env/
+ll_env/
 __pycache__/
 *.sqlite3
 ```
@@ -136,7 +136,7 @@ It's time to deploy the project. We'll use `django-simple-deploy`, a tool that a
 
 First, install `dsd-scalingo`, the plugin that handles deployment to Scalingo:
 
-```sh
+```sh hl_lines="1 2"
 (ll_env)learning_log$ pip install dsd-scalingo
 (ll_env)learning_log$ pip freeze > requirements.txt
 ```
@@ -159,7 +159,7 @@ Note that the name here is `django_simple_deploy` with underscores, even though 
 
 These changes need to be committed before making Scalingo-specific configuration changes:
 
-```sh
+```sh hl_lines="1"
 (ll_env)learning_log$ git commit -am "Added django-simple-deploy."
 ```
 
@@ -171,290 +171,187 @@ The simplest way to deploy your project is to use the fully automated workflow f
 
 First, make sure you're logged in to the Scalingo CLI:
 
-```sh
+```sh hl_lines="1"
 $ scalingo login
 ```
 
 Now, run the `deploy` command, in the fully-automated mode:
 
-```sh
+```sh hl_lines="1"
 $ python manage.py deploy --automate-all
+Configuring project for deployment...
+Logging run of `manage.py deploy`...
+...
+
 ```
 
 You'll need to confirm what's about to be done, and you'll see a bunch of output scroll by. You should see the deployed version of the project:
 
-[screenshot]
+![Learning Log home page, with remote URL highlighted in address bar](../images/ll_home_page_deployed_scalingo.png)
+
+The project looks the same as it did when using the `runserver` command, but now anyone can access the project. If you want someone else to try it out, just share the URL as you would for any web site you want to share.
+
+Scalingo created a new database when it built the project, so none of the data you entered locally was copied over to the remote project. Take a moment to register an account on your deployed instance of Learning Log. If you can register an account, you'll know your database is working correctly.
 
 ### Understanding the Deployed Project
 
-It's nice that the deployment was handled automatically, but there are some things you should understand about how the project was configured...
-
-
-
-
-
-
-### Creating a Project on Upsun
-
-Now it's time to make a new project on Upsun. First, authenticate with the CLI:
-
-```sh
-(ll_env)learning_log$ upsun login
-```
-
-This command should open a browser, where you can confirm the terminal-based login.
-
-Now run the `create` command, to generate a new project on Upsun:
-
-```sh hl_lines="1 5 12 17 23"
-(ll_env)learning_log$ upsun create --title ll_project_remote
-Enter a number to choose an organization (-o):
-  [0] My Projects (<org-id>)
-  [1] eric_fixed (<org-id>)
- > 1
- Creating a project under the organization eric_fixed (<org-id>)
-
-* Region (--region)
-The region where the project will be hosted.
-  --snip--
-  [us-4.platform.sh] Charleston, United States (Google)
-> us-4.platform.sh
-
-Default branch (--default-branch)
-The default Git branch name for the project (the production environment)
-Default: main
-> main
-
-Local Git repository detected: /.../learning_log
-Set the new project ll_project_remote as the remote for this repository directory? [Y/n] y
-
-The estimated monthly cost of this project is: $12.00 USD
-Are you sure you want to continue? [Y/n] y
-
-The Upsun Bot is activating your project
-
-      ▄     ▄  
-      ▄█▄▄▄█▄  
-    ▄██▄███▄██▄
-    █ █▀▀▀▀▀█ █
-       ▀▀ ▀▀   
-
-The project is now ready!
---snip--
-```
-
-!!! note
-    This is the point at which Upsun will verify that you have a payment method on file. If you see a message reading "Insufficient credit to create a new project", follow the link to add a payment method.
-
-The new remote project needs a name. You can use any name with underscores, but it's helpful to use a name similar to what you used when running `django startproject`. At the same time, it's nice to use a name that's distinct from names that have already been used. The name `ll_project_remote` lets you distinguish between the *ll_project* directory on your local system, and the remote project on Upsun.
-
-You'll be prompted for which organization to use; make sure to use the one that's on the Fixed plan. You'll be asked to choose a region; any one should work, but it's usually better to choose one relatively close to your location. You'll be prompted for which branch to use. There's only one branch, `main`, so use that. Finally, you'll need to confirm the estimated cost, which you'll be charged if you keep your project deployed beyond the free trial period.
-
-After you've answered all the questions, you should see a dancing robot as Upsun creates the remote resources for you.
-
-### Configuring Learning Log for Upsun
-
-Now you have a project that works locally, and an empty project on Upsun's servers. The project needs some new files and configuration changes in order to work on Upsun. You can add those files manually, but it's easy to make a small mistake like a typo, or miss a required file. These simple mistakes can take a long time to sort out, even for experienced developers, because every hosting platform has slightly different requirements.
-
-`django-simple-deploy` avoids that issue by making all the necessary changes for you. Running the `manage.py deploy` command makes those configuration changes:
+Now that the project is deployed, let's see how it works. Let's first look at the state of the project after deployment:
 
 ```sh hl_lines="1"
-(ll_env)learning_log$ python manage.py deploy --deployed-project-name ll_project_remote
-Configuring project for deployment...
-Logging run of `manage.py deploy`...
-Created /.../dsd_logs/dsd_2025-11-10-185305.log.
-
-Deployment target: Upsun
-  Using plugin: dsd_upsun
-  --snip--
-
---- Your project is now configured for deployment on Upsun. ---
-
-To deploy your project, you will need to:
-- Commit the changes made in the configuration process.
-    $ git status
-    $ git add .
-    $ git commit -am "Configured project for deployment."
-- Push your project to Upsun's servers:
-    $ upsun push
-- Open your project:
-    $ upsun url    
-- As you develop your project further:
-    - Make local changes
-    - Commit your local changes
-    - Run `upsun push`
-
-- You can find a full record of this configuration in the dsd_logs directory.
+$ git log --pretty=oneline
+080714 (HEAD -> main, scalingo/main) Configured project for deployment.
+cbc1c6 Added django-simple-deploy.
+fba05c Initial state, before deploying.
 ```
 
-You need to tell `django-simple-deploy` the name of the project on `Upsun`, and the `--deployed-project-name` argument lets you do that. After running this command, you should see a summary of the changes that were made to your project in preparation for pushing it to Upsun. `django-simple-deploy` looks for a clean Git status before it makes configuration changes, so if you forgot to run `git commit` before calling `deploy`, you might have to make another commit and then run `deploy` a second time.
-
-The final block of output summarizes how to review the changes that were made, push your project to Upsun's servers, and open your project. It also summarizes briefly how to push subsequent changes from your local system to Upsun. We'll follow these steps now to finish the deployment.
-
-### Reviewing and committing configuration changes
-
-An external tool has just made a number of changes to your project. Git helps you see exactly what changes were made:
+The `--pretty=oneline` argument for `git log` generates a more concise summary of the history of the project. There was one commit made for the deployment. We can see which files were changed by comparing the current state of the project to the previous state:
 
 ```sh hl_lines="1"
-(ll_env)learning_log$ git status
-	modified:   .gitignore
-	modified:   ll_project/settings.py
-	modified:   requirements.txt
-
-Untracked files:
-	.platform.app.yaml
-	.platform/
+$ git diff HEAD^ --name-only
+.gitignore
+.python-version
+Procfile
+bin/post_deploy.sh
+ll_project/settings.py
+requirements.txt
 ```
 
-This output shows that three files were modified, and some new files were added. You can see what changes were made by running `git diff <file-path>`. For example, here's the changes made to the *settings.py* file:
+The command `git diff` lets you examine the difference between any two commits, or states of the project. When you're using Git, `HEAD` refers to the current state of the project, and `HEAD^` means "one commit behind the current state". The `--name-only` argument tells Git to only show the names of the files that have changed, without showing how each file was changed.
+
+In this case, several new files were added, and some files were changed. You can use `git diff` to examine the changes that were made to a single file:
 
 ```sh hl_lines="1"
-(ll_env)learning_log$ git diff ll_project/settings.py
---snip--
-+# Upsun settings.
+$ git diff HEAD^ ll_project/settings.py
+...
+```
+
+A section was added to the end of the file. Here's the block that was added to *settings.py*:
+
+```python  hl_lines="1"
+$ git diff HEAD^ ll_project/settings.py 
+...
+ LOGIN_URL = 'accounts:login'
++
++
++# Scalingo settings.
 +import os
-+
-+if os.environ.get("PLATFORM_APPLICATION_NAME"):
-+    # Import some Upsun settings from the environment.
-+    from platformshconfig import Config
-+
-+    config = Config()
-+
-+    try:
-+        ALLOWED_HOSTS.append("*")
-+    except NameError:
-+        ALLOWED_HOSTS = ["*"]
-+
-+    DEBUG = False
++if "scalingo" in os.environ.get("STACK", ""):
++    import dj_database_url
+
+```
+
+Using `git diff` is helpful, and the more you use it the easier you'll be able to read the output format. Here's the full block that was added to settings.py:
+
+```python title="File: ll_project/settings.py" hl_lines="4-34"
 --snip--
+LOGIN_URL = 'accounts:login'
+
+# Scalingo settings.
+import os
+if "scalingo" in os.environ.get("STACK", ""):
+    import dj_database_url
+
+    DEBUG = True
+
+    DATABASES = {
+        "default": dj_database_url.config(
+            env="DATABASE_URL",
+            conn_max_age=600,
+            conn_health_checks=True,
+            ssl_require=True,
+        ),
+    }
+
+    STATIC_ROOT = 'staticfiles'
+    STATIC_URL = '/static/'
+
+    STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, 'static'),
+    )
+
+    MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
+
+    STORAGES = {
+        "staticfiles": {
+            "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+        },
+    }
+    ALLOWED_HOSTS = ["*"]
 ```
 
-It takes a little to get used to the format of a `git diff` listing. If what you see isn't entirely clear, look at this output and then look at the file in your text editor. The `git diff` output should show you where to focus your attention in the file.
+The settings in this block only take effect on Scalingo; they don't affect the project when you run it on your system using `runserver`. These settings make sure that debugging information is not shown when an error occurs in the deployed version of the project. The `DATABASES` dictionary configures the deployed project to use the live database. The rest of this block handles static files such as JavaScript and CSS files, and makes sure the project can be served from the remote host.
 
-The important part to notice here is that a conditional block has been added to the end of the settings file. Briefly, if the project is running in an Upsun environment, these settings will override the settings that were defined earlier in the file. Those settings will still work on your system, but the Upsun-specific settings will take effect in the Upsun environment.
-
-If you run `git diff` against the other files listed you'll see that a *dsd_logs* directory is being ignored, and a couple requirements were added that need to be installed in Upsun's environment.
-
-You can open the new files, such as *.platform.app.yaml* in your text editor and see what was added. These files tell Upsun how to build the project in their remote environment, and which resources to attach to the project. The *.platform* name appears here because Upsun has not fully transitioned away from their former name, Platform.sh.
-
-When you're finished reviewing the changes that were made, make a new commit:
-
-```sh  hl_lines="1-3"
-(ll_env)learning_log$ git add .
-(ll_env)learning_log$ git commit -am "Configured project for deployment to Upsun."
-(ll_env)learning_log$ git status
-On branch main
-nothing to commit, working tree clean
-```
-
-It's a good habit to check `git status` after committing more significant changes, to make sure you haven't missed anything. It's quite easy, for example, to forget to run `git add` and find that you've got a few files that haven't actually been committed yet.
-
-### Pushing the project to Upsun
-
-Now it's time to push the project to Upsun:
-
-```sh hl_lines="1 4"
-(ll_env)learning_log$ upsun push
-$ upsun push
-Selected project: ll_project_remote (<id>)
-Pushing HEAD to the environment main (type: production).
-Are you sure you want to continue? [Y/n] y
---snip--
-To git.us-4.platform.sh:uexe5p4cbfote.git
-   * [new branch]      HEAD -> main
-```
-
-This command pushes all your project's files to Upsun's servers. You'll be asked one last time to confirm that you want to push your project to Upsun. The `push` command also causes Upsun to set up an environment from which the project can be served to end users. It installs the project's requirements, runs the database migrations, and starts listening for requests. This process can take about 3-10 minutes. There's a lot of output, but I encourage you to skim through it. It won't all make sense, but a lot will. You can see it copying files, installing packages, running migrations, and getting ready to process requests.
-
-When your project has been pushed, you can open it with the `url` command:
-
-```sh hl_lines="1 5"
-(ll_env)learning_log$ upsun url
-Enter a number to open a URL
-  [0] https://main-bvxea6i-uexe5p4cbfote.us-4.platformsh.site/
-  [1] http://main-bvxea6i-uexe5p4cbfote.us-4.platformsh.site/
- > 0
-https://main-bvxea6i-uexe5p4cbfote.us-4.platformsh.site/
-```
-
-When you run this command, you'll be shown a couple URLs where your project can be seen. Enter `0` for the URL with `https`, and your project will open in a new browser tab:
-
-![Learning Log home page, with remote URL highlighted in address bar](../images/ll_home_page_deployed.png)
-
-This looks just like the project does when you used the `runserver` command, but now anyone can access your project. If you want someone else to try it out, just share the URL as you would for any web site you want to share.
-
-Upsun created a new database when it built the project, so none of the data you entered locally was copied over to the remote project. Take a moment to register an account on your deployed instance of Learning Log. If you can register an account, you'll know your database is working correctly.
+I encourage you to look at the other files that were modified, and the new files that were created as well. Some of it will make sense right away, and the more you look at these files the better you'll understand the configuration that's necessary to support the live version of a project.
 
 ### Creating a superuser
 
-When you maintain a deployed project, you'll almost certainly want access to the Django admin site. For that, you need a superuser. The `ssh` command lets you run the same terminal commands you were using locally, on the remote project:
+When you maintain a deployed project, you'll almost certainly want access to the Django admin site. For that, you need a superuser. The `run` command lets you run the same terminal commands you were using locally, on the remote project:
 
-```sh hl_lines="1 2 4 5 10"
-(ll_env)learning_log$ upsun ssh
-web@ll_project_remote.0:~$ ls
-accounts  learning_logs  ll_project  logs  manage.py  requirements.txt  static
-web@ll_project_remote.0:~$ python manage.py createsuperuser
-Username (leave blank to use 'web'): ll_admin_remote
+```sh hl_lines="1 4"
+(ll_env)learning_log$ scalingo run python manage.py createsuperuser
+-----> Starting container one-off-1178  Done in 0.101 seconds
+...
+Username (leave blank to use 'appsdeck'): ll_admin_remote
 Email address: 
 Password: 
 Password (again): 
 Superuser created successfully.
-web@ll_project_remote.0:~$ exit
-logout
-Connection to ssh.us-4.platform.sh closed.
-(ll_env)learning_log$
 ```
 
-When you first run the `upsun ssh` command, you may get another prompt about the authenticity of this host. If you see this message, enter `Y` and you should be logged in to a remote terminal session.
-
-After running the `ssh` command, your terminal acts just like a terminal on the remote server. Note that your prompt has changed to indicate that you’re in a web session associated with the project named `ll_project_remote`. If you issue the `ls` command, you’ll see the files that have been pushed to the server.
-
-Issue the same `createsuperuser` command we used in Chapter 18 . This time, I entered an admin username, `ll_admin_remote`, that’s distinct from the one I used locally . When you’re finished working in the remote terminal session, enter the `exit` command . Your prompt will indicate that you’re working in your local system again.
+When you run a command that requires user input, Scalingo opens a connection to the server. While the command is running, your terminal acts just like a terminal on the remote server. This is the same `createsuperuser` command we used in Chapter 18 . This time, I entered an admin username, `ll_admin_remote`, that’s distinct from the one I used locally.
 
 Now you can add `/admin/` to the end of the URL for the live app and log in to the admin site. If others have already started using your project, be aware that you’ll have access to all their data! Take this responsibility seriously, and users will continue to trust you with their data.
 
-!!! note
-    Windows users will use the same commands shown here (such as ls instead of dir), because you’re running a Linux terminal through a remote connection.
+![Learning Log home page, with admin username highlighted](../images/ll_admin_remote.png)
+
+Pushing Further Changes
+---
+
+Here's the last part of the output from running `deploy`:
+
+```sh
+2026-03-24 12:22:39,593 INFO: --- Your project should now be deployed on Scalingo ---
+2026-03-24 12:22:39,593 INFO: 
+2026-03-24 12:22:39,593 INFO: It should have opened up in a new browser tab. If you see a
+2026-03-24 12:22:39,593 INFO:   "server not available" message, wait a minute or two and
+2026-03-24 12:22:39,593 INFO:   refresh the tab. It sometimes takes a few minutes for the
+2026-03-24 12:22:39,593 INFO:   server to be ready.
+2026-03-24 12:22:39,593 INFO: - You can also visit your project at https://ll-project.osc-fr1.scaling.io
+2026-03-24 12:22:39,594 INFO: 
+2026-03-24 12:22:39,594 INFO: If you make further changes and want to push them to Scalingo,
+2026-03-24 12:22:39,594 INFO: commit your changes and then run `git push scalingo main`.
+```
+
+This tells you some important information about your deployed project. It includes your project's URL, instructions for how to push new versions of your project to the remote server, and how to run `manage.py` commands. If this information is no longer showing in your terminal, you can find a copy of it in the `dsd_logs/` directory that was added to the project.
 
 Finishing Chapter 20
 ---
 
-You can now go back to the book and pick up on page 459, at the *Creating Custom Error Pages* section. The only difference you’ll need to keep in mind is that you’ll use `upsun` whenever you see the command `platform` used in the book. Also, any reference to Platform.sh should be read as a reference to Upsun.
+You can now go back to the book and pick up on page 459, at the *Creating Custom Error Pages* section. The only difference you’ll need to keep in mind is that you’ll use the command `git push scalingo main` whenever you see want to push a new version of your project to the remote server.
 
-For more specific information about deploying Django projects to Upsun, see the main [Django documentation page](https://fixed.docs.upsun.com/guides/django.html) for Fixed deployments.
+For more specific information about deploying Django projects to Scalingo, see the guide [Get Started with Django on Scalingo](https://doc.scalingo.com/languages/python/django/start).
 
 Destroying the remote project
 ---
 
-You'll begin to accrue charges for your deployment if you leave it running beyond the free trial period. The instructions in the book for deleting the remote project should work, but I want to repeat them here so there's no confusion.
+You probably don't want to pay for an ongoing deployed version of the Learning Log project. You can destroy the remote project, and you'll have the remainder of your free trial to either go through the process again, or try deploying a different project. 
 
 ### Deleting with the CLI
 
-In your local project environment, you can use the `project:delete` command to destroy your remote project:
+In your local project environment, you can use the `destroy` command to destroy your remote project:
 
 ```sh hl_lines="1 10 11"
-$ upsun project:delete
-You are about to delete the project:
-  ll_project_remote (<id>)
-
- * This action is irreversible.
- * Your site will no longer be accessible.
- * All data associated with this project will be deleted, including backups.
- * You will be charged at the end of the month for any remaining project costs.
-
-Are you sure you want to delete this project? [y/N] y
-Type the project title to confirm: ll_project_remote
-
-The project ll_project (<id>) was deleted.
+$ scalingo destroy
+...
 ```
 
-This is a reliable way to delete your project. However, you should log in to [https://upsun.com](https://upsun.com) and visit your dashboard to verify you don't have any active resources remaining.
+This is a reliable way to destroy your project. However, you should log in to [https://scalingo.com](https://scalingo.com) and visit your dashboard to verify you don't have any active resources remaining.
 
-### Deleting through the Upsun dashboard
+### Deleting through the Scalingo dashboard
 
 Every hosting company I've ever worked with has a browser-based dashboard. Some are more complex than others, so make sure you poke around and see how your host's dashboard is organized.
 
-On Upsun, visit [https://console.upsun.com](https://console.upsun.com). Here's what that page looks like after deploying Learning Log:
+On Scalingo, visit [https://scalingo.com](https://scalingo.com). Here's what that page looks like after deploying Learning Log:
 
 ![The Upsun dashboard, showing one project named ll_project_remote](../images/upsun_dashboard.png)
 
