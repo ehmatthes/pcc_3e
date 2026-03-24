@@ -24,7 +24,7 @@ Updates
 
 ### Chapter 20
 
-The second half of Chapter 20, starting on page 445, focuses on the process of deploying Learning Log to the hosting company Platform.sh. That company has rebranded as Upsun, and they've changed their approach to deployment somewhat.
+The second half of Chapter 20, starting on page 445, focuses on the process of deploying Learning Log to the hosting company Platform.sh. That company has changed their deployment process significantly, and is no longer a good option for deploying the Learning Log project.
 
 Fully up-to-date instructions for deploying Learning Log are posted on the [Deploying Django](deploying_django.md) page. If anything in these instructions is not working for you, please don't hesitate to [reach out](../contact.md).
 
