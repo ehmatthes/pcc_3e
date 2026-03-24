@@ -8,9 +8,9 @@ title: Deploying Learning Log
 
 Building a Django project that works on your system is satisfying, but it gets even more satisfying when you see your site deployed where anyone can access it.
 
-In the second half of Chapter 20, the book walks you through the process of deploying Learning Log to the hosting company Platform.sh. That company has rebranded as Upsun, but they've changed their approach to deployment so much that I can no longer recommend them as a host for people who are learning about deployment. However, [Scalingo](https://scalingo.com) is a modern web hosting platform that supports Django. Scalingo also offers a 30-day free trial that doesn't require a credit card. This is perfect for learning about deployment.
+In the second half of Chapter 20, the book walks you through the process of deploying Learning Log to the hosting company Platform.sh. That company has rebranded as Upsun, but they've changed their approach to deployment so much that I can no longer recommend them as a host for people who are learning about deployment. However, [Scalingo](https://scalingo.com) is a modern web hosting platform that supports Django. Scalingo also offers a 30-day free trial that doesn't require a credit card. This is good for learning about deployment.
 
-The instructions here should be fully up to date. If you run into any steps that don't seem to work, please [reach out](../contact.md) and I will try to update these instructions. Thank you!
+The instructions here should be up to date. If you run into any steps that don't seem to work, please [reach out](../contact.md) and I will try to update these instructions. Thank you!
 
 Making a Scalingo Account
 ---
@@ -74,7 +74,7 @@ If you get a message indicating that Git is not installed, see the installation 
 
 ### Configuring Git
 
-Git keeps track of who makes changes to a project, even when only one person is working on the project. To do this, Git needs to know your username and email. You must provide a username, but you can make up an email for your practice projects:
+Git keeps track of who makes changes to a project, even when only one person is working on the project. To do this, Git needs to know your username and email. You must provide a username, but you can make up an email for your practice projects. If you just installed Git and have never configured it, set your username and email address:
 
 ```sh hl_lines="1 2"
 (ll_env)learning_log$ git config --global user.name "eric"
@@ -244,7 +244,7 @@ import os
 if "scalingo" in os.environ.get("STACK", ""):
     import dj_database_url
 
-    DEBUG = True
+    DEBUG = False
 
     DATABASES = {
         "default": dj_database_url.config(
@@ -322,7 +322,7 @@ This tells you some important information about your deployed project. It includ
 Finishing Chapter 20
 ---
 
-You can now go back to the book and pick up on page 459, at the *Creating Custom Error Pages* section. The only difference you’ll need to keep in mind is that you’ll use the command `git push scalingo main` whenever you see want to push a new version of your project to the remote server.
+You can now go back to the book and pick up on page 459, at the *Creating Custom Error Pages* section. The only difference you’ll need to keep in mind is that you’ll use the command `git push scalingo main` whenever you want to push a new version of your project to the remote server.
 
 For more specific information about deploying Django projects to Scalingo, see the guide [Get Started with Django on Scalingo](https://doc.scalingo.com/languages/python/django/start).
 
